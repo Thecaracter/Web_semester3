@@ -1,15 +1,13 @@
 <?php
 require ("koneksi.php");
-
 session_start();
-
 if(!isset($_SESSION['id']) ){
     $_SESSION['msg'] ='Harus login dulu bro';
     header('Location: landingpage.php');
 }
 $sesID = $_SESSION ['id'];
 $sesName = $_SESSION ['name'];
-$sesLvl = $_SESSION['level'];
+// $sesRole = $_SESSION['role'] ;
 ?>
 <header class="main-header">
     <!-- Logo -->
