@@ -39,14 +39,14 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-  <?php include 'header.php' ?>
+  <?php require './page/header.php'; ?>
   <!-- Left side column. contains the logo and sidebar -->
-  <?php  include 'menu.php' ?>
+  <?php  require './page/menu.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
-  <?php include 'main.php'; ?>
+  <?php  require './page/main.php'; ?>
   <!-- /.content-wrapper -->
-  <?php include 'footer.php'; ?>
+  <?php  require './page/footer.php'; ?>
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->

@@ -1,9 +1,17 @@
 <?php 
-if (!isset($_SESSION['password']))
-{
-  header('Location:landingpage.html');
-	// header('Location:login.php');
+require ("koneksi.php");
+
+session_start();
+
+if(!isset($_SESSION['id']) ){
+    $_SESSION['msg'] ='Harus login dulu bro';
+    header('Location: landingpage.php');
 }
+$sesID = $_SESSION ['id'];
+$sesName = $_SESSION ['name'];
+$sesRole = $_SESSION['role'];
+
+
 ?>
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -14,8 +22,18 @@ if (!isset($_SESSION['password']))
           <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Admin</p>
-          <a href="#"><i class="fa fa-money text-success"></i> Koperasi</a>
+          <p><?php echo $sesName?></p>
+          <a href="#"><i class="fa fa-money text-success"></i> 
+          <?php 
+          
+          if ($sesRole == 1) {
+            echo 'Admin';
+          } else {
+            echo 'Pegawai';
+          }$sesRole
+
+          ?>
+        </a>
         </div>
       </div>
       <!-- search form --><!-- /.search form -->

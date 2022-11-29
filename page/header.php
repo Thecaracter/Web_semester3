@@ -1,9 +1,15 @@
-<?php session_start(); 
-if (!isset($_SESSION['password']))
-{
-  header('Location:landingpage.html');
-	// header('Location:login.php');
+<?php
+require ("koneksi.php");
+
+session_start();
+
+if(!isset($_SESSION['id']) ){
+    $_SESSION['msg'] ='Harus login dulu bro';
+    header('Location: landingpage.php');
 }
+$sesID = $_SESSION ['id'];
+$sesName = $_SESSION ['name'];
+$sesLvl = $_SESSION['level'];
 ?>
 <header class="main-header">
     <!-- Logo -->
@@ -26,7 +32,7 @@ if (!isset($_SESSION['password']))
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/avatar5.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">Admin</span>
+              <span class="hidden-xs"><?php echo $sesName ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -34,8 +40,7 @@ if (!isset($_SESSION['password']))
                 <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
 
                 <p>
-                  Farel - Luluk
-                  <small>28 December 2020</small>
+                  <?php echo $sesName ?>
                 </p>
               </li>
               <!-- Menu Footer-->
