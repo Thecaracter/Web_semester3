@@ -30,14 +30,14 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
-    <?php include './page/header.php'; ?>
+    <?php include './bean/header.php'; ?>
     <!-- Left side column. contains the logo and sidebar -->
-    <?php include './page/menu.php'; ?>
+    <?php include './bean/menu.php'; ?>
 
     <!-- Content Wrapper. Contains page content -->
     <?php include 'main-anggota.php'; ?>
     <!-- /.content-wrapper -->
-    <?php include './page/footer.php'; ?>
+    <?php include './bean/footer.php'; ?>
 
   </div>
   <!-- jQuery 2.2.3 -->
