@@ -1,7 +1,6 @@
-
 <?php
 session_start();
-if(isset($_SESSION['ses_username']) != ''){
+if (isset($_SESSION['ses_username']) != '') {
   header("index.php");
   header("menu.php");
   header("header.php");
@@ -12,35 +11,34 @@ if(isset($_SESSION['ses_username']) != ''){
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Login Form Design</title>
-    <link rel="stylesheet" type="text/css" href="css/style_login.css" />
-  </head>
-  <body>
-    <section class="anjay">
-      <video autoplay loop muted plays-inline class="back-video">
-        <source src="asset/anjay.mp4" type="video/mp4" />
-      </video>
-      <div class="login-box">
-        <img src="asset/koperasi.png" class="avatar" />
-        <h1>Login Here</h1>
-        <form action="login.php" method="POST">
-          <p>Username</p>
-          <input type="text" name="username" placeholder="Masukin Username" />
-          <p>Password</p>
-          <input
-            type="password"
-            name="password"
-            placeholder="Masukin password"
-          />
-          <input type="submit" name="submit" value="Login" />
-          <!-- <a href="#">Lupa Password</a> -->
-        </form>
-      </div>
-      -->
-    </section>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </body>
+
+<head>
+  <title>Login Form Design</title>
+  <link rel="stylesheet" type="text/css" href="css/style_login.css" />
+</head>
+
+<body>
+  <section class="anjay">
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="asset/anjay.mp4" type="video/mp4" />
+    </video>
+    <div class="login-box">
+      <img src="asset/koperasi.png" class="avatar" />
+      <h1>Login Here</h1>
+      <form action="login.php" method="POST">
+        <p>Username</p>
+        <input type="text" name="username" placeholder="Masukin Username" />
+        <p>Password</p>
+        <input type="password" name="password" placeholder="Masukin password" />
+        <input type="submit" name="submit" value="Login" />
+        <!-- <a href="#">Lupa Password</a> -->
+      </form>
+    </div>
+    -->
+  </section>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
 </html>
 
 <?php
@@ -64,7 +62,7 @@ if (isset($_POST['submit'])) {
     $_SESSION["ses_level"] = $data_login["level"];
     $_SESSION["ses_username"] = $data_login["username"];
     $_SESSION["ses_password"] = $data_login["password"];
-   
+
     echo "<script>
 		Swal.fire({title: 'Login Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
 		}).then((result) => {if (result.value)
@@ -76,6 +74,7 @@ if (isset($_POST['submit'])) {
 			Swal.fire({title: 'Login Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
 			}).then((result) => {if (result.value)
 				{window.location = 'login.php';}
-			})</script>";}
-} 
+			})</script>";
+  }
+}
 ?>
