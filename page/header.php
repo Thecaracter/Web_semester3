@@ -1,13 +1,17 @@
 <?php
-require ("koneksi.php");
+include "koneksi.php";
+error_reporting(0);
 session_start();
-if(!isset($_SESSION['id']) ){
-    $_SESSION['msg'] ='Harus login dulu bro';
-    header('Location: landingpage.php');
+if (isset($_SESSION["ses_usesrname"]) == "") {
+  // header("location: login.php");
+} else {
+  $data_id = $_SESSION["ses_id"];
+  $data_level = $_SESSION["ses_level"];
+  $data_username = $_SESSION["ses_username"];
+  $data_password = $_SESSION["ses_password"];
 }
-$sesID = $_SESSION ['id'];
-$sesName = $_SESSION ['name'];
-// $sesRole = $_SESSION['role'] ;
+
+
 ?>
 <header class="main-header">
     <!-- Logo -->
@@ -30,7 +34,7 @@ $sesName = $_SESSION ['name'];
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/avatar5.png" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo $sesName ?></span>
+              <span class="hidden-xs"><?php echo $data_username ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -38,7 +42,7 @@ $sesName = $_SESSION ['name'];
                 <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo $sesName ?>
+                  <?php echo $data_username ?>
                 </p>
               </li>
               <!-- Menu Footer-->

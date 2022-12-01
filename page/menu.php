@@ -1,12 +1,18 @@
 <?php
-require ("koneksi.php");
-if(!isset($_SESSION['id']) ){
-    $_SESSION['msg'] ='Harus login dulu bro';
-    header('Location: landingpage.php');
+include "koneksi.php";
+
+session_start();
+error_reporting(0);
+if (isset($_SESSION["ses_username"]) == "") {
+  // header("location: login.php");
+} else {
+  $data_id = $_SESSION["ses_id"];
+  $data_level = $_SESSION["ses_level"];
+  $data_username = $_SESSION["ses_username"];
+  $data_password = $_SESSION["ses_password"];
 }
-$sesID = $_SESSION ['id'];
-$sesName = $_SESSION ['name'];
-$sesRole = $_SESSION['role'] ;
+
+
 ?>
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -17,15 +23,15 @@ $sesRole = $_SESSION['role'] ;
           <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p><?php echo $sesName?></p>
+          <p><?php echo $data_username?></p>
           <a href="#"><i class="fa fa-money text-success"></i> 
           <?php 
           
-          if ($sesRole == 1) {
+          if ($data_level == 1) {
             echo 'Admin';
           } else {
             echo 'Pegawai';
-          }$sesRole
+          }$data_level
 
           ?>
         </a>
