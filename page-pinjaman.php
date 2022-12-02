@@ -29,14 +29,14 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-  <?php include 'header.php'; ?>
+  <?php include './bean/header.php'; ?>
   <!-- Left side column. contains the logo and sidebar -->
-  <?php include 'menu.php'; ?>
+  <?php include './bean/menu.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <?php include 'main-pinjaman.php'; ?>
   <!-- /.content-wrapper -->
-  <?php include 'footer.php'; ?>
+  <?php include './bean/footer.php'; ?>
 
 </div>
 <!-- jQuery 2.2.3 -->
