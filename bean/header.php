@@ -3,7 +3,7 @@ include "koneksi.php";
 error_reporting(0);
 session_start();
 if (isset($_SESSION["ses_username"]) == "") {
-  // header("location: login.php");
+  header("location: landingpage.php");
 } else {
   $data_id = $_SESSION["ses_id"];
   $data_level = $_SESSION["ses_level"];

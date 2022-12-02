@@ -14,7 +14,7 @@ if (isset($_SESSION['ses_username']) != '') {
 
 <head>
   <title>Login Form Design</title>
-  <link rel="stylesheet" type="text/css" href="css/style_login.css" />
+  <link rel="stylesheet" type="text/css" href="style/style_login.css" />
 </head>
 
 <body>

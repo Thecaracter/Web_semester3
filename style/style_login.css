@@ -20,12 +20,12 @@ body {
   transform: translate(-50%, -50%);
 }
 .avatar {
-  width: 100px;
-  height: 125px;
+  width: 130px;
+  height: 100px;
   border-radius: 50%;
   position: absolute;
   top: -50px;
-  left: calc(50% - 15%);
+  left: calc(50% - 20%);
 }
 h1 {
   margin-top: 0px;
