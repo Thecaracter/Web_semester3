@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Nov 2022 pada 10.14
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 7.4.28
+-- Waktu pembuatan: 02 Des 2022 pada 03.14
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,7 +37,7 @@ CREATE TABLE `anggota` (
   `status` varchar(8) NOT NULL,
   `no_telp` varchar(12) NOT NULL,
   `besar_simpanan` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `anggota`
@@ -46,7 +46,7 @@ CREATE TABLE `anggota` (
 INSERT INTO `anggota` (`id_anggota`, `nama`, `alamat`, `tgl_lahir`, `tmp_lahir`, `j_kel`, `status`, `no_telp`, `besar_simpanan`) VALUES
 ('AGT001', 'Luluk Mufida', 'Jl. Mutiara', '2000-11-23', 'Pasuruan', 'Perempuan', '1', '082301261900', 25000),
 ('AGT002', 'Farel Putra Hidayat', 'Jl. Brawijaya', '2000-11-23', 'Jember', 'Laki-Laki', '1', '082310001134', 25000),
-('AGT003', 'RIZQI NUR ANDI PUTRA', 'Jalan pahlawan klayu mayang', '2001-09-19', 'Jember', 'Laki-Laki', '0', '08098098097', 50000000),
+('AGT003', 'RIZQI NUR ANDI PUTRA', 'Jalan pahlawan klayu mayang', '2001-09-19', 'Jember', 'Laki-Laki', '1', '08098098097', 50000000),
 ('AGT004', 'amanda zafira', 'bojong kenyot', '1978-09-17', 'Amerika', 'Laki-Laki', '1', '0827187120', 0);
 
 -- --------------------------------------------------------
@@ -67,7 +67,7 @@ CREATE TABLE `angsuran` (
   `denda` bigint(20) NOT NULL,
   `bln` varchar(2) NOT NULL,
   `ket` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `angsuran`
@@ -84,19 +84,19 @@ INSERT INTO `angsuran` (`id_angsuran`, `id_pinjaman`, `id_anggota`, `nama_pinjam
 --
 
 CREATE TABLE `karyawan` (
-  `id_karyawan` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `jenis_kelamin` enum('Laki-laki','Perempuan','') NOT NULL,
   `password` varchar(11) NOT NULL,
   `alamat` varchar(50) NOT NULL,
-  `role` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `level` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `karyawan`
 --
 
-INSERT INTO `karyawan` (`id_karyawan`, `username`, `jenis_kelamin`, `password`, `alamat`, `role`) VALUES
+INSERT INTO `karyawan` (`id`, `username`, `jenis_kelamin`, `password`, `alamat`, `level`) VALUES
 (1, 'rizqi', 'Laki-laki', '1234', 'jl pahlawan,dusun klayu, desa mayang', 1),
 (2, 'thoriq', 'Laki-laki', '1234', 'jl kere hore mantap', 1),
 (3, 'nabila', 'Perempuan', '1234', 'jl mantap', 1),
@@ -112,7 +112,7 @@ INSERT INTO `karyawan` (`id_karyawan`, `username`, `jenis_kelamin`, `password`, 
 CREATE TABLE `k_pinjaman` (
   `id_k_pinjaman` int(11) NOT NULL,
   `nama_pinjaman` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `k_pinjaman`
@@ -134,7 +134,7 @@ CREATE TABLE `k_simpanan` (
   `nm_simpanan` varchar(25) NOT NULL,
   `ket_simpanan` text NOT NULL,
   `besar_simpanan` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `k_simpanan`
@@ -144,31 +144,6 @@ INSERT INTO `k_simpanan` (`id`, `nm_simpanan`, `ket_simpanan`, `besar_simpanan`)
 (1, 'Simpanan Pokok', 'Simpanan Pokok yang dibayarkan pertama kali oleh anggota koperasi dan hanya sekali saja', '50000'),
 (2, 'Simpanan Wajib', 'Simpanan Wajib yang dibayarkan oleh anggota setiap bulannya', '25000'),
 (3, 'Simpanan Sukarela', 'Simpanan Sukarela yang mirip seperti tabungan dengan jumlah dan waktu simpanan tidak ditentukan', '');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `petugas`
---
-
-CREATE TABLE `petugas` (
-  `id_petugas` int(11) NOT NULL,
-  `nama` varchar(40) NOT NULL,
-  `alamat` varchar(50) NOT NULL,
-  `no_hp` varchar(12) NOT NULL,
-  `tmp_lahir` varchar(30) NOT NULL,
-  `tgl_lahir` varchar(20) NOT NULL,
-  `ket` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `petugas`
---
-
-INSERT INTO `petugas` (`id_petugas`, `nama`, `alamat`, `no_hp`, `tmp_lahir`, `tgl_lahir`, `ket`) VALUES
-(1, 'Alhamdi Ferdiawan Bahri', 'Jalan Pahlawan GG IV/02 Pamolokan Sumenep', '082301261900', 'Sumenep', '23/11/2000', 'Aktif'),
-(2, 'sarf', 'sgfsd', '353245345', 'sdgw4t45', '04/05/2034', 'fghfgh'),
-(3, 'Rizqi', 'Jl pahlawan', '08883662780', 'jember', '19 september 2001', 'admin');
 
 -- --------------------------------------------------------
 
@@ -188,7 +163,7 @@ CREATE TABLE `pinjaman` (
   `bln` varchar(2) NOT NULL,
   `thn` varchar(4) NOT NULL,
   `ket` enum('1','0') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `pinjaman`
@@ -213,7 +188,7 @@ CREATE TABLE `simpanan` (
   `besar_simpanan` bigint(20) DEFAULT NULL,
   `ket_simpanan` text DEFAULT NULL,
   `bln` varchar(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `simpanan`
@@ -266,7 +241,7 @@ ALTER TABLE `angsuran`
 -- Indeks untuk tabel `karyawan`
 --
 ALTER TABLE `karyawan`
-  ADD PRIMARY KEY (`id_karyawan`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `k_pinjaman`
@@ -279,12 +254,6 @@ ALTER TABLE `k_pinjaman`
 --
 ALTER TABLE `k_simpanan`
   ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `petugas`
---
-ALTER TABLE `petugas`
-  ADD PRIMARY KEY (`id_petugas`);
 
 --
 -- Indeks untuk tabel `pinjaman`
@@ -308,7 +277,7 @@ ALTER TABLE `simpanan`
 -- AUTO_INCREMENT untuk tabel `karyawan`
 --
 ALTER TABLE `karyawan`
-  MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `k_pinjaman`
@@ -321,12 +290,6 @@ ALTER TABLE `k_pinjaman`
 --
 ALTER TABLE `k_simpanan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT untuk tabel `petugas`
---
-ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `simpanan`
