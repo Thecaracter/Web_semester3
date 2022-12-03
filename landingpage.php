@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Koperasi Simpan Pinjam</title>
@@ -12,7 +13,9 @@
   <link href="img/logo-koperasi.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+    rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,9 +28,9 @@
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <script src="js/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
-        integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
-    <script src="js\jquery.counterup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+    integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+  <script src="js\jquery.counterup.min.js"></script>
 
   <!-- Nivo Slider Theme -->
   <link href="css/nivo-slider-theme.css" rel="stylesheet">
@@ -55,18 +58,19 @@
             <nav class="navbar navbar-default">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="index.html">
                   <h1><span>KSP</span> Makmur</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
-								</a>
+                </a>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
@@ -200,16 +204,18 @@
         </div>
       </div>
       <div class="row">
-        
+
         <!-- single-well end-->
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="well-middle">
             <div class="section-headline text-center">
-              
-                <h4 class="sec-head">Visi Koperasi Simpan Pinjam</h4>
+
+              <h4 class="sec-head">Visi Koperasi Simpan Pinjam</h4>
               </a>
               <p>
-                Mengajak seluruh potensi yang ada dalam masyarakat dengan tanpa membedakan suku,ras,golongan dan agama, agar mereka dapat bersama-sama, bersatu padu dan beritikad baik dalam membangun ekonomi kerakyatan secara bergotong royong dalam bentuk koperasi.
+                Mengajak seluruh potensi yang ada dalam masyarakat dengan tanpa membedakan suku,ras,golongan dan agama,
+                agar mereka dapat bersama-sama, bersatu padu dan beritikad baik dalam membangun ekonomi kerakyatan
+                secara bergotong royong dalam bentuk koperasi.
               </p>
               <ul>
                 <li>
@@ -225,15 +231,17 @@
           <div class="well-middle">
             <div class="section-headline text-center">
               <br>
-              
-                <h4 class="sec-head">Misi Koperasi Simpan Pinjam</h4>
-              
+
+              <h4 class="sec-head">Misi Koperasi Simpan Pinjam</h4>
+
               <ul>
                 <li>Mewujudkan SDM pengelola Koperasi dan UMKM yang Profesional</li>
                 <li>Mewujudkan iklim usaha yang kondusif bagi perkembangan Koperasi dan UMKM</li>
-                <li>Menumbuh kembangkan lembaga keuangan mikro (KOPERASI SIMPAN PINJAM/ UNIT SIMPAN PINJAM KOPERASI-Koperasi) sampai di wilayah perdesaan</li>
+                <li>Menumbuh kembangkan lembaga keuangan mikro (KOPERASI SIMPAN PINJAM/ UNIT SIMPAN PINJAM
+                  KOPERASI-Koperasi) sampai di wilayah perdesaan</li>
                 <li>Membangun dan mengembangkan jaringan distribusi dan networking ekonomi sampai perdesaan</li>
-                <li>Mengembangkan Koperasi dan UMKM berbasis produk unggulan daerah yang tertumpu pada sumber daya lokal</li>
+                <li>Mengembangkan Koperasi dan UMKM berbasis produk unggulan daerah yang tertumpu pada sumber daya lokal
+                </li>
                 <li>Penumbuhan wirausaha baru dan perluasan kesempatan kerja</li>
               </ul>
             </div>
@@ -263,8 +271,8 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
-											<i class="fa fa-money"></i>
-										</a>
+                    <i class="fa fa-money"></i>
+                  </a>
                   <h4>Simpanan Pokok</h4>
                   <p>
                     Simpanan yang pertama kali dibayarkan oleh anggota koperasi saat bergabung menjadi anggota
@@ -279,8 +287,8 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
-											<i class="fa fa-handshake-o"></i>
-										</a>
+                    <i class="fa fa-handshake-o"></i>
+                  </a>
                   <h4>Simpanan Wajib</h4>
                   <p>
                     Simpanan bersifat wajib, yang harus dibayarkan semua anggota setiap bulan
@@ -296,8 +304,8 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" href="#">
-											<i class="fa fa-calendar"></i>
-										</a>
+                    <i class="fa fa-calendar"></i>
+                  </a>
                   <h4>Simpanan Sukarela</h4>
                   <p>
                     Simpanan Sukarela yang mirip seperti tabungan, dengan jumlah dan waktu simpanan tidak ditentukan
@@ -307,11 +315,11 @@
               <!-- end about-details -->
             </div>
           </div>
-          
-          </div>
+
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!-- End Service area -->
 
@@ -327,51 +335,61 @@
             <div class="col-xs-12 col-sm-4 col-md-4 text-center">
               <div class="single-skill">
                 <div class="diff-ournumbers" id="diffnumbers-1">
-                <?php
-                include 'koneksi.php'; 
-				$query = mysqli_query($conn, "SELECT * FROM anggota");
-				$jum_anggota = mysqli_num_rows($query);
-			    ?>
-                  <p class="counter-count" style="font-size:70px;color:white;"><?php echo $jum_anggota ?></p>
+                  <?php
+                  include 'koneksi.php';
+                  $query = mysqli_query($conn, "SELECT * FROM anggota");
+                  $jum_anggota = mysqli_num_rows($query);
+                  ?>
+                  <p class="counter-count" style="font-size:70px;color:white;">
+                    <?php echo $jum_anggota ?>
+                  </p>
                   <br>
                   <h2>Anggota</h2>
                 </div>
               </div>
-              </div>
             </div>
-            <!-- single-skill end -->
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center">
-              <div class="single-skill">
-                <div class="diff-ournumbers" id="diffnumbers-1">
+          </div>
+          <!-- single-skill end -->
+          <!-- single-skill start -->
+          <div class="col-xs-12 col-sm-4 col-md-4 text-center">
+            <div class="single-skill">
+              <div class="diff-ournumbers" id="diffnumbers-1">
                 <?php
                 $query = mysqli_query($conn, "SELECT * FROM karyawan");
-				$jum_karyawan = mysqli_num_rows($query);
+                $jum_karyawan = mysqli_num_rows($query);
                 ?>
-                  <p class="counter-count" style="font-size:70px;color:white;"><?php echo $jum_karyawan ?></p>
-                  <br>
-                  <h2>Pengurus</h2>
-                </div>
+                <p class="counter-count" style="font-size:70px;color:white;">
+                  <?php echo $jum_karyawan ?>
+                </p>
+                <br>
+                <h2>Pengurus</h2>
               </div>
             </div>
-            <!-- single-skill end -->
-            <!-- single-skill start -->
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center">
-              <div class="single-skill">
-                <div class="diff-ournumbers" id="diffnumbers-1">
-                  <p class="counter-count" style="font-size:70px;color:white;">3</p>
-                  <br>
-                  <h2>Cabang</h2>
-                </div>
-              </div>
-            </div>
-            <!-- single-skill end -->
           </div>
+          <!-- single-skill end -->
+          <!-- single-skill start -->
+          <div class="col-xs-12 col-sm-4 col-md-4 text-center">
+            <div class="single-skill">
+              <div class="diff-ournumbers" id="diffnumbers-1">
+                <?php
+                $query = mysqli_query($conn, "SELECT * FROM pinjaman");
+                $jum_pinjaman = mysqli_num_rows($query);
+                ?>
+                <p class="counter-count" style="font-size:70px;color:white;">
+                  <?php echo $jum_pinjaman ?>
+                </p>
+                <br>
+                <h2>Pinjaman</h2>
+              </div>
+            </div>
+          </div>
+          <!-- single-skill end -->
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-      $(".counter-count").counterUp({ delay: 50, time: 2000 });
+  </div>
+  <script type="text/javascript">
+    $(".counter-count").counterUp({ delay: 50, time: 2000 });
   </script>
   </div>
   <!-- our-skill-area end -->
@@ -394,10 +412,10 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="check-title">
-											<a data-toggle="collapse" class="active" data-parent="#accordion" href="#check1">
-                                                <span class="acc-icons"></span>Simpanan Yang Menguntungkan
-											</a>
-										</h4>
+                    <a data-toggle="collapse" class="active" data-parent="#accordion" href="#check1">
+                      <span class="acc-icons"></span>Simpanan Yang Menguntungkan
+                    </a>
+                  </h4>
                 </div>
                 <div id="check1" class="panel-collapse collapse in">
                   <div class="panel-body">
@@ -412,10 +430,10 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="check-title">
-											<a data-toggle="collapse" data-parent="#accordion" href="#check2">
-                                                <span class="acc-icons"></span> Pinjaman Untuk Anggota
-											</a>
-										</h4>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#check2">
+                      <span class="acc-icons"></span> Pinjaman Untuk Anggota
+                    </a>
+                  </h4>
                 </div>
                 <div id="check2" class="panel-collapse collapse">
                   <div class="panel-body">
@@ -430,10 +448,10 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="check-title">
-											<a data-toggle="collapse" data-parent="#accordion" href="#check3">
-                                                <span class="acc-icons"></span>Berfokus Pada Kepentingan Anggota
-											</a>
-										</h4>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#check3">
+                      <span class="acc-icons"></span>Berfokus Pada Kepentingan Anggota
+                    </a>
+                  </h4>
                 </div>
                 <div id="check3" class="panel-collapse collapse ">
                   <div class="panel-body">
@@ -448,15 +466,16 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="check-title">
-											<a data-toggle="collapse" data-parent="#accordion" href="#check4">
-                                                <span class="acc-icons"></span>Aman Dan Terkendali
-											</a>
-										</h4>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#check4">
+                      <span class="acc-icons"></span>Aman Dan Terkendali
+                    </a>
+                  </h4>
                 </div>
                 <div id="check4" class="panel-collapse collapse">
                   <div class="panel-body">
                     <p>
-                      KSP Makmur dibawah pengawasan Kementrian Koperasi dan Usaha Kecil dan Menengah Republik Indonesia, dan sudah mendapatkan pengesahan Badan Hukum sejak 2017.
+                      KSP Makmur dibawah pengawasan Kementrian Koperasi dan Usaha Kecil dan Menengah Republik Indonesia,
+                      dan sudah mendapatkan pengesahan Badan Hukum sejak 2017.
                     </p>
                   </div>
                 </div>
@@ -486,10 +505,13 @@
                 <div class="event-content head-team">
                   <h4>Project</h4>
                   <p>
-                    Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut, laborum sequi.
+                    Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus
+                    adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut,
+                    laborum sequi.
                   </p>
                   <p>
-                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis placeat.
+                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto
+                    ducimus, doloribus fuga itaque omnis placeat.
                   </p>
                 </div>
               </div>
@@ -499,10 +521,12 @@
                 <div class="event-content head-team">
                   <h4>Planning</h4>
                   <p>
-                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis.
+                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto
+                    ducimus, doloribus fuga itaque omnis.
                   </p>
                   <p>
-                    Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut.
+                    Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus
+                    adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut.
                   </p>
                 </div>
               </div>
@@ -512,10 +536,12 @@
                 <div class="event-content head-team">
                   <h4>Success</h4>
                   <p>
-                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis placeat.
+                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto
+                    ducimus, doloribus fuga itaque omnis placeat.
                   </p>
                   <p>
-                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto ducimus, doloribus fuga itaque omnis.
+                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto
+                    ducimus, doloribus fuga itaque omnis.
                   </p>
                 </div>
               </div>
@@ -550,12 +576,12 @@
   </div>
   <!-- End Wellcome Area -->
 
-  
+
   <!-- Start reviews Area -->
   <div class="reviews-area hidden-xs">
     <div class="work-us">
       <div class="work-left-text">
-        
+
       </div>
       <div class="work-right-text text-center">
         <h2>working with us</h2>
@@ -706,7 +732,7 @@
     </div>
   </div>
   <!-- awesome-portfolio end -->
-  
+
   <!-- Start Testimonials -->
   <div class="testimonials-area">
     <div class="testi-inner area-padding">
@@ -722,7 +748,8 @@
                 <div class="single-testi">
                   <div class="testi-text">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
+                      congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
                     </p>
                     <h6>Boby</h6>
                   </div>
@@ -731,7 +758,8 @@
                 <div class="single-testi">
                   <div class="testi-text">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
+                      congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
                     </p>
                     <h6>Jhon</h6>
                   </div>
@@ -740,7 +768,8 @@
                 <div class="single-testi">
                   <div class="testi-text">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
+                      congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
                     </p>
                     <h6>Fleming</h6>
                   </div>
@@ -857,7 +886,7 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -870,7 +899,7 @@
                 &copy; Copyright <strong>KSP Makmur</strong>
               </p>
             </div>
-            
+
           </div>
         </div>
       </div>
