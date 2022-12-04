@@ -101,7 +101,7 @@ elseif (isset($_GET['reqpin']) && $_GET['reqpin'] == 'add')
 				{
 					echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					ID Pinjaman Tidak Dapat di ubah!!
+					ID Pinjaman Tidak Dapat Di Ubah!!!
 					</div>';
 				}
 				else if (isset($_GET['nama_pinjaman']))
@@ -153,7 +153,7 @@ elseif (isset($_GET['reqpin']) && $_GET['reqpin'] == 'add')
               <div class="box-body">
               <div class="form-group">
                   <label>ID Pinjaman</label>
-                  <p style="color:#F00;"<small>*id pinjaman tidak dapat di ubah</small></p>
+                  <p style="color:#F00;"><small>*id pinjaman tidak dapat di ubah</small></p>
                   <input type="text" value="<?php echo $hasilkode ?>" class="form-control" name="id_pinjaman" rows="3" placeholder="ID Pinjaman">
                 </div>
                 <div class="form-group">

@@ -15,7 +15,7 @@ include 'funct.php';
     <section class="content">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Daftar Petugas</h3>
+              <h3 class="box-title">Daftar Simpanan</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -46,7 +46,7 @@ include 'funct.php';
                       <td><?php echo numberrupiah($data['besar_simpanan']) ?></td>
                       <td>
                       <center>
-			<a href="proses.php?id_simpanan=<?php echo $data['id_simpanan'];?>&reqs=dell" title="Hapus Petugas ini" class="btn btn-danger btn-sm"  onClick="return confirm('Yakin mau di hapus?');"><span class="glyphicon glyphicon-trash"> Hapus</span> </a></center>
+			<a href="proses.php?id_simpanan=<?php echo $data['id_simpanan'];?>&reqs=dell" title="Hapus Simpanan Ini" class="btn btn-danger btn-sm"  onClick="return confirm('Yakin mau di hapus?');"><span class="glyphicon glyphicon-trash"> Hapus</span> </a></center>
                       </td>
                     </tr>
                     <?php 

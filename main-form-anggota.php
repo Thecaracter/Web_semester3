@@ -150,7 +150,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 					<input type="hidden" name="id_anggota" value="<?php echo $id_anggota ?>">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="exampleInputEmail1">ID</label>
+							<label for="exampleInputEmail1">ID Anggota</label>
 							<input type="text" class="form-control" name="id_anggota" id="exampleInputEmail1"
 								placeholder="ID" value="<?php echo $hasilkode ?>" <?php if ($_GET['reqa']=='edit' &&
 								isset($_GET['reqa'])=='edit') {
@@ -175,6 +175,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 							<input type="text" class="form-control" name="tgl_lahir" value="<?php echo $tgl_lahir ?>"
 								data-inputmask="'alias': 'yyyy/mm/dd'" data-mask="">
 						</div>
+						<br>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Tempat Lahir</label>
 							<input type="text" class="form-control" name="tmp_lahir" value="<?php echo $tmp_lahir ?>"
@@ -219,6 +220,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 							<input type="text" value="<?php echo $tgl_simpanan ?>" class="form-control"
 								name="tgl_simpanan" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask="">
 						</div>
+						<br>
 						<div class="form-group">
 							<label>Keterangan Simpanan</label>
 							<textarea class="form-control" name="ket_simpanan" rows="3"

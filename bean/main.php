@@ -81,7 +81,7 @@
 						<h3>
 							<?php echo $jum_peminjam ?>
 						</h3>
-						<p>Jumlah Data peminjam</p>
+						<p>Jumlah Data Pinjaman</p>
 					</div>
 					<div class="icon">
 						<i class="ion ion-cash"></i>

@@ -47,9 +47,9 @@ include 'funct.php';
                       <td><center><?php echo $data['no_telp']; ?></center></td>
                       <td>
                          <center>
-                         	<a href="page-form-anggota.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=edit" title="Edit Data ini" class="btn btn-danger btn-sm"><i class="fa fa-edit "></i> Edit
+                         	<a href="page-form-anggota.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=edit" title="Edit Data Ini" class="btn btn-danger btn-sm"><i class="fa fa-edit "></i> Edit
                             </a>
-                            <a href="proses.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=dell" title="Berhenti Jadi Anggota" class="btn btn-success btn-sm"><span class="fa fa-info"> Detail</span> 
+                            <a href="proses.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=dell" title="Lihat Detail" class="btn btn-success btn-sm"><span class="fa fa-info"> Detail</span> 
                             </a>
 							<a href="proses.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=dell" title="Berhenti Jadi Anggota" class="btn btn-warning btn-sm" onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-share"> Berhenti</span> 
                             </a>
