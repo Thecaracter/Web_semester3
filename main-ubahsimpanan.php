@@ -29,7 +29,7 @@ include 'funct.php';
                 ?>
                 <table id="dataTable" class="table table-bordered table-striped">
                     <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal"
-                        class="btn btn-warning">Tambah Data Karyawan</button>
+                        class="btn btn-success">Tambah Jenis Simpanan</button>
                     <br></br>
                     <thead>
                         <tr class="info">
@@ -120,10 +120,10 @@ include 'funct.php';
                     <input type="text" name="nama" id="nama" class="form-control" />
                     <br />
                     <label>Keterangan simpanan</label>
-                    <textarea name="alamat" id="alamat" class="form-control"></textarea>
+                    <textarea name="ketsim" id="ketsim" class="form-control"></textarea>
                     <br />
                     <label>Besar Simpanan</label>
-                    <input type="text" name="umur" id="umur" class="form-control" />
+                    <input type="text" name="besar" id="besar" class="form-control" />
                     <br />
                     <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
 

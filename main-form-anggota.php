@@ -1,5 +1,34 @@
 <?php
 include 'koneksi.php';
+
+if (isset($_POST['but_upload'])) {
+
+    $name = $_FILES['file']['name'];
+    $target_dir = "upload/";
+    $target_file = $target_dir . basename($_FILES["file"]["name"]);
+
+    // Select file type
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+    // Valid file extensions
+    $extensions_arr = array("jpg", "jpeg", "png", "gif");
+
+    // Check extension
+    if (in_array($imageFileType, $extensions_arr)) {
+        // Upload file
+        if (move_uploaded_file($_FILES['file']['tmp_name'], $target_dir . $name)) {
+            // Convert to base64 
+            $image_base64 = base64_encode(file_get_contents('upload/' . $name));
+            $image = 'data:image/' . $imageFileType . ';base64,' . $image_base64;
+            // Insert record
+            $query = "insert into images(image) values('" . $image . "')";
+            mysqli_query($conn, $query);
+        }
+
+    }
+
+}
+
 if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 	$namaform = "<i class = 'fa fa-edit'></i> Edit";
 	$id_anggota = $_GET['id_anggota'];
@@ -195,15 +224,18 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 							<textarea class="form-control" name="ket_simpanan" rows="3"
 								placeholder="Keterangan Simpanan">Simpanan Pokok yang dibayarkan pertama kali oleh anggota koperasi dan hanya sekali saja</textarea>
 						</div>
+						<input type='file' name='file' />
 						<?php } ?>
 					</div>
 
 					<!-- /.box-body -->
 
 					<div class="box-footer">
-						<button type="submit" class="btn btn-primary">
+					<form method="post" action="" enctype='multipart/form-data'>
+					<button type="submit" value='Save name' name='but_upload' class="btn btn-primary">
 							<?php echo $button ?>
 						</button>
+					</form>
 					</div>
 				</form>
 			</div>
