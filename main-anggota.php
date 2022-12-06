@@ -2,6 +2,7 @@
 include 'funct.php';
 ?> 
 <div class="content-wrapper">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <section class="content-header">
       <h1>
         Halaman Daftar Anggota
@@ -51,7 +52,7 @@ include 'funct.php';
                             </a>
                             <a href="proses.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=dell" title="Lihat Detail" class="btn btn-success btn-sm"><span class="fa fa-info"> Detail</span> 
                             </a>
-							<a href="proses.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=dell" title="Berhenti Jadi Anggota" class="btn btn-warning btn-sm" onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-share"> Berhenti</span> 
+							<a <?php echo $data['id_anggota'];?>&reqa=dell" title="Berhenti Jadi Anggota" class="btn btn-warning btn-sm" onClick="returnconfirm();"><span class="fa fa-share"> Berhenti</span> 
                             </a>
             			</center>
                       </td>
@@ -60,6 +61,26 @@ include 'funct.php';
 						$no++;
 						}
 					?>
+          <script>
+            function returnconfirm(){
+              swal({
+              title: "Anda Yakin Akan Berhenti?",
+              text: "Data Tidak Bisa Dipulihkan Setelah Di Hapus",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+            })
+            .then((willDelete) => {
+              if (willDelete) {
+                swal("Data Berhasil Di Hapus", {
+                  icon: "success",
+                });
+              } else {
+                swal("Data Tetap Tersimpan");
+              }
+            });
+            }
+          </script>
                 </tbody>
               </table>
           <!-- /.box -->

@@ -37,7 +37,7 @@ include 'funct.php';
                                 <center>No</center>
                             </th>
                             <th>
-                                <center>Jenis simpanan</center>
+                                <center>Jenis Simpanan</center>
                             </th>
                             <th>
                                 <center>Keterangan Simpanan</center>
