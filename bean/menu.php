@@ -78,10 +78,6 @@ if (isset($_SESSION["ses_username"]) == "") {
             </a>
             <ul class="treeview-menu">
               <li><a href="page-ubahsimpanan.php"><i class="fa fa-pencil-square"></i> Jenis Simpan</a></li>
-              <li>
-                <a href="#"><i class="fa fa-plus"></i> Tambah Jenis Simpanan
-                </a>
-              </li>
             </ul>
           </li>
         </ul>

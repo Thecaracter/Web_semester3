@@ -75,7 +75,7 @@ include 'funct.php';
                             <td>
                                 <center>
 
-                                    <a href="page-form-anggota.php?id_anggota=<?php echo $data['id_anggota']; ?>&reqa=edit"
+                                    <a type="button" name="edit" value="Edit" id="<?php echo $row["id"]; ?>"
                                         title="Edit Data ini" class="btn btn-danger btn-sm"><i class="fa fa-edit "></i>
                                         Edit
                                     </a>
@@ -185,7 +185,7 @@ include 'funct.php';
 
             else {
             $.ajax({
-                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs '] ?> ">",
+                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs ']?> ">",
                 method: "POST",
                 data: $('#insert_form').serialize(),
                 beforeSend: function () {
