@@ -143,6 +143,7 @@ if (isset($_GET['reqs']) && $_GET['reqs'] == 'add')
                   </div>
                   <input type="text" class="form-control" name="tgl_simpanan" value="<?php echo $tgl_simpanan ?>" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask="">
                 </div>
+				<br>
                 <div class="form-group">
                   <label>Besar Simpanan</label>
                   <input type="number" value="<?php echo $besar_simpanan ?>" class="form-control" name="besar_simpanan" rows="3" placeholder="Besar Simpanan" id="besar_simpanan">

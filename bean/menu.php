@@ -32,7 +32,7 @@ if (isset($_SESSION["ses_username"]) == "") {
           if ($data_level == 1) {
             echo 'Admin';
           } else {
-            echo 'Pegawai';
+            echo 'Petugas';
           }
           $data_level
 

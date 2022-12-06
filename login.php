@@ -29,12 +29,11 @@ if (isset($_SESSION['ses_username']) != '') {
         <p>Username</p>
         <input type="text" name="username" placeholder="Masukin Username" />
         <p>Password</p>
-        <input type="password" name="password" placeholder="Masukin password" />
+        <input type="password" name="password" placeholder="Masukin Password" />
         <input type="submit" name="submit" value="Login" />
         <!-- <a href="#">Lupa Password</a> -->
       </form>
     </div>
-    -->
   </section>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

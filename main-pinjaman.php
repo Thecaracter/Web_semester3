@@ -47,8 +47,8 @@ include 'funct.php';
                       <td><center><?php echo numberrupiah($data['besar_pinjaman']); ?></center></td>
                       <td><center><?php echo TanggalIndo($data['tgl_pinjaman']); ?></center></td>
                       <td>
-                          <center><a href="page-form-peminjaman.php?id_pinjaman=<?php echo $data['id_pinjaman'];?>&reqpin=edit" title="Edit Data ini" class="btn btn-info btn-sm"><i class="fa fa-edit "></i> Edit</a>
-			<a href="proses.php?id_pinjaman=<?php echo $data['id_pinjaman'];?>&reqpin=dell" title="Hapus Petugas ini" class="btn btn-danger btn-sm"  onClick="return confirm('Yakin mau di hapus?');"><span class="glyphicon glyphicon-trash"> Hapus</span> </a></center>
+                          <center><a href="page-form-peminjaman.php?id_pinjaman=<?php echo $data['id_pinjaman'];?>&reqpin=edit" title="Edit Data Ini" class="btn btn-info btn-sm"><i class="fa fa-edit "></i> Edit</a>
+			<a href="proses.php?id_pinjaman=<?php echo $data['id_pinjaman'];?>&reqpin=dell" title="Hapus Pinjaman Ini" class="btn btn-danger btn-sm"  onClick="return confirm('Yakin mau di hapus?');"><span class="glyphicon glyphicon-trash"> Hapus</span> </a></center>
                       </td>
                     </tr>
                     <?php 
