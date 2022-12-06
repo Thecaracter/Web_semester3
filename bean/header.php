@@ -1,5 +1,6 @@
 <?php
-include "../koneksi.php";
+include "koneksi.php";
+
 error_reporting(0);
 session_start();
 if (isset($_SESSION["ses_username"]) == "") {
@@ -34,7 +35,7 @@ if (isset($_SESSION["ses_username"]) == "") {
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="../dist/img/avatar5.png" class="user-image" alt="User Image">
+            <img src="dist/img/avatar5.png" class="user-image" alt="User Image">
             <span class="hidden-xs">
               <?php echo $data_username ?>
             </span>
@@ -42,7 +43,7 @@ if (isset($_SESSION["ses_username"]) == "") {
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
-              <img src="../dist/img/avatar5.png" class="img-circle" alt="User Image">
+              <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
 
               <p>
                 <?php echo $data_username ?>

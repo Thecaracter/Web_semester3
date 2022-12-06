@@ -21,7 +21,7 @@ if (isset($_SESSION["ses_username"]) == "") {
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="../dist/img/avatar5.png" class="img-circle" alt="User Image">
+        <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
         <p>
@@ -60,15 +60,27 @@ if (isset($_SESSION["ses_username"]) == "") {
         </a>
         <ul class="treeview-menu" style="display: none;">
           <li>
+            <a href="#"><i class="fa fa-circle-o"></i> Karyawan
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="page-karyawan.php"><i class="fa fa-gavel"></i> Daftar Karyawan</a></li>
+              <li>
+                <a href="page-form-anggota.php?reqa=add"><i class="fa fa-plus"></i> Form Karyawan
+                </a>
+              </li>
+            </ul>
             <a href="#"><i class="fa fa-circle-o"></i> Anggota
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="page/page-anggota.php"><i class="fa fa-database"></i> Daftar Anggota</a></li>
+              <li><a href="page-anggota.php"><i class="fa fa-database"></i> Daftar Anggota</a></li>
               <li>
-                <a href="../page/page-form-anggota.php?reqa=add"><i class="fa fa-plus"></i> Form Anggota
+                <a href="page-form-anggota.php?reqa=add"><i class="fa fa-plus"></i> Form Anggota
                 </a>
               </li>
             </ul>
