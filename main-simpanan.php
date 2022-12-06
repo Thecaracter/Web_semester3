@@ -10,7 +10,8 @@ include 'funct.php';
     </h1>
     <ol class="breadcrumb">
       <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Dashboard</li>
+      <li class="active">Simpanan</li>
+      <li class="active">Data Simpanan</li>
     </ol>
   </section>
   <section class="content">

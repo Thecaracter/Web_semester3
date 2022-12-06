@@ -22,7 +22,8 @@ if (isset($_GET['reqs']) && $_GET['reqs'] == 'add')
         <small>Control panel</small></h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li class="active">Simpanan</li>
+		<li class="active">Form Simpanan</li>
       </ol>
     </section>
 

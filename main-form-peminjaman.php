@@ -65,7 +65,8 @@ elseif (isset($_GET['reqpin']) && $_GET['reqpin'] == 'add')
         <small>Control panel</small></h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li class="active">Pinjaman</li>
+        <li class="active">Form Pinjaman</li>
       </ol>
     </section>
 
