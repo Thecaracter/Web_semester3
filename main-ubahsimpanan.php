@@ -115,15 +115,15 @@ include 'funct.php';
                 <h4 class="modal-title">Input Data Dengan Menggunakan Modal Bootstrap</h4>
             </div>
             <div class="modal-body">
-                <form method="post" id="insert_form">
+                <form action="insert.php" method="post" id="insert_form">
                     <label>Nama Simpanan</label>
-                    <input type="text" name="nama" id="nama" class="form-control" />
+                    <input type="text" name="nm_simpanan" id="nama" class="form-control" />
                     <br />
                     <label>Keterangan simpanan</label>
-                    <textarea name="ketsim" id="ketsim" class="form-control"></textarea>
+                    <textarea name="ket_simpanan" id="ketsim" class="form-control"></textarea>
                     <br />
                     <label>Besar Simpanan</label>
-                    <input type="text" name="besar" id="besar" class="form-control" />
+                    <input type="text" name="besar_simpanan" id="besar" class="form-control" />
                     <br />
                     <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
 
@@ -185,7 +185,7 @@ include 'funct.php';
 
             else {
             $.ajax({
-                url: "insert.php",
+                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs '] ?> ">",
                 method: "POST",
                 data: $('#insert_form').serialize(),
                 beforeSend: function () {
