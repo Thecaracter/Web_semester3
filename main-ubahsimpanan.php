@@ -80,7 +80,7 @@ include 'funct.php';
                                         Edit
                                     </a>
 
-                                    <a href="proses.php?id=<?php echo $data['id']; ?>&reqaus=dell"
+                                    <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
                                         title="Hapus Simpanan" class="btn btn-warning btn-sm"
                                         onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-trash">
                                             Berhenti</span>

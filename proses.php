@@ -2,7 +2,6 @@
 <?php session_start();
 require 'koneksi.php';
 error_reporting(0);
-
 //Aksi anggota
 if ($_POST['reqa'] == "add") {
 	$id_anggota = $_POST['id_anggota'];
@@ -43,29 +42,6 @@ if ($_POST['reqa'] == "add") {
 	} else if ($ket_simpanan != "Simpanan Pokok yang dibayarkan pertama kali oleh anggota koperasi dan hanya sekali saja") {
 		header('Location:page-form-anggota.php?reqa=add&ket_simpanan=salah');
 	} else {
-		$name = $_FILES['file']['name'];
-		$target_dir = "upload/";
-		$target_file = $target_dir . basename($_FILES["file"]["name"]);
-
-		// Select file type
-		$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
-		// Valid file extensions
-		$extensions_arr = array("jpg", "jpeg", "png", "gif");
-
-		// Check extension
-		if (in_array($imageFileType, $extensions_arr)) {
-			// Upload file
-			if (move_uploaded_file($_FILES['file']['tmp_name'], $target_dir . $name)) {
-				// Convert to base64 
-				$image_base64 = base64_encode(file_get_contents('upload/' . $name));
-				$image = 'data:image/' . $imageFileType . ';base64,' . $image_base64;
-				// Insert record
-				$query = "insert into images(image) values('" . $image . "')";
-				mysqli_query($conn, $query) or die(mysqli_error($conn));
-			}
-
-		}
 		$sql_anggota = "INSERT INTO anggota (id_anggota,nama,alamat,tgl_lahir,tmp_lahir,j_kel,status,no_telp)VALUES('" . $id_anggota . "','" . $nama . "','" . $alamat . "','" . $tgl_lahir . "','" . $tmp_lahir . "','" . $j_kel . "','1','" . $no_telp . "')";
 
 		$sql_simpanan = "INSERT INTO simpanan (nm_simpanan,id_anggota,tgl_simpanan,besar_simpanan,ket_simpanan,bln)VALUES('" . $nm_simpanan . "','" . $id_anggota . "','" . $tgl_simpanan . "','" . $besar_simpanan . "','" . $ket_simpanan . "','" . $bln . "')";
@@ -123,14 +99,6 @@ if ($_GET['reqa'] == "dell") {
 		echo 'swal("Anda Berhasil Berhenti!", "Klik Button Untuk Melanjutkan!", "success");';
 	}
 	exit;
-}
-if ($_GET['reqaus'] == "dell") {
-	$id_ubahsimpanan = $_GET['id'];
-	mysqli_query($conn, "DELETE FROM K_simpanan where id='" . $id_ubahsimpanan . "'");
-	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
-	header('Location:page-ubahsimpanan.php');
-	exit;
-
 }
 
 //Aksi Simpanan
@@ -285,6 +253,12 @@ if ($_GET['reqang'] == 'dell') {
 	header('Location:page-angsuran.php');
 	exit;
 }
-if ($_GET['requbs'] == 'add') {
+if ($_GET['requbs'] == "dell") {
+	$id_ubahsimpanan = $_GET['id'];
+	mysqli_query($conn, "DELETE FROM K_simpanan where id='" . $id_ubahsimpanan . "'");
+	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
+	header('Location:page-ubahsimpanan.php');
+	exit;
+
 }
 ?>
