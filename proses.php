@@ -42,13 +42,31 @@ if ($_POST['reqa'] == "add") {
 	} else if ($ket_simpanan != "Simpanan Pokok yang dibayarkan pertama kali oleh anggota koperasi dan hanya sekali saja") {
 		header('Location:page-form-anggota.php?reqa=add&ket_simpanan=salah');
 	} else {
-		$sql_anggota = "INSERT INTO anggota (id_anggota,nama,alamat,tgl_lahir,tmp_lahir,j_kel,status,no_telp)VALUES('" . $id_anggota . "','" . $nama . "','" . $alamat . "','" . $tgl_lahir . "','" . $tmp_lahir . "','" . $j_kel . "','1','" . $no_telp . "')";
+		if (isset($_FILES['foto-profile'])) {
 
-		$sql_simpanan = "INSERT INTO simpanan (nm_simpanan,id_anggota,tgl_simpanan,besar_simpanan,ket_simpanan,bln)VALUES('" . $nm_simpanan . "','" . $id_anggota . "','" . $tgl_simpanan . "','" . $besar_simpanan . "','" . $ket_simpanan . "','" . $bln . "')";
 
-		$tambah_anggota = mysqli_query($conn, $sql_anggota) or die(mysqli_error($conn));
-		$tambah_simpanan = mysqli_query($conn, $sql_simpanan) or die(mysqli_error($conn));
-		header('Location:page-anggota.php');
+			$folder = 'uploads/';
+
+			if (isset($_FILES['foto-profile']['name']) && ($_FILES['foto-profile']['name'] != "")) {
+				$newImage = $folder . $_FILES['foto-profile']['name'];
+				move_uploaded_file($_FILES['foto-profile']['tmp_name'], $newImage);
+			}
+			$sql_anggota = "INSERT INTO anggota (id_anggota,nama,alamat,tgl_lahir,tmp_lahir,j_kel,status,no_telp,besar_simpanan,foto)VALUES('" . $id_anggota . "','" . $nama . "','" . $alamat . "','" . $tgl_lahir . "','" . $tmp_lahir . "','" . $j_kel . "','1','" . $no_telp . "','" . $besar_simpanan . "','" . $newImage . "')";
+
+			$sql_simpanan = "INSERT INTO simpanan (nm_simpanan,id_anggota,tgl_simpanan,besar_simpanan,ket_simpanan,bln)VALUES('" . $nm_simpanan . "','" . $id_anggota . "','" . $tgl_simpanan . "','" . $besar_simpanan . "','" . $ket_simpanan . "','" . $bln . "')";
+			$tambah_anggota = mysqli_query($conn, $sql_anggota) or die(mysqli_error($conn));
+			$tambah_simpanan = mysqli_query($conn, $sql_simpanan) or die(mysqli_error($conn));
+
+			// $up = $user->tambahProduk($idProduk, $namaProduk, $hargaProduk, $newImage, $cid);
+			if ($tambah_anggota && $tambah_simpanan == true) {
+				echo 'berhasil';
+				header('Location:page-anggota.php');
+			} else {
+				echo 'gagal';
+			}
+		}
+
+
 	}
 	exit;
 } else if ($_POST['reqa'] == "edit") {
@@ -75,7 +93,7 @@ if ($_POST['reqa'] == "add") {
 		header("Location:page-form-anggota.php?reqa=edit&id_anggota=$_POST[id_anggota]&no_telp=kosong");
 	} else {
 
-		$sql = mysqli_query($conn, "UPDATE anggota set nama='" . $nama . "',alamat='" . $alamat . "',tgl_lahir='" . $tgl_lahir . "',tmp_lahir='" . $tmp_lahir . "',j_kel='" . $j_kel . "',no_telp='" . $no_telp . "' WHERE id_anggota='" . $id_anggota . "'");
+		$sql = mysqli_query($conn, "UPDATE anggota set nama='" . $nama . "',alamat='" . $alamat . "',tgl_lahir='" . $tgl_lahir . "',tmp_lahir='" . $tmp_lahir . "',j_kel='" . $j_kel . "',no_telp='" . $no_telp . "',besar_simpanan='" . $besar_simpanan . "' WHERE id_anggota='" . $id_anggota . "'");
 
 		header('Location:page-anggota.php');
 	}

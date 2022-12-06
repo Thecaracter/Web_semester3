@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "../koneksi.php";
 
 session_start();
 error_reporting(0);
@@ -10,6 +10,7 @@ if (isset($_SESSION["ses_username"]) == "") {
   $data_level = $_SESSION["ses_level"];
   $data_username = $_SESSION["ses_username"];
   $data_password = $_SESSION["ses_password"];
+  // $_SESSION["ses_foto"] = $data_login["foto"];
 }
 
 
@@ -20,7 +21,7 @@ if (isset($_SESSION["ses_username"]) == "") {
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
+        <img src="../dist/img/avatar5.png" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
         <p>
@@ -65,9 +66,9 @@ if (isset($_SESSION["ses_username"]) == "") {
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="page-anggota.php"><i class="fa fa-database"></i> Daftar Anggota</a></li>
+              <li><a href="page/page-anggota.php"><i class="fa fa-database"></i> Daftar Anggota</a></li>
               <li>
-                <a href="page-form-anggota.php?reqa=add"><i class="fa fa-plus"></i> Form Anggota
+                <a href="../page/page-form-anggota.php?reqa=add"><i class="fa fa-plus"></i> Form Anggota
                 </a>
               </li>
             </ul>

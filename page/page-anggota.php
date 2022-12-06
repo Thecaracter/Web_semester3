@@ -8,7 +8,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -16,10 +16,10 @@
   <!-- DataTables -->
   <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -30,32 +30,32 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
-    <?php include './bean/header.php'; ?>
+    <?php include '../bean/header.php'; ?>
     <!-- Left side column. contains the logo and sidebar -->
-    <?php include './bean/menu.php'; ?>
+    <?php include '../bean/menu.php'; ?>
 
     <!-- Content Wrapper. Contains page content -->
-    <?php include 'main-anggota.php'; ?>
+    <?php include '../main-anggota.php'; ?>
     <!-- /.content-wrapper -->
-    <?php include './bean/footer.php'; ?>
+    <?php include '../bean/footer.php'; ?>
 
   </div>
   <!-- jQuery 2.2.3 -->
-  <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+  <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!-- DataTables -->
-  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+  <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
   <!-- SlimScroll -->
-  <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+  <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
   <!-- FastClick -->
-  <script src="plugins/fastclick/fastclick.js"></script>
+  <script src="../plugins/fastclick/fastclick.js"></script>
   <!-- AdminLTE App -->
-  <script src="dist/js/app.min.js"></script>
+  <script src="../dist/js/app.min.js"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="dist/js/demo.js"></script>
+  <script src="../dist/js/demo.js"></script>
   <!-- page script -->
   <script>
     $(function () {

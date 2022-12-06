@@ -116,7 +116,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
             }
 
             ?>
-				<form role="form" action="proses.php" method="POST">
+				<form role="form" action="proses.php" method="POST" enctype='multipart/form-data'>
 					<input type="hidden" name="reqa" value="<?php echo $_GET['reqa'] ?>">
 					<input type="hidden" name="id_anggota" value="<?php echo $id_anggota ?>">
 					<div class="box-body">
@@ -171,8 +171,14 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 							<input type="number" class="form-control" id="exampleInputPassword1"
 								value="<?php echo $no_telp ?>" placeholder="Nomor Handphone" name="no_telp">
 						</div>
+						<div>
+							<br>
+							<input type='hidden' name='old-foto-profile'value="<?php $foto; ?>" />
+							<input type='file' name='foto-profile' />
+						</div>
 						<?php if (isset($_GET['reqa']) && $_GET['reqa'] == 'add') { ?>
-						<h2 style="text-align:center;">Simpanan Pokok</h2>
+						<br>
+							<h2 style="text-align:center;">Simpanan Pokok</h2>
 						<div class="form-group">
 							<label for="exampleInputPassword1">Nama Simpanan</label>
 							<input type="text" class="form-control" id="exampleInputPassword1" value="Simpanan Pokok"

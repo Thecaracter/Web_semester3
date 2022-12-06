@@ -63,6 +63,7 @@ if (isset($_POST['submit'])) {
     $_SESSION["ses_level"] = $data_login["level"];
     $_SESSION["ses_username"] = $data_login["username"];
     $_SESSION["ses_password"] = $data_login["password"];
+    $_SESSION["ses_foto"] = $data_login["foto"];
 
     echo "<script>
 		Swal.fire({title: 'Login Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'

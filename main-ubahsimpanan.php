@@ -83,7 +83,7 @@ include 'funct.php';
                                     <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
                                         title="Hapus Simpanan" class="btn btn-warning btn-sm"
                                         onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-trash">
-                                            Berhenti</span>
+                                            Hapus</span>
                                     </a>
 
                                 </center>
@@ -185,7 +185,7 @@ include 'funct.php';
 
             else {
             $.ajax({
-                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs ']?> ">",
+                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs '] ?> ">",
                 method: "POST",
                 data: $('#insert_form').serialize(),
                 beforeSend: function () {
