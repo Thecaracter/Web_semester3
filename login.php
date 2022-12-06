@@ -15,6 +15,8 @@ if (isset($_SESSION['ses_username']) != '') {
 <head>
   <title>Login Form Design</title>
   <link rel="stylesheet" type="text/css" href="style/style_login.css" />
+  <link href="img/logo-koperasi.png" rel="icon">
+  <link href="img/logo-koperasi.png" rel="apple-touch-icon">
 </head>
 
 <body>
