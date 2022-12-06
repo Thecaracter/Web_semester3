@@ -3,7 +3,7 @@ include 'koneksi.php';
 if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 	$namaform = "<i class = 'fa fa-edit'></i> Edit";
 	$id = $_GET['id'];
-	$query = mysqli_query($conn, "SELECT * FROM anggota  WHERE id=$id ");
+	$query = mysqli_query($conn, "SELECT * FROM karyawan  WHERE id=$id ");
 	$data = mysqli_fetch_array($query);
 	$nama = $data['nama'];
 	$alamat = $data['alamat'];
@@ -15,15 +15,15 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 	$button = "<i class='fa fa-save'></i> Update";
 } elseif (isset($_GET['reqa']) && $_GET['reqa'] == 'add') {
 	$namaform = "<i class='fa fa-plus'></i> Tambah";
-	$carikode = mysqli_query($conn, "SELECT MAX(id_anggota) FROM anggota") or die(mysqli_error($koneksi));
+	$carikode = mysqli_query($conn, "SELECT MAX(id) FROM karyawan") or die(mysqli_error($coon));
 	$datakode = mysqli_fetch_array($carikode);
 	if ($datakode) {
 		$nilaikode = substr($datakode[0], 3);
 		$kode = (int) $nilaikode;
 		$kode = $kode + 1;
-		$hasilkode = "AGT" . str_pad($kode, 3, "0", STR_PAD_LEFT);
+		$hasilkode = "RI" . str_pad($kode, 3, "0", STR_PAD_LEFT);
 	}
-	$_SESSION['id_anggota'] = $hasilkode;
+	$_SESSION['id'] = $hasilkode;
 	$nama = '';
 	$alamat = '';
 	$tgl_lahir = '';
@@ -43,7 +43,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 		</h1>
 		<ol class="breadcrumb">
 			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-			<li class="active">Anggota</li>
+			<li class="active">Karyawan</li>
 		</ol>
 	</section>
 
@@ -52,7 +52,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 		<div class="box">
 			<div class="box-header">
 				<h3 class="box-title">
-					<?php echo $namaform; ?> Daftar Anggota
+					<?php echo $namaform; ?> Daftar Karyawan
 				</h3>
 			</div>
 			<!-- /.box-header -->
@@ -123,10 +123,10 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 						<div class="form-group">
 							<label for="exampleInputEmail1">ID Anggota</label>
 							<input type="text" class="form-control" name="id_anggota" id="exampleInputEmail1"
-								placeholder="ID" value="<?php echo $hasilkode ?>" <?php if ( $_GET['reqa'] == 'edit' &&
-								isset($_GET['reqa']) == 'edit' ) {
-	                                   echo 'disabled';
-                                   } ?>>
+								placeholder="ID" value="<?php echo $hasilkode ?>" <?php if (
+                                   	$_GET['reqa']=='edit' &&
+                                   	isset($_GET['reqa'])=='edit'
+                                   ) { echo 'disabled'; } ?>>
 						</div>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Nama</label>
@@ -156,15 +156,11 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 							<label>Jenis Kelamin</label>
 							<select class="form-control" name="j_kel">
 								<option selected value="">-- Pilih Jenis Kelamin --</option>
-								<option value="Laki-Laki" <?php if ($j_kel == "Laki-Laki") {
-	                                echo 'selected="selected"';
-                                }
-									?>
+								<option value="Laki-Laki" <?php if ($j_kel=="Laki-Laki") { echo 'selected="selected"'; }
+                                ?>
 									>Laki-Laki</option>
-								<option value="Perempuan" <?php if ($j_kel == "Perempuan") {
-	            echo 'selected="selected"';
-            }
-									?>
+								<option value="Perempuan" <?php if ($j_kel=="Perempuan") {                     echo 'selected="selected"';                     }
+                                ?>
 									>Perempuan</option>
 							</select>
 						</div>

@@ -68,7 +68,7 @@ if (isset($_SESSION["ses_username"]) == "") {
             <ul class="treeview-menu">
               <li><a href="page-karyawan.php"><i class="fa fa-gavel"></i> Daftar Karyawan</a></li>
               <li>
-                <a href="page-form-anggota.php?reqa=add"><i class="fa fa-plus"></i> Form Karyawan
+                <a href="page-form-karyawan.php?reqa=add"><i class="fa fa-plus"></i> Form Karyawan
                 </a>
               </li>
             </ul>
