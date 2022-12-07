@@ -165,7 +165,7 @@ if ($_GET['reqs'] == "dell") {
 }
 
 
-
+//Aksi Pinjaman
 if ($_POST['reqpin'] == "add") {
 	$id_pinjaman = $_POST['id_pinjaman'];
 	$nama_pinjaman = $_POST['nama_pinjaman'];
@@ -223,6 +223,7 @@ if ($_GET['reqpin'] == 'dell') {
 	exit;
 }
 
+//Aksi Angsuran
 if ($_POST['reqang'] == "add") {
 	$id_angsuran = $_POST['id_angsuran'];
 	$id_pinjaman = $_POST['id_pinjaman'];
@@ -279,6 +280,8 @@ if ($_GET['requbs'] == "dell") {
 	exit;
 
 }
+
+//Aksi Ubah Simpanan
 if ($_POST['requbs'] == "add") {
 	if (!empty($_POST)) {
 		$output = '';

@@ -7,20 +7,20 @@ include 'funct.php';
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Halaman Ubah Simpanan
+            Halaman Ubah Pinjaman
             <small>Control panel</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="index.php"><i class="fa fa-dashboard"></i> Master</a></li>
-            <li class="active">Master Simpanan</li>
-            <li class="active">Jenis Simpan</li>
+            <li class="active">Master Pinjaman</li>
+            <li class="active">Jenis Pinjaman</li>
 
         </ol>
     </section>
     <section class="content">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Daftar Simpanan Koperasi</h3>
+                <h3 class="box-title">Daftar Pinjaman Koperasi</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -29,7 +29,7 @@ include 'funct.php';
                 ?>
                 <table id="dataTable" class="table table-bordered table-striped">
                     <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal"
-                        class="btn btn-success">Tambah Jenis Simpanan</button>
+                        class="btn btn-success">Tambah Jenis Pinjaman</button>
                     <br></br>
                     <thead>
                         <tr class="info">
@@ -40,10 +40,10 @@ include 'funct.php';
                                 <center>ID</center>
                             </th>
                             <th>
-                                <center>Nama Simpanan</center>
+                                <center>Nama Pinjaman</center>
                             </th>
                             <th>
-                                <center>Besar Simpanan</center>
+                                <center>Besar Pinjaman</center>
                             </th>
                             <th>
                                 <center>Action</center>
@@ -76,12 +76,12 @@ include 'funct.php';
                                 <center>
 
                                     <a type="button" name="edit" value="Edit" id="<?php echo $row["id"]; ?>"
-                                        title="Edit Data ini" class="btn btn-danger btn-sm"><i class="fa fa-edit "></i>
+                                        title="Edit Data Ini" class="btn btn-danger btn-sm"><i class="fa fa-edit "></i>
                                         Edit
                                     </a>
 
                                     <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
-                                        title="Hapus Simpanan" class="btn btn-warning btn-sm"
+                                        title="Hapus Pinjaman" class="btn btn-warning btn-sm"
                                         onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-trash">
                                             Hapus</span>
                                     </a>
@@ -116,13 +116,13 @@ include 'funct.php';
             </div>
             <div class="modal-body">
                 <form action="insert.php" method="post" id="insert_form">
-                    <label>Nama Simpanan</label>
+                    <label>Nama Pinjaman</label>
                     <input type="text" name="nm_simpanan" id="nama" class="form-control" />
                     <br />
-                    <label>Keterangan Simpanan</label>
+                    <label>Keterangan Pinjaman</label>
                     <textarea style="resize:vertical" name="ket_simpanan" id="ketsim" class="form-control"></textarea>
                     <br />
-                    <label>Besar Simpanan</label>
+                    <label>Besar Pinjaman</label>
                     <input type="text" name="besar_simpanan" id="besar" class="form-control" />
                     <br />
                     <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
