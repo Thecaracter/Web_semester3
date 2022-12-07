@@ -4,19 +4,19 @@ include 'funct.php';
 <div class="content-wrapper">
   <section class="content-header">
     <h1>
-      Halaman Daftar Anggota
+      Halaman Daftar Karyawan
       <small>Control panel</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="index.php"><i class="fa fa-dashboard"></i> Master</a></li>
-      <li class="active">Anggota</li>
-      <li class="active">Daftar Anggota</li>
+      <li class="active">Karyawan</li>
+      <li class="active">Daftar Karyawan</li>
     </ol>
   </section>
   <section class="content">
     <div class="box">
       <div class="box-header">
-        <h3 class="box-title">Daftar Anggota Koperasi</h3>
+        <h3 class="box-title">Daftar Karyawan Koperasi</h3>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
@@ -74,7 +74,7 @@ include 'funct.php';
                     class="btn btn-success btn-sm"><span class="fa fa-info"> Detail</span>
                   </a>
                   <a href="proses.php?id_anggota=<?php echo $data['id_anggota']; ?>&reqa=dell"
-                    title="Berhenti Jadi Anggota" class="btn btn-warning btn-sm"
+                    title="Berhenti Jadi Karyawan" class="btn btn-warning btn-sm"
                     onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-share"> Berhenti</span>
                   </a>
                 </center>

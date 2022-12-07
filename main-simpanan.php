@@ -2,6 +2,7 @@
 include 'funct.php';
 ?>
 <div class="content-wrapper">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <section class="content-header">
     <h1>
       Halaman Daftar Simpanan
@@ -9,7 +10,8 @@ include 'funct.php';
     </h1>
     <ol class="breadcrumb">
       <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Dashboard</li>
+      <li class="active">Simpanan</li>
+      <li class="active">Data Simpanan</li>
     </ol>
   </section>
   <section class="content">
@@ -72,7 +74,7 @@ include 'funct.php';
                 <center>
                   <a href="proses.php?id_simpanan=<?php echo $data['id_simpanan']; ?>&reqs=dell"
                     title="Hapus Simpanan Ini" class="btn btn-danger btn-sm"
-                    onClick="return confirm('Yakin mau di hapus?');"><span class="glyphicon glyphicon-trash">
+                    onClick="returnconfirm();"><span class="glyphicon glyphicon-trash">
                       Hapus</span> </a>
                 </center>
               </td>
@@ -81,6 +83,24 @@ include 'funct.php';
                 $no++;
               }
               ?>
+            <script>
+            function returnconfirm(){
+              swal({
+              title: "Anda Yakin Akan Berhenti?",
+              text: "Data Tidak Bisa Dipulihkan Setelah Di Hapus",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+            })
+            .then((willDelete) => {
+              if (willDelete.isConfirmed) {
+                swal('Data Di Hapus', '', 'success');
+              } else {
+                swal(' Cancelled', '', 'error');
+              }
+            });
+            }
+          </script>
           </tbody>
         </table>
         <!-- /.box -->

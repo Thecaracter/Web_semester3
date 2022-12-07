@@ -12,8 +12,8 @@ include 'funct.php';
         </h1>
         <ol class="breadcrumb">
             <li><a href="index.php"><i class="fa fa-dashboard"></i> Master</a></li>
-            <li class="active">Simpanan</li>
-            <li class="active">Daftar Simpanan</li>
+            <li class="active">Master Simpanan</li>
+            <li class="active">Jenis Simpan</li>
 
         </ol>
     </section>
@@ -37,7 +37,7 @@ include 'funct.php';
                                 <center>No</center>
                             </th>
                             <th>
-                                <center>Jenis simpanan</center>
+                                <center>Jenis Simpanan</center>
                             </th>
                             <th>
                                 <center>Keterangan Simpanan</center>
@@ -112,15 +112,15 @@ include 'funct.php';
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Input Data Dengan Menggunakan Modal Bootstrap</h4>
+                <h4 class="modal-title">Input Data</h4>
             </div>
             <div class="modal-body">
                 <form action="insert.php" method="post" id="insert_form">
                     <label>Nama Simpanan</label>
                     <input type="text" name="nm_simpanan" id="nama" class="form-control" />
                     <br />
-                    <label>Keterangan simpanan</label>
-                    <textarea name="ket_simpanan" id="ketsim" class="form-control"></textarea>
+                    <label>Keterangan Simpanan</label>
+                    <textarea style="resize:vertical" name="ket_simpanan" id="ketsim" class="form-control"></textarea>
                     <br />
                     <label>Besar Simpanan</label>
                     <input type="text" name="besar_simpanan" id="besar" class="form-control" />
