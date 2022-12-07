@@ -66,7 +66,7 @@ if (isset($_SESSION["ses_username"]) == "") {
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="page-karyawan.php"><i class="fa fa-gavel"></i> Daftar Karyawan</a></li>
+              <li><a href="page-karyawan.php"><i class="fa fa-user-plus"></i> Daftar Karyawan</a></li>
               <li>
                 <a href="page-form-karyawan.php?reqa=add"><i class="fa fa-plus"></i> Form Karyawan
                 </a>
@@ -91,6 +91,14 @@ if (isset($_SESSION["ses_username"]) == "") {
             </a>
             <ul class="treeview-menu">
               <li><a href="page-ubahsimpanan.php"><i class="fa fa-pencil-square"></i> Jenis Simpan</a></li>
+            </ul>
+            <a href="#"><i class="fa fa-circle-o"></i> Master Pinjaman
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="page-ubahsimpanan.php"><i class="fa fa-wrench"></i> Jenis Pinjaman</a></li>
             </ul>
           </li>
         </ul>
