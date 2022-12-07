@@ -748,10 +748,10 @@
                 <div class="single-testi">
                   <div class="testi-text">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
-                      congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
+                    KSP Makmur membantu saya dalam mendirikan usaha dengan program pinjaman, 
+                    <br>kemudian saya salurkan untuk membangun usaha yang saya miliki
                     </p>
-                    <h6>Boby</h6>
+                    <h6></h6>
                   </div>
                 </div>
                 <!-- End single item -->
@@ -802,10 +802,12 @@
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="contact-icon text-center">
               <div class="single-icon">
-                <a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
+                <i class="fa fa-phone"></i></a>
                 <p>
-                  Call: +62 85 828 399 15<br>
-                  <span>Senin - Jumat (07.00 - 13.00)</span>
+                  Call: (0333) 846328<br>
+                  <span>Senin - Kamis (08.00 - 14.00)
+                  <br>Jumat         (08.00 - 10.30)
+                  <br>Sabtu         (08.00 - 13.00)</span>
                 </p>
               </div>
             </div>
@@ -828,8 +830,8 @@
               <div class="single-icon">
                 <i class="fa fa-map-marker"></i>
                 <p>
-                  Jalan Raya No 15 C<br>
-                  <span>Jember</span>
+                  Jl. Guntur, Dusun Krajan, Genteng Kulon, Kec. Genteng<br>
+                  <span>Banyuwangi</span>
                 </p>
               </div>
             </div>
@@ -879,9 +881,9 @@
                   Hubungi kami untuk layanan lebih lanjut
                 </p>
                 <div class="footer-contacts">
-                  <p><span>Tel:</span> +62 85 828 399 15</p>
+                  <p><span>Tel:</span> (0333) 846328</p>
                   <p><span>Email:</span> kspmakmur@gmail.com</p>
-                  <p><span>Working Hours:</span> (07.00 - 13.00)</p>
+                  <p><span>Hari Kerja:</span> (Senin - Sabtu)</p>
                 </div>
               </div>
             </div>
