@@ -98,7 +98,7 @@ if (isset($_SESSION["ses_username"]) == "") {
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="page-ubahsimpanan.php"><i class="fa fa-wrench"></i> Jenis Pinjaman</a></li>
+              <li><a href="page-ubahpinjaman.php"><i class="fa fa-wrench"></i> Jenis Pinjaman</a></li>
             </ul>
           </li>
         </ul>
