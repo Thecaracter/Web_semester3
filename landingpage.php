@@ -209,8 +209,8 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="well-middle">
             <div class="section-headline text-center">
-              
-              <h4 class="sec-head">Grafik Peminjaman Koperasi Makmur</h4>
+
+              <h4 class="sec-head">Visi Koperasi Simpan Pinjam</h4>
               </a>
               <p>
                 Mengajak seluruh potensi yang ada dalam masyarakat dengan tanpa membedakan suku,ras,golongan dan agama,
@@ -748,8 +748,8 @@
                 <div class="single-testi">
                   <div class="testi-text">
                     <p>
-                    KSP Makmur membantu saya dalam mendirikan usaha dengan program pinjaman, 
-                    <br>kemudian saya salurkan untuk membangun usaha yang saya miliki
+                      KSP Makmur membantu saya dalam mendirikan usaha dengan program pinjaman,
+                      <br>kemudian saya salurkan untuk membangun usaha yang saya miliki
                     </p>
                     <h6></h6>
                   </div>
@@ -806,8 +806,8 @@
                 <p>
                   Call: (0333) 846328<br>
                   <span>Senin - Kamis (08.00 - 14.00)
-                  <br>Jumat         (08.00 - 10.30)
-                  <br>Sabtu         (08.00 - 13.00)</span>
+                    <br>Jumat (08.00 - 10.30)
+                    <br>Sabtu (08.00 - 13.00)</span>
                 </p>
               </div>
             </div>
