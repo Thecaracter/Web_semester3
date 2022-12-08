@@ -93,7 +93,7 @@
 		<div class="box box-default">
 			<div class="box-header with-border">
 				<center>
-					<h2 class="box-title"><strong>Visi Koperasi Simpan Pinjam</strong></h2>
+					<h2 class="box-title"><strong>Grafik Koperasi Simpan Pinjam</strong></h2>
 				</center>
 				<div class="box-tools pull-right">
 					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i
