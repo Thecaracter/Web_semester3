@@ -42,9 +42,9 @@ include 'funct.php';
                             <th>
                                 <center>Nama Pinjaman</center>
                             </th>
-                            <th>
+                            <!-- <th>
                                 <center>Besar Pinjaman</center>
-                            </th>
+                            </th> -->
                             <th>
                                 <center>Action</center>
                             </th>
@@ -69,9 +69,9 @@ include 'funct.php';
                             <td>
                                 <?php echo $data['nama_pinjaman']; ?>
                             </td>
-                            <td>
+                            <!-- <td>
                                 <?php echo $data['besar_simpanan'] ?>
-                            </td>
+                            </td> -->
                             <td>
                                 <center>
 
@@ -117,14 +117,15 @@ include 'funct.php';
             <div class="modal-body">
                 <form action="insert.php" method="post" id="insert_form">
                     <label>Nama Pinjaman</label>
-                    <input type="text" name="nm_simpanan" id="nama" class="form-control" />
+                    <input type="text" name="nama_pinjaman" id="nama" class="form-control" />
                     <br />
                     <label>Keterangan Pinjaman</label>
-                    <textarea style="resize:vertical" name="ket_simpanan" id="ketsim" class="form-control"></textarea>
+                    <textarea style="resize:vertical" name="keterangan_pinjaman" id="ketsim"
+                        class="form-control"></textarea>
                     <br />
-                    <label>Besar Pinjaman</label>
+                    <!-- <label>Besar Pinjaman</label>
                     <input type="text" name="besar_simpanan" id="besar" class="form-control" />
-                    <br />
+                    <br /> -->
                     <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
 
                 </form>
@@ -185,7 +186,7 @@ include 'funct.php';
 
             else {
             $.ajax({
-                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs '] ?> ">",
+                url: "<input type="hidden" name="requbp" value="<?php echo $_GET[' requbp '] ?> ">",
                 method: "POST",
                 data: $('#insert_form').serialize(),
                 beforeSend: function () {
