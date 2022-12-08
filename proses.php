@@ -300,6 +300,8 @@ if ($_POST['requbs'] == "add") {
 	}
 
 }
+
+//Aksi Karyawan
 if ($_POST['reqkar'] == "add") {
 	$id_anggota = $_POST['id'];
 	$nama = $_POST['nama'];
@@ -312,21 +314,21 @@ if ($_POST['reqkar'] == "add") {
 
 
 	if ($id_anggota != $_SESSION['id']) {
-		header('Location:page-form-anggota.php?reqa=add&id_salah=salah');
+		header('Location:page-form-karyawan.php?reqkar=add&id_salah=salah');
 	} else if ($nama == "") {
-		header('Location:page-form-anggota.php?reqa=add&nama=kosong');
+		header('Location:page-form-karyawan.php?reqkar=add&nama=kosong');
 	} else if ($alamat == "") {
-		header('Location:page-form-anggota.php?reqa=add&alamat=kosong');
+		header('Location:page-form-karyawan.php?reqkar=add&alamat=kosong');
 	} else if ($tgl_lahir == "") {
-		header('Location:page-form-anggota.php?reqa=add&tgl_lahir=kosong');
+		header('Location:page-form-karyawan.php?reqkar=add&tgl_lahir=kosong');
 	} else if ($tmp_lahir == "") {
-		header('Location:page-form-anggota.php?reqa=add&tmp_lahir=kosong');
+		header('Location:page-form-karyawan.php?reqkar=add&tmp_lahir=kosong');
 	} else if ($j_kel == "") {
-		header('Location:page-form-anggota.php?reqa=add&j_kel=kosong');
+		header('Location:page-form-karyawan.php?reqkar=add&j_kel=kosong');
 	} else if ($no_telp == "") {
-		header('Location:page-form-anggota.php?reqa=add&no_telp=kosong');
+		header('Location:page-form-karyawan.php?reqkar=add&no_telp=kosong');
 	} else if ($besar_simpanan != "50000") {
-		header('Location:page-form-anggota.php?reqa=add&besar_simpanan=salah');
+		header('Location:page-form-karyawan.php?reqkar=add&besar_simpanan=salah');
 	} else {
 		if (isset($_FILES['foto-profile'])) {
 
@@ -345,7 +347,7 @@ if ($_POST['reqkar'] == "add") {
 			// $up = $user->tambahProduk($idProduk, $namaProduk, $hargaProduk, $newImage, $cid);
 			if ($tambah_anggota == true) {
 				echo 'berhasil';
-				header('Location:page-anggota.php');
+				header('Location:page-karyawan.php');
 			} else {
 				echo 'gagal';
 			}

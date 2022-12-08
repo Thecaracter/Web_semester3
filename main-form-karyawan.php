@@ -15,7 +15,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 	$button = "<i class='fa fa-save'></i> Update";
 } elseif (isset($_GET['reqa']) && $_GET['reqa'] == 'add') {
 	$namaform = "<i class='fa fa-plus'></i> Tambah";
-	$carikode = mysqli_query($conn, "SELECT MAX(id) FROM karyawan") or die(mysqli_error($coon));
+	$carikode = mysqli_query($conn, "SELECT MAX(id) FROM karyawan") or die(mysqli_error($conn));
 	$datakode = mysqli_fetch_array($carikode);
 	if ($datakode) {
 		$nilaikode = substr($datakode[0], 3);
@@ -93,27 +93,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 					Nomor Handphone Anda Kosong!!!
 					</div>';
-                } else if (isset($_GET['nm_simpanan'])) {
-	                echo '<div class="alert alert-danger">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Nama Simpanan Tidak Dapat di Ubah!!!
-					</div>';
-                } else if (isset($_GET['besar_simpanan'])) {
-	                echo '<div class="alert alert-danger">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Besar Simpanan Tidak Dapat di Ubah!!!
-					</div>';
-                } else if (isset($_GET['tgl_simpanan'])) {
-	                echo '<div class="alert alert-danger">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Tanggal Simpanan Tidak Dapat di Ubah!!!
-					</div>';
-                } else if (isset($_GET['ket_simpanan'])) {
-	                echo '<div class="alert alert-danger">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Keterangan Simpanan Tidak Dapat di Ubah!!!
-					</div>';
-                }
+                } 
 
                 ?>
 				<form role="form" action="proses.php" method="POST" enctype='multipart/form-data'>
@@ -135,7 +115,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 						</div>
 						<div class="form-group">
 							<label>Alamat</label>
-							<textarea class="form-control" name="alamat" rows="3"
+							<textarea class="form-control" style="resize:vertical" name="alamat" rows="3"
 								placeholder="Alamat"><?php echo $alamat; ?></textarea>
 						</div>
 						<label for="exampleInputEmail1">Tanggal Lahir</label>

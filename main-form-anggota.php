@@ -67,17 +67,17 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
             } else if (isset($_GET['nama'])) {
 	            echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Nama anda belum di isi!!!
+					Nama Anda Belum Di Isi!!!
 					</div>';
             } else if (isset($_GET['alamat'])) {
 	            echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Alamat anda belum di isi!!!
+					Alamat Anda Belum Di Isi!!!
 					</div>';
             } else if (isset($_GET['tgl_lahir'])) {
 	            echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Tanggal Lahir anda belum di isi!!!
+					Tanggal Lahir Anda Belum Di Isi!!!
 					</div>';
             } else if (isset($_GET['tmp_lahir'])) {
 	            echo '<div class="alert alert-danger">
@@ -87,7 +87,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
             } else if (isset($_GET['j_kel'])) {
 	            echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Pilih jenis kelamin dengan tepat!!!
+					Pilih Jenis Kelamin Dengan Tepat!!!
 					</div>';
             } else if (isset($_GET['no_telp'])) {
 	            echo '<div class="alert alert-danger">
@@ -97,22 +97,22 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
             } else if (isset($_GET['nm_simpanan'])) {
 	            echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Nama Simpanan Tidak Dapat di Ubah!!!
+					Nama Simpanan Tidak Dapat Di Ubah!!!
 					</div>';
             } else if (isset($_GET['besar_simpanan'])) {
 	            echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Besar Simpanan Tidak Dapat di Ubah!!!
+					Besar Simpanan Tidak Dapat Di Ubah!!!
 					</div>';
             } else if (isset($_GET['tgl_simpanan'])) {
 	            echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Tanggal Simpanan Tidak Dapat di Ubah!!!
+					Tanggal Simpanan Tidak Dapat Di Ubah!!!
 					</div>';
             } else if (isset($_GET['ket_simpanan'])) {
 	            echo '<div class="alert alert-danger">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-					Keterangan Simpanan Tidak Dapat di Ubah!!!
+					Keterangan Simpanan Tidak Dapat Di Ubah!!!
 					</div>';
             }
 
@@ -136,7 +136,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 						</div>
 						<div class="form-group">
 							<label>Alamat</label>
-							<textarea class="form-control" name="alamat" rows="3"
+							<textarea class="form-control" style="resize:vertical" name="alamat" rows="3"
 								placeholder="Alamat"><?php echo $alamat; ?></textarea>
 						</div>
 						<label for="exampleInputEmail1">Tanggal Lahir</label>
@@ -170,7 +170,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 						<div class="form-group">
 							<label for="exampleInputPassword1">Nomor Handphone</label>
 							<input type="number" class="form-control" id="exampleInputPassword1"
-								value="<?php echo $no_telp ?>" placeholder="Nomor Handphone" name="no_telp">
+								value="<?php echo $no_telp ?>" placeholder="08123456789" name="no_telp">
 						</div>
 						<div>
 							<br>

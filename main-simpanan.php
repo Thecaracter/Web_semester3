@@ -74,7 +74,7 @@ include 'funct.php';
                 <center>
                   <a href="proses.php?id_simpanan=<?php echo $data['id_simpanan']; ?>&reqs=dell"
                     title="Hapus Simpanan Ini" class="btn btn-danger btn-sm"
-                    onClick="returnconfirm();"><span class="glyphicon glyphicon-trash">
+                    onClick="konfirmasi();"><span class="glyphicon glyphicon-trash">
                       Hapus</span> </a>
                 </center>
               </td>
@@ -84,7 +84,7 @@ include 'funct.php';
               }
               ?>
             <script>
-            function returnconfirm(){
+            function konfirmasi(){
               swal({
               title: "Anda Yakin Akan Berhenti?",
               text: "Data Tidak Bisa Dipulihkan Setelah Di Hapus",

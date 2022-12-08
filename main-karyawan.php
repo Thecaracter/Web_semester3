@@ -67,7 +67,7 @@ include 'funct.php';
               </td>
               <td>
                 <center>
-                  <a href="page-form-anggota.php?id_anggota=<?php echo $data['id_anggota']; ?>&reqa=edit"
+                  <a href="page-form-karyawan.php?id_anggota=<?php echo $data['id_anggota']; ?>&reqa=edit"
                     title="Edit Data Ini" class="btn btn-danger btn-sm"><i class="fa fa-edit "></i> Edit
                   </a>
                   <a href="proses.php?id_anggota=<?php echo $data['id_anggota']; ?>&reqa=dell" title="Lihat Detail"
