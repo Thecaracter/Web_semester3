@@ -209,8 +209,8 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="well-middle">
             <div class="section-headline text-center">
-
-              <h4 class="sec-head">Visi Koperasi Simpan Pinjam</h4>
+              
+              <h4 class="sec-head">Grafik Peminjaman Koperasi Makmur</h4>
               </a>
               <p>
                 Mengajak seluruh potensi yang ada dalam masyarakat dengan tanpa membedakan suku,ras,golongan dan agama,
