@@ -31,7 +31,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 	$j_kel = '';
 	$no_telp = '';
 	$tgl_simpanan = date('Y-m-d');
-	$button = "<i class='fa fa-save'></i> Simpan";
+	$button = "<i class='fa fa-save' ></i> Simpan";
 }
 ?>
 <div class="content-wrapper">
@@ -160,7 +160,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 					<!-- /.box-body -->
 
 					<div class="box-footer">
-						<button type="submit" class="btn btn-primary">
+						<button type="submit" class="btn btn-primary" style="box-shadow: 0 3px 0 0 #007299; padding:10px 16px; ">
 							<?php echo $button ?>
 						</button>
 					</div>

@@ -158,7 +158,7 @@ if (isset($_GET['reqs']) && $_GET['reqs'] == 'add')
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary"><?php echo $button ?></button>
+                <button type="submit" class="btn btn-primary" style="box-shadow: 0 3px 0 0 #007299; padding:10px 16px; " ><?php echo $button ?></button>
               </div>
             </form>
             </div>

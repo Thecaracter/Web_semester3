@@ -132,7 +132,7 @@ if (isset($_SESSION["ses_username"]) == "") {
             <a href="page-pinjaman.php"><i class="fa fa-circle-o"></i> Data Pinjaman</a>
           </li>
           <li>
-            <a href="page-form-peminjaman.php"><i class="fa fa-circle-o"></i> Form Pinjaman
+            <a href="page-form-peminjaman.php?reqpin=add"><i class="fa fa-circle-o"></i> Form Pinjaman
             </a>
           </li>
         </ul>
