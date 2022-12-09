@@ -160,6 +160,7 @@ if ($_POST['reqs'] == "add") {
 if ($_GET['reqs'] == "dell") {
 	$id_simpanan = $_GET['id_simpanan'];
 	mysqli_query($conn, "DELETE FROM simpanan where id_simpanan='" . $id_simpanan . "'");
+	$_SESSION["sukses"] = 'Data Berhasil Di Hapus';
 	header('Location:page-simpanan.php');
 	exit;
 }
