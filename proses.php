@@ -107,6 +107,7 @@ if ($_GET['reqa'] == "dell") {
 	// $sql_pin = mysqli_query("Select * From pinjam where id_anggota='".$id_anggota."'");
 	$data_pin = mysqli_fetch_array($sql_pin);
 	$jumlah_pin = mysqli_num_rows($sql_pin);
+	$_SESSION["suksess"] = 'Data Berhasil Di Hapus';
 
 	if ($jumlah_pin == 0 || $data_pin['ket'] == 1) {
 		$sql = "UPDATE anggota set status='0' where id_anggota='" . $id_anggota . "'";
