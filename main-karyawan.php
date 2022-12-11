@@ -68,14 +68,14 @@ include 'funct.php';
               <td>
                 <center>
                   <a href="page-form-karyawan.php?id_anggota=<?php echo $data['id_anggota']; ?>&reqa=edit"
-                    title="Edit Data Ini" class="btn btn-danger btn-sm"><i class="fa fa-edit "></i> Edit
+                    title="Edit Data Ini" class="btn btn-sm" style="background: darkslateblue;color:white;"><i class="fa fa-edit "></i> Edit
                   </a>
                   <a href="proses.php?id_anggota=<?php echo $data['id_anggota']; ?>&reqa=dell" title="Lihat Detail"
-                    class="btn btn-success btn-sm"><span class="fa fa-info"> Detail</span>
+                    class="btn btn-info btn-sm"><span class="fa fa-info"> Detail</span>
                   </a>
                   <a href="proses.php?id_anggota=<?php echo $data['id_anggota']; ?>&reqa=dell"
-                    title="Berhenti Jadi Karyawan" class="btn btn-warning btn-sm"
-                    onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-share"> Berhenti</span>
+                    title="Berhenti Jadi Karyawan" class="btn btn-danger btn-sm"
+                    onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-times"> Berhenti</span>
                   </a>
                 </center>
               </td>

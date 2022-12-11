@@ -76,13 +76,13 @@ include 'funct.php';
                                 <center>
 
                                     <a type="button" name="edit" value="Edit" id="<?php echo $row["id"]; ?>"
-                                        title="Edit Data ini" class="btn btn-danger btn-sm"><i class="fa fa-edit "></i>
+                                        title="Edit Data ini" class="btn btn-sm" style="background: darkslateblue;color:white;"><i class="fa fa-edit "></i>
                                         Edit
                                     </a>
 
                                     <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
-                                        title="Hapus Simpanan" class="btn btn-warning btn-sm"
-                                        onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-trash">
+                                        title="Hapus Simpanan" class="btn btn-danger btn-sm"
+                                        onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-trash-o">
                                             Hapus</span>
                                     </a>
 
