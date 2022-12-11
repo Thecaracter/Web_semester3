@@ -115,7 +115,7 @@ include 'funct.php';
                 <h4 class="modal-title">Input Data</h4>
             </div>
             <div class="modal-body">
-                <form action="insert_ubahsimpanan.php" method="post" id="insert_form">
+                <form action="./proses/insert_ubahsimpanan.php" method="post" id="insert_form">
 
                     <label>Nama Simpanan</label>
                     <input type="text" name="nm_simpanan" id="nama" class="form-control" />
@@ -186,7 +186,7 @@ include 'funct.php';
 
             else {
             $.ajax({
-                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs '] ?> ">",
+                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs ']?> ">",
                 method: "POST",
                 data: $('#insert_form').serialize(),
                 beforeSend: function () {

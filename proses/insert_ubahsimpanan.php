@@ -1,5 +1,5 @@
 <?php
-require "koneksi.php";
+require "../koneksi.php";
 if (!empty($_POST)) {
     $output = '';
     $nama = $_POST["nm_simpanan"];
@@ -11,7 +11,7 @@ VALUES('$nama', '$ket', '$bsr')
 ";
 
     $result = mysqli_query($conn, $query);
-    header("location: page-ubahsimpanan.php");
+    header("location: ../page-ubahsimpanan.php");
 
 
 }
