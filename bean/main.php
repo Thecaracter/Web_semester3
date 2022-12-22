@@ -90,75 +90,40 @@
 			</div>
 			<!-- ./col -->
 		</div>
-		<div class="box box-default">
-			<div class="box-header with-border">
-				<center>
-					<h2 class="box-title"><strong>Grafik Koperasi Simpan Pinjam</strong></h2>
-				</center>
-				<div class="box-tools pull-right">
-					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-							class="fa fa-minus"></i></button>
-				</div>
-			</div>
-			<div class="box-body" style="display: block;">
-				<ol style="text-align:justify; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;">
-					<li>
-						Mengajak seluruh potensi yang ada dalam masyarakat dengan tanpa membedakan suku,ras,golongan dan
-						agama, agar mereka dapat bersama-sama, bersatu padu dan beritikad baik dalam membangun ekonomi
-						kerakyatan secara bergotong royong dalam bentuk koperasi.
-					</li>
-					<li>
-						Membantu para pedagang kecil dan menengah didalam mobilisasi permodalan demi kelancaran usaha
-						sehingga dapat meningkatkan kesejahteraan mereka.
-					</li>
-					<li>
-						Turut membantu pembangunan ekonomi dan menunjang pelaksanaan kegiatan usaha secara aktif dengan
-						mengajak mitra usaha lainnya baik BUMN,swasta, perbankan maupun gerakan koperasi lainnya.
-					</li>
-					<li>
-						Sebagai penyeimbang system perekonomian Indonesia dalam bentuk organisasi masyarakat.
-					</li>
-					<li>
-						Memberikan kredit berbunga rendah kepada para pedagang kecil.
-					</li>
-				</ol>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Grafik Oprasional KSP</h2>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">Grafik Batang Simpanan</div>
+				<div class="panel-body"><iframe src="barchartsjs.php" width="100%" height="300"></iframe></div>
 			</div>
 		</div>
-		<div class="box box-default">
-			<div class="box-header with-border">
-				<center>
-					<h2 class="box-title"><strong>Misi Koperasi Simpan Pinjam</strong></h2>
-				</center>
-				<div class="box-tools pull-right">
-					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-							class="fa fa-minus"></i></button>
-				</div>
-			</div>
-			<div class="box-body" style="display: block;">
-				<ol style="text-align:justify; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;">
-					<li>
-						Mewujudkan SDM pengelola Koperasi dan UMKM yang Profesional.
-					</li>
-					<li>
-						Mewujudkan iklim usaha yang kondusif bagi perkembangan Koperasi dan UMKM.
-					</li>
-					<li>
-						Menumbuh kembangkan lembaga keuangan mikro (KOPERASI SIMPAN PINJAM/ UNIT SIMPAN PINJAM
-						KOPERASI-Koperasi) sampai di wilayah perdesaan.
-					</li>
-					<li>
-						Membangun dan mengembangkan jaringan distribusi dan networking ekonomi sampai perdesaan.
-					</li>
-					<li>
-						Mengembangkan Koperasi dan UMKM berbasis produk unggulan daerah yang tertumpu pada sumber daya
-						lokal.
-					</li>
-					<li>
-						Penumbuhan wirausaha baru dan perluasan kesempatan kerja.
-					</li>
-				</ol>
+	</div>
+</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">Grafik Garis Pinjaman</div>
+				<div class="panel-body"><iframe src="linechart.php" width="100%" height="300"></iframe></div>
 			</div>
 		</div>
+	</div>
+</div>
+</body>
+</html>
 		<div class="box box-default">
 			<div class="box-header with-border">
 				<center>
