@@ -75,9 +75,13 @@ include 'funct.php';
                             <td>
                                 <center>
 
-                                    <a type="button" name="edit" value="Edit" id="<?php echo $row["id"]; ?>"
-                                        title="Edit Data ini" class="btn btn-sm" style="background: darkslateblue;color:white;"><i class="fa fa-edit "></i>
+                                    <a type="button" name="edit" value="Edit" title="Edit Data ini" class="btn btn-sm"
+                                        id="<?php echo $row["id"]; ?>" style="background: darkslateblue;color:white;"><i
+                                            class="fa fa-edit "></i>
                                         Edit
+                                    </a>
+                                    <a><input type="button" name="edit" value="Edit" id="<?php echo $row["id"]; ?>"
+                                            class="btn btn-warning btn-xs edit_data" />
                                     </a>
 
                                     <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
@@ -186,7 +190,7 @@ include 'funct.php';
 
             else {
             $.ajax({
-                url: "<input type="hidden" name="requbs" value="<?php echo $_GET[' requbs ']?> ">",
+                url: "./proses/insert_ubahsimpanan.php",
                 method: "POST",
                 data: $('#insert_form').serialize(),
                 beforeSend: function () {
