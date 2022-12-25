@@ -16,15 +16,7 @@
         <div class="col-md-12">
           <div class="box box-info">
             <div class="box-header">
-              <h3 class="box-title">
-                <small>PINJAMAN</small>
-              </h3>
-              <!-- tools box -->
-              <div class="pull-right box-tools">
-                <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
-                  <i class="fa fa-minus"></i></button>
-              </div>
-              <!-- /. tools -->
+              <h3 class="box-title">Daftar Angsuran</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body pad" style="display: block;">

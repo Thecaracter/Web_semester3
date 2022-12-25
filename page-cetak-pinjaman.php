@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Koperasi | Form Simpanan</title>
+  <title>Koperasi | Cetak Pinjaman</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -40,14 +40,14 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-  <?php include 'header.php' ?>
+  <?php include './bean/header.php' ?>
   <!-- Left side column. contains the logo and sidebar -->
-  <?php  include 'menu.php' ?>
+  <?php  include './bean/menu.php' ?>
 
   <!-- Content Wrapper. Contains page content -->
   <?php include 'main-cetak-pinjaman.php'; ?>
   <!-- /.content-wrapper -->
-  <?php include 'footer.php'; ?>
+  <?php include './bean/footer.php'; ?>
   <!-- /.control-sidebar -->
 </div>
 <!-- Bootstrap 3.3.7 -->

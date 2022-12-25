@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Koperasi | Form Simpanan</title>
+  <title>Koperasi | Cetak Simpanan</title>
   <link href="img/logo_koperasi.png" rel="icon">
   <link href="img/logo_koperasi.png" rel="apple-touch-icon">
   <!-- Tell the browser to be responsive to screen width -->
