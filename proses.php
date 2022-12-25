@@ -275,7 +275,7 @@ if ($_GET['reqang'] == 'dell') {
 	exit;
 }
 if ($_GET['requbs'] == "dell") {
-	$id_ubahsimpanan = $_GET['id_k_pinjaman'];
+	$id_ubahsimpanan = $_GET['id'];
 	mysqli_query($conn, "DELETE FROM K_simpanan where id='" . $id_ubahsimpanan . "'");
 	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
 	header('Location:page-ubahsimpanan.php');

@@ -75,13 +75,11 @@ include 'funct.php';
                             <td>
                                 <center>
 
-                                    <a type="button" name="edit" value="Edit" title="Edit Data ini" class="btn btn-sm"
-                                        id="<?php echo $row["id"]; ?>" style="background: darkslateblue;color:white;"><i
+                                    <a type="button" name="edit" value="Edit" data-toggle="modal"
+                                        data-target="#editModal<?php echo $row["id"]; ?>" title="Edit Data ini"
+                                        class="btn btn-sm" style="background: darkslateblue;color:white;"><i
                                             class="fa fa-edit "></i>
                                         Edit
-                                    </a>
-                                    <a><input type="button" name="edit" value="Edit" id="<?php echo $row["id"]; ?>"
-                                            class="btn btn-warning btn-xs edit_data" />
                                     </a>
 
                                     <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
@@ -93,10 +91,43 @@ include 'funct.php';
                                 </center>
                             </td>
                         </tr>
-                        <?php
+
+                        <div id="editModal<?php echo $row["id"]; ?>" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Input Data</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="./proses/insert_ubahsimpanan.php" method="post" id="insert_form">
+
+                                            <label>Nama Simpanan</label>
+                                            <input type="text" value=" <?php echo $data['nm_simpanan']; ?>"
+                                                name="nm_simpanan" id="nama" class="form-control" />
+                                            <br />
+                                            <label>Keterangan Simpanan</label>
+                                            <textarea style="resize:vertical" value=" " name="ket_simpanan" id="ketsim"
+                                                class="form-control"><?php echo $data['ket_simpanan']; ?></textarea>
+                                            <br />
+                                            <label>Besar Simpanan</label>
+                                            <input type="text" value=" <?php echo $data['besar_simpanan']; ?>"
+                                                name="besar_simpanan" id="besar" class="form-control" />
+                                            <br />
+                                            <input type="submit" name="insert" id="insert" value="Insert"
+                                                class="btn btn-success" />
+
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                <?php
                                 $no++;
                             }
-                            ?>
+                                ?>
 
                     </tbody>
                 </table>
@@ -159,21 +190,7 @@ include 'funct.php';
 </div>
 
 
-<div id="editModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Edit Data Karyawan</h4>
-            </div>
-            <div class="modal-body" id="form_edit">
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
 </div>
 
 <script>
