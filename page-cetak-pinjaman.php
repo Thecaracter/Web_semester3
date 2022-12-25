@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Koperasi | Cetak Angsuran</title>
-  <link href="img/logo_koperasi.png" rel="icon">
-  <link href="img/logo_koperasi.png" rel="apple-touch-icon">
+  <title>Koperasi | Form Simpanan</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -42,14 +40,14 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-  <?php include './bean/header.php' ?>
+  <?php include 'header.php' ?>
   <!-- Left side column. contains the logo and sidebar -->
-  <?php  include './bean/menu.php' ?>
+  <?php  include 'menu.php' ?>
 
   <!-- Content Wrapper. Contains page content -->
-  <?php include 'main-cetak-angsuran.php'; ?>
+  <?php include 'main-cetak-pinjaman.php'; ?>
   <!-- /.content-wrapper -->
-  <?php include './bean/footer.php'; ?>
+  <?php include 'footer.php'; ?>
   <!-- /.control-sidebar -->
 </div>
 <!-- Bootstrap 3.3.7 -->
