@@ -150,7 +150,7 @@ include 'funct.php';
                 <h4 class="modal-title">Input Data</h4>
             </div>
             <div class="modal-body">
-                <form action="./proses/insert_ubahsimpanan.php" method="post" id="insert_form">
+                <form action="./proses/edit_ubahsimpanan.php" method="post" id="insert_form">
 
                     <label>Nama Simpanan</label>
                     <input type="text" name="nm_simpanan" id="nama" class="form-control" />

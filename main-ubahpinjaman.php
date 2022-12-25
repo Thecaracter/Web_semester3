@@ -75,9 +75,10 @@ include 'funct.php';
                             <td>
                                 <center>
 
-                                    <a type="button" name="edit" value="Edit" id="<?php echo $row["id"]; ?>"
-                                        title="Edit Data Ini" class="btn btn-sm"
-                                        style="background: darkslateblue;color:white;"><i class="fa fa-edit "></i>
+                                    <a type="button" name="edit" value="Edit" data-toggle="modal"
+                                        data-target="#editModal<?php echo $row["id_k_pinjaman"]; ?>"
+                                        title="Edit Data ini" class="btn btn-sm"
+                                        style="background: darkslateblue;color:white;"></i>
                                         Edit
                                     </a>
 
@@ -89,10 +90,37 @@ include 'funct.php';
                                 </center>
                             </td>
                         </tr>
-                        <?php
+                        <div id="editModal<?php echo $row["id"]; ?>" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Input Data</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="./proses/insert_ubahsimpanan.php" method="post" id="insert_form">
+
+                                            <label>Nama Pinjaman</label>
+                                            <input type="text" value=" <?php echo $data['nama_pinjaman']; ?>"
+                                                name="nama_pinjaman" id="nama" class="form-control" />
+                                            <br />
+                                            <label>Keterangan Pinjaman</label>
+                                            <textarea style="resize:vertical" name="keterangan_pinjaman" id="ketsim"
+                                                class="form-control"><?php echo $data['keterangan_pinjaman']; ?></textarea>
+                                            <br />
+                                            <input type="submit" name="insert" id="insert" value="Insert"
+                                                class="btn btn-success" />
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                <?php
                                 $no++;
                             }
-                            ?>
+                                ?>
 
                     </tbody>
                 </table>
