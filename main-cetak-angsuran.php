@@ -101,7 +101,7 @@
 			<?php
 			}else
 			{
-				echo '<div class="alert alert-danger" style="height:100px; font-size:50px;" align="center">
+				echo '<div class="alert alert-danger" style="height: 80px; font-size:40px;" align="center">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 					DATA BELUM ADA!!!
 					</div>';

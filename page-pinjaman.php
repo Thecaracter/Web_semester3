@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Koperasi | Page Petugas</title>
+  <title>Koperasi | Page Pinjaman</title>
   <link href="img/logo_koperasi.png" rel="icon">
   <link href="img/logo_koperasi.png" rel="apple-touch-icon">
   <!-- Tell the browser to be responsive to screen width -->

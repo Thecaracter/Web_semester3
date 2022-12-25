@@ -235,6 +235,7 @@ if(isset($_GET['reqang']) && $_GET['reqang'] == 'add')
                   </div>
                   <input type="text" class="form-control" id="tgl_pembayaran" name="tgl_pembayaran"data-inputmask="'alias': 'yyyy/mm/dd'" data-mask="">
                 </div>
+				<br>
                <div class="form-group">
                   <label>Angsuran Ke</label>
                   <input type="number" value="<?php echo $angsuran_ke ?>" id="<?php if(isset($_GET['reqang']) && $_GET['reqang'] == 'add'){ ?>angsuran_ke<?php } ?>" class="form-control" name="angsuran_ke" rows="3" placeholder="Angsuran Ke">
@@ -265,8 +266,9 @@ if(isset($_GET['reqang']) && $_GET['reqang'] == 'add')
 					$("#tgl_pembayaran").val(tgl_pembayaran);
 				  });
 				</script>
+				<br>
                 <div class="form-group">
-                  <label>besar angsuran</label>
+                  <label>Besar Angsuran</label>
                   <input type="number" id="besar_angsuran" value="<?php echo $besar_angsuran ?>" class="form-control"Y rows="3" placeholder="Besar Angsuran" name="besar_angsuran">
                 </div>
                 
@@ -274,7 +276,7 @@ if(isset($_GET['reqang']) && $_GET['reqang'] == 'add')
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary"><?php echo $button ?></button>
+                <button type="submit" class="btn btn-primary" style="box-shadow: 0 3px 0 0 #007299; padding:10px 16px; "><?php echo $button ?></button>
               </div>
             </form>
             </div>
