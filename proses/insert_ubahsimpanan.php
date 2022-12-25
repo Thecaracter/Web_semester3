@@ -6,7 +6,7 @@ if (!empty($_POST)) {
     $ket = $_POST["ket_simpanan"];
     $bsr = $_POST["besar_simpanan"];
     $query = "
-INSERT INTO k_simpanan(nm_simpanan, ket_simpanan, besar_simpanan)
+INSERT INTO k_pinjaman(nm_simpanan, ket_simpanan, besar_simpanan)
 VALUES('$nama', '$ket', '$bsr')
 ";
 

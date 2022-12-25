@@ -275,10 +275,18 @@ if ($_GET['reqang'] == 'dell') {
 	exit;
 }
 if ($_GET['requbs'] == "dell") {
-	$id_ubahsimpanan = $_GET['id'];
+	$id_ubahsimpanan = $_GET['id_k_pinjaman'];
 	mysqli_query($conn, "DELETE FROM K_simpanan where id='" . $id_ubahsimpanan . "'");
 	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
 	header('Location:page-ubahsimpanan.php');
+	exit;
+
+}
+if ($_GET['requbp'] == "dell") {
+	$id_ubahsimpanan = $_GET['id'];
+	mysqli_query($conn, "DELETE FROM K_pinjaman where id_k_pinjaman='" . $id_ubahsimpanan . "'");
+	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
+	header('Location:page-ubahpinjaman.php');
 	exit;
 
 }
@@ -377,6 +385,7 @@ if ($_POST['requbp'] == "add") {
 	}
 
 }
+
 if ($_POST['reqp'] == "add") {
 	$id_karyawan = $_POST['id_karyawan'];
 	$nama = $_POST['nama'];

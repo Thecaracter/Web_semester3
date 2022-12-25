@@ -42,9 +42,9 @@ include 'funct.php';
                             <th>
                                 <center>Nama Pinjaman</center>
                             </th>
-                            <!-- <th>
-                                <center>Besar Pinjaman</center>
-                            </th> -->
+                            <th>
+                                <center>Keterangan Pinjaman</center>
+                            </th>
                             <th>
                                 <center>Action</center>
                             </th>
@@ -69,21 +69,21 @@ include 'funct.php';
                             <td>
                                 <?php echo $data['nama_pinjaman']; ?>
                             </td>
-                            <!-- <td>
-                                <?php echo $data['besar_simpanan'] ?>
-                            </td> -->
+                            <td>
+                                <?php echo $data['keterangan_pinjaman']; ?>
+                            </td>
                             <td>
                                 <center>
 
                                     <a type="button" name="edit" value="Edit" id="<?php echo $row["id"]; ?>"
-                                        title="Edit Data Ini" class="btn btn-sm" style="background: darkslateblue;color:white;"><i class="fa fa-edit "></i>
+                                        title="Edit Data Ini" class="btn btn-sm"
+                                        style="background: darkslateblue;color:white;"><i class="fa fa-edit "></i>
                                         Edit
                                     </a>
 
-                                    <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
-                                        title="Hapus Pinjaman" class="btn btn-danger btn-sm"
-                                        onClick="return confirm('Yakin mau berhenti?');"><span class="fa fa-trash">
-                                            Hapus</span>
+                                    <a href="proses.php?id=<?php echo $data['id_k_pinjaman']; ?>&requbp=dell"
+                                        title="Hapus Pinjaman" class="btn btn-danger btn-sm">
+                                        Hapus</span>
                                     </a>
 
                                 </center>
@@ -115,7 +115,7 @@ include 'funct.php';
                 <h4 class="modal-title">Input Data</h4>
             </div>
             <div class="modal-body">
-                <form action="insert.php" method="post" id="insert_form">
+                <form action="./proses/insert_ubahpinjaman.php" method="post" id="insert_form">
                     <label>Nama Pinjaman</label>
                     <input type="text" name="nama_pinjaman" id="nama" class="form-control" />
                     <br />
@@ -123,9 +123,7 @@ include 'funct.php';
                     <textarea style="resize:vertical" name="keterangan_pinjaman" id="ketsim"
                         class="form-control"></textarea>
                     <br />
-                    <!-- <label>Besar Pinjaman</label>
-                    <input type="text" name="besar_simpanan" id="besar" class="form-control" />
-                    <br /> -->
+
                     <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
 
                 </form>
