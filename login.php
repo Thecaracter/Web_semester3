@@ -15,8 +15,8 @@ if (isset($_SESSION['ses_username']) != '') {
 <head>
   <title>Login Form Design</title>
   <link rel="stylesheet" type="text/css" href="style/style_login.css" />
-  <link href="img/logo-koperasi.png" rel="icon">
-  <link href="img/logo-koperasi.png" rel="apple-touch-icon">
+  <link href="img/logo_koperasi.png" rel="icon">
+  <link href="img/logo_koperasi.png" rel="apple-touch-icon">
 </head>
 
 <body>
@@ -25,7 +25,7 @@ if (isset($_SESSION['ses_username']) != '') {
       <source src="asset/anjay.mp4" type="video/mp4" />
     </video>
     <div class="login-box">
-      <img src="asset/koperasi.png" class="avatar" />
+      <img src="asset/logo.png" class="avatar" />
       <h1>Login Here</h1>
       <form action="login.php" method="POST">
         <p>Username</p>
