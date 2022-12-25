@@ -93,20 +93,22 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 					Nomor Handphone Anda Kosong!!!
 					</div>';
-                } 
+                }
 
                 ?>
 				<form role="form" action="proses.php" method="POST" enctype='multipart/form-data'>
-					<input type="hidden" name="reqa" value="<?php echo $_GET['reqa'] ?>">
+					<input type="hidden" name="reqp" value="<?php echo $_GET['reqa'] ?>">
 					<input type="hidden" name="id" value="<?php echo $id ?>">
 					<div class="box-body">
 						<div class="form-group">
 							<label for="exampleInputEmail1">ID Anggota</label>
-							<input type="text" class="form-control" name="id_anggota" id="exampleInputEmail1"
+							<input type="text" class="form-control" name="id_karyawan" id="exampleInputEmail1"
 								placeholder="ID" value="<?php echo $hasilkode ?>" <?php if (
-                                   	$_GET['reqa']=='edit' &&
-                                   	isset($_GET['reqa'])=='edit'
-                                   ) { echo 'disabled'; } ?>>
+                                   	$_GET['reqa'] == 'edit' &&
+                                   	isset($_GET['reqa']) == 'edit'
+                                   ) {
+	                                   echo 'disabled';
+                                   } ?>>
 						</div>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Nama</label>
@@ -136,12 +138,16 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 							<label>Jenis Kelamin</label>
 							<select class="form-control" name="j_kel">
 								<option selected value="">-- Pilih Jenis Kelamin --</option>
-								<option value="Laki-Laki" <?php if ($j_kel=="Laki-Laki") { echo 'selected="selected"'; }
+								<option value="Laki-Laki" <?php if ($j_kel == "Laki-Laki") {
+	                                echo 'selected="selected"';
+                                }
                                 ?>
-									>Laki-Laki</option>
-								<option value="Perempuan" <?php if ($j_kel=="Perempuan") {                     echo 'selected="selected"';                     }
+									?? ?? ??>Laki-Laki</option>
+								<option value="Perempuan" <?php if ($j_kel == "Perempuan") {
+	                                echo 'selected="selected"';
+                                }
                                 ?>
-									>Perempuan</option>
+									?? ?? ??>Perempuan</option>
 							</select>
 						</div>
 						<div class="form-group">
@@ -160,7 +166,8 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 					<!-- /.box-body -->
 
 					<div class="box-footer">
-						<button type="submit" class="btn btn-primary" style="box-shadow: 0 3px 0 0 #007299; padding:10px 16px; ">
+						<button type="submit" class="btn btn-primary"
+							style="box-shadow: 0 3px 0 0 #007299; padding:10px 16px; ">
 							<?php echo $button ?>
 						</button>
 					</div>

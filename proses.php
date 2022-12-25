@@ -377,4 +377,72 @@ if ($_POST['requbp'] == "add") {
 	}
 
 }
+if ($_POST['reqp'] == "add") {
+	$id_karyawan = $_POST['id_karyawan'];
+	$nama = $_POST['nama'];
+	$alamat = $_POST['alamat'];
+	$no_telp = $_POST['no_telp'];
+	$j_kel = $_POST['j_kel'];
+	$tmp_lahir = $_POST['tmp_lahir'];
+	$tgl_lahir = $_POST['tgl_lahir'];
+	// $ket = $_POST['ket'];
+	// $nm_simpanan = $_POST['nm_simpanan'];
+	// $besar_simpanan = $_POST['besar_simpanan'];
+	// $tgl_simpanan = $_POST['tgl_simpanan'];
+	// $ket_simpanan = $_POST['ket_simpanan'];
+	// $bln = date('m');
+	// $tgl_skrg = date('Y/m/d');
+
+	if ($id_anggota != $_SESSION['id_anggota']) {
+		header('Location:page-form-anggota.php?reqa=add&id_salah=salah');
+	} else if ($nama == "") {
+		header('Location:page-form-anggota.php?reqa=add&nama=kosong');
+	} else if ($alamat == "") {
+		header('Location:page-form-anggota.php?reqa=add&alamat=kosong');
+	} else if ($tgl_lahir == "") {
+		header('Location:page-form-anggota.php?reqa=add&tgl_lahir=kosong');
+	} else if ($tmp_lahir == "") {
+		header('Location:page-form-anggota.php?reqa=add&tmp_lahir=kosong');
+	} else if ($j_kel == "") {
+		header('Location:page-form-anggota.php?reqa=add&j_kel=kosong');
+	} else if ($no_telp == "") {
+		header('Location:page-form-anggota.php?reqa=add&no_telp=kosong');
+		// } else if ($nm_simpanan != "Simpanan Pokok") {
+		// 	header('Location:page-form-anggota.php?reqa=add&nm_simpanan=salah');
+		// } else if ($besar_simpanan != "50000") {
+		// 	header('Location:page-form-anggota.php?reqa=add&besar_simpanan=salah');
+		// } else if ($tgl_simpanan != $tgl_skrg) {
+		// 	header('Location:page-form-anggota.php?reqa=add&tgl_simpanan=salah');
+		// } else if ($ket_simpanan != "Simpanan Pokok yang dibayarkan pertama kali oleh anggota koperasi dan hanya sekali saja") {
+		// 	header('Location:page-form-anggota.php?reqa=add&ket_simpanan=salah');
+	} else {
+		if (isset($_FILES['foto-profile'])) {
+
+
+			$folder = 'uploads/';
+
+			if (isset($_FILES['foto-profile']['name']) && ($_FILES['foto-profile']['name'] != "")) {
+				$newImage = $folder . $_FILES['foto-profile']['name'];
+				move_uploaded_file($_FILES['foto-profile']['tmp_name'], $newImage);
+			}
+			$sql_anggota = "INSERT INTO anggota (id,username,jenis_kelamin,password,alamat,foto,level)VALUES('" . $id_karyawan . "','" . $nama . "','" . $alamat . "','" . $tgl_lahir . "','" . $tmp_lahir . "','" . $j_kel . "','1','" . $no_telp . "','" . $besar_simpanan . "','" . $newImage . "')";
+
+			// $sql_simpanan = "INSERT INTO simpanan (nm_simpanan,id_anggota,tgl_simpanan,besar_simpanan,ket_simpanan,bln)VALUES('" . $nm_simpanan . "','" . $id_anggota . "','" . $tgl_simpanan . "','" . $besar_simpanan . "','" . $ket_simpanan . "','" . $bln . "')";
+			$tambah_anggota = mysqli_query($conn, $sql_anggota) or die(mysqli_error($conn));
+			$tambah_simpanan = mysqli_query($conn, $sql_simpanan) or die(mysqli_error($conn));
+
+			// $up = $user->tambahProduk($idProduk, $namaProduk, $hargaProduk, $newImage, $cid);
+			if ($tambah_anggota && $tambah_simpanan == true) {
+				echo 'berhasil';
+				header('Location:page-karyawan.php');
+			} else {
+				echo 'gagal';
+			}
+		}
+
+
+	}
+	exit;
+}
+
 ?>

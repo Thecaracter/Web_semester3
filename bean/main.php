@@ -91,39 +91,43 @@
 			<!-- ./col -->
 		</div>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-</head>
-<body>
-	<div class="container">
-		<h2>Grafik Oprasional KSP</h2>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="panel-group">
-			<div class="panel panel-default">
-				<div class="panel-heading">Grafik Batang Simpanan</div>
-				<div class="panel-body"><iframe src="barchartsjs.php" width="100%" height="300"></iframe></div>
-			</div>
-		</div>
-	</div>
-</div>
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="panel-group">
-			<div class="panel panel-default">
-				<div class="panel-heading">Grafik Garis Pinjaman</div>
-				<div class="panel-body"><iframe src="linechart.php" width="100%" height="300"></iframe></div>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
-</html>
+		<!DOCTYPE html>
+		<html>
+
+		<head>
+			<title>Bootstrap Example</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		</head>
+
+		<body>
+			<div class="container">
+				<h2>Grafik Oprasional KSP</h2>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group">
+							<div class="panel panel-default">
+								<div class="panel-heading">Grafik Batang Simpanan</div>
+								<div class="panel-body"><iframe src="bar.php" width="100%" height="300"></iframe></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel-group">
+							<div class="panel panel-default">
+								<div class="panel-heading">Grafik Garis Pinjaman</div>
+								<div class="panel-body"><iframe src="bar.php" width="100%" height="300"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</body>
+
+		</html>
 		<div class="box box-default">
 			<div class="box-header with-border">
 				<center>
