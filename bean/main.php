@@ -119,7 +119,7 @@
 						<div class="panel-group">
 							<div class="panel panel-default">
 								<div class="panel-heading">Grafik Garis Pinjaman</div>
-								<div class="panel-body"><iframe src="bar.php" width="100%" height="300"></iframe>
+								<div class="panel-body"><iframe src="line.php" width="100%" height="300"></iframe>
 								</div>
 							</div>
 						</div>

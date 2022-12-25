@@ -48,7 +48,7 @@
                             labels: nama,
                             datasets: [
                                 {
-                                    label: 'Nama User',
+                                    label: 'sembunyikan',
                                     backgroundColor: '#49e2ff',
                                     borderColor: '#46d5f1',
                                     hoverBackgroundColor: '#CCCCCC',
