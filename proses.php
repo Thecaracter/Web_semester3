@@ -284,7 +284,7 @@ if ($_GET['requbs'] == "dell") {
 }
 if ($_GET['requbp'] == "dell") {
 	$id_ubahsimpanan = $_GET['id'];
-	mysqli_query($conn, "DELETE FROM K_pinjaman where id_k_pinjaman='" . $id_ubahsimpanan . "'");
+	mysqli_query($conn, "DELETE FROM K_pinjaman where id='" . $id_ubahsimpanan . "'");
 	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
 	header('Location:page-ubahpinjaman.php');
 	exit;

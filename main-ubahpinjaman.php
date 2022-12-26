@@ -54,7 +54,7 @@ include 'funct.php';
                         <tr>
                             <?php
                             $no = 1;
-                            while ($data = mysqli_fetch_array($sql)) {
+                            while ($row = mysqli_fetch_array($sql)) {
                             ?>
                             <td>
                                 <center>
@@ -63,27 +63,28 @@ include 'funct.php';
                             </td>
                             <td>
                                 <center>
-                                    <?php echo $data['id_k_pinjaman']; ?>
+                                    <?php echo $row['id']; ?>
                                 </center>
                             </td>
                             <td>
-                                <?php echo $data['nama_pinjaman']; ?>
+                                <?php echo $row['nama_pinjaman']; ?>
                             </td>
                             <td>
-                                <?php echo $data['keterangan_pinjaman']; ?>
+                                <?php echo $row['keterangan_pinjaman']; ?>
                             </td>
                             <td>
                                 <center>
 
+
                                     <a type="button" name="edit" value="Edit" data-toggle="modal"
-                                        data-target="#editModal<?php echo $row["id_k_pinjaman"]; ?>"
-                                        title="Edit Data ini" class="btn btn-sm"
-                                        style="background: darkslateblue;color:white;"></i>
+                                        data-target="#editModal<?php echo $row["id"]; ?>" title="Edit Data ini"
+                                        class="btn btn-sm" style="background: darkslateblue;color:white;"><i
+                                            class="fa fa-edit "></i>
                                         Edit
                                     </a>
 
-                                    <a href="proses.php?id=<?php echo $data['id_k_pinjaman']; ?>&requbp=dell"
-                                        title="Hapus Pinjaman" class="btn btn-danger btn-sm">
+                                    <a href="proses.php?id=<?php echo $row['id']; ?>&requbp=dell" title="Hapus Pinjaman"
+                                        class="btn btn-danger btn-sm">
                                         Hapus</span>
                                     </a>
 
@@ -98,18 +99,18 @@ include 'funct.php';
                                         <h4 class="modal-title">Input Data</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="./proses/insert_ubahsimpanan.php" method="post" id="insert_form">
+                                        <form action="./proses/edit_ubahsimpanan.php" method="post">
 
                                             <label>Nama Pinjaman</label>
-                                            <input type="text" value=" <?php echo $data['nama_pinjaman']; ?>"
+                                            <input type="text" value=" <?php echo $row['nama_pinjaman']; ?>"
                                                 name="nama_pinjaman" id="nama" class="form-control" />
                                             <br />
                                             <label>Keterangan Pinjaman</label>
                                             <textarea style="resize:vertical" name="keterangan_pinjaman" id="ketsim"
-                                                class="form-control"><?php echo $data['keterangan_pinjaman']; ?></textarea>
+                                                class="form-control"><?php echo $row['keterangan_pinjaman']; ?></textarea>
                                             <br />
-                                            <input type="submit" name="insert" id="insert" value="Insert"
-                                                class="btn btn-success" />
+                                            <button class="btn btn-success btn-sm ms-auto" type="submit"
+                                                name="update">Edit</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">

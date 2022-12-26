@@ -76,7 +76,7 @@ include 'funct.php';
                                 <center>
 
                                     <a type="button" name="edit" value="Edit" data-toggle="modal"
-                                        data-target="#editModal<?php echo $row["id"]; ?>" title="Edit Data ini"
+                                        data-target="#editModal<?php echo $data["id"]; ?>" title="Edit Data ini"
                                         class="btn btn-sm" style="background: darkslateblue;color:white;"><i
                                             class="fa fa-edit "></i>
                                         Edit
@@ -90,9 +90,12 @@ include 'funct.php';
 
                                 </center>
                             </td>
+
+
+
                         </tr>
 
-                        <div id="editModal<?php echo $row["id"]; ?>" class="modal fade">
+                        <div id="editModal<?php echo $data["id"]; ?>" class="modal fade">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -100,21 +103,25 @@ include 'funct.php';
                                         <h4 class="modal-title">Input Data</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="./proses/insert_ubahsimpanan.php" method="post" id="insert_form">
+                                        <form action="./proses/edit_ubahsimpanan.php" method="post" id="update">
+                                            <input type="hidden" value="<?php echo $data['id']; ?>"
+                                                name="id_simpanan_edit" id="id_simpanan_edit" class="form-control">
 
                                             <label>Nama Simpanan</label>
                                             <input type="text" value=" <?php echo $data['nm_simpanan']; ?>"
-                                                name="nm_simpanan" id="nama" class="form-control" />
+                                                name="nm_simpanan_edit" id="nama" class="form-control" />
                                             <br />
                                             <label>Keterangan Simpanan</label>
-                                            <textarea style="resize:vertical" value=" " name="ket_simpanan" id="ketsim"
+                                            <textarea style="resize:vertical" value=" " name="ket_simpanan_edit"
+                                                id="ketsim"
                                                 class="form-control"><?php echo $data['ket_simpanan']; ?></textarea>
                                             <br />
                                             <label>Besar Simpanan</label>
                                             <input type="text" value=" <?php echo $data['besar_simpanan']; ?>"
-                                                name="besar_simpanan" id="besar" class="form-control" />
+                                                name="besar_simpanan_edit" id="besar" class="form-control" />
                                             <br />
-                                            <input type="submit" name="insert" id="insert" value="Insert"
+
+                                            <input type="submit" name="update" id="update" value="update"
                                                 class="btn btn-success" />
 
                                         </form>
@@ -124,6 +131,8 @@ include 'funct.php';
                                             data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
+
+
                                 <?php
                                 $no++;
                             }
