@@ -70,6 +70,7 @@ if (isset($_POST['submit'])) {
 		}).then((result) => {if (result.value)
 			{window.location = 'index.php';}
 		})</script>";
+
   } else {
 
     echo "<script>
