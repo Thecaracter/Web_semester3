@@ -128,34 +128,3 @@
 		</body>
 
 		</html>
-		<div class="box box-default">
-			<div class="box-header with-border">
-				<center>
-					<h2 class="box-title"><strong>Tujuan Koperasi Simpan Pinjam</strong></h2>
-				</center>
-				<div class="box-tools pull-right">
-					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-							class="fa fa-minus"></i></button>
-				</div>
-			</div>
-			<div class="box-body" style="display: block;">
-				<ol style="text-align:justify; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;">
-					<li>
-						Meningkatkan tali persaudaraan dan kebersamaan diantara sesama anggota Koperasi
-					</li>
-					<li>
-						Memberdayakan kegiatan Koperasi hingga fungsinya lebih maksimal, efisien, efektif dan produktif
-						dalam meningkatkan kesejahteraan anggotanya
-					</li>
-					<li>
-						Meningkatkan pendapatan serta pemerataan kesejahteraan anggota Koperasi secara profesional
-					</li>
-					<li>
-						Membuka lapangan pekerjaan baru yang terbuka bagi anggota koperasi dan keluarganya
-					</li>
-				</ol>
-			</div>
-		</div>
-	</section>
-	<!-- /.content -->
-</div>
