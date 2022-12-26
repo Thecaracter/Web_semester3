@@ -5,11 +5,15 @@
     <title>Contoh Penggunaan BarsGraph</title>
     <style type="text/css">
         BODY {
-            width: 550PX;
+            /* width: 550PX; */
+            height: 500%;
+            width: 100%;
+            margin: 0 auto;
+
         }
 
         #chart-container {
-            width: 100%;
+            width: auto;
             height: auto;
         }
     </style>
