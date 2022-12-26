@@ -213,7 +213,7 @@ if ($_POST['reqpin'] == "add") {
 	$sql = "UPDATE pinjaman set nama_pinjaman='" . $nama_pinjaman . "',id_anggota='" . $id_anggota . "',besar_pinjaman='" . $besar_pinjaman . "' WHERE id_pinjaman='" . $id_pinjaman . "'";
 
 	$update = mysqli_query($conn, $sql);
-
+	header('Location:page-pinjaman.php');
 	exit;
 }
 if ($_GET['reqpin'] == 'dell') {
