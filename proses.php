@@ -268,7 +268,7 @@ if ($_POST['reqang'] == "add") {
 }
 if ($_GET['reqang'] == 'dell') {
 	$id_angsuran = $_GET['id_angsuran'];
-
+	$_SESSION["suksesss"] = 'Data Berhasil Di Hapus';
 	$delete = mysqli_query($conn, "DELETE FROM angsuran WHERE id_angsuran='" . $id_angsuran . "'");
 
 	header('Location:page-angsuran.php');
