@@ -99,8 +99,9 @@ include 'funct.php';
                                         <h4 class="modal-title">Input Data</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="./proses/edit_ubahsimpanan.php" method="post">
-
+                                        <form action="./proses/edit_ubahpinjaman.php" method="post">
+                                            <input type="hidden" value="<?php echo $row['id']; ?>" name="id_pinjaman"
+                                                id="id_pinjaman" class="form-control">
                                             <label>Nama Pinjaman</label>
                                             <input type="text" value=" <?php echo $row['nama_pinjaman']; ?>"
                                                 name="nama_pinjaman" id="nama" class="form-control" />
@@ -109,8 +110,8 @@ include 'funct.php';
                                             <textarea style="resize:vertical" name="keterangan_pinjaman" id="ketsim"
                                                 class="form-control"><?php echo $row['keterangan_pinjaman']; ?></textarea>
                                             <br />
-                                            <button class="btn btn-success btn-sm ms-auto" type="submit"
-                                                name="update">Edit</button>
+                                            <input type="submit" name="update" id="update" value="update"
+                                                class="btn btn-success" />
                                         </form>
                                     </div>
                                     <div class="modal-footer">

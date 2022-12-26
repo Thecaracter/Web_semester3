@@ -106,7 +106,7 @@ include 'funct.php';
                                         <form action="./proses/edit_ubahsimpanan.php" method="post" id="update">
                                             <input type="hidden" value="<?php echo $data['id']; ?>"
                                                 name="id_simpanan_edit" id="id_simpanan_edit" class="form-control">
-
+                                            <br />
                                             <label>Nama Simpanan</label>
                                             <input type="text" value=" <?php echo $data['nm_simpanan']; ?>"
                                                 name="nm_simpanan_edit" id="nama" class="form-control" />
