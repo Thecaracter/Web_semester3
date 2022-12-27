@@ -752,27 +752,27 @@
                       KSP Makmur membantu saya dalam mendirikan usaha dengan program pinjaman,
                       <br>kemudian saya salurkan untuk membangun usaha yang saya miliki
                     </p>
-                    <h6></h6>
+                    <h6>-Anindita-</h6>
                   </div>
                 </div>
                 <!-- End single item -->
                 <div class="single-testi">
                   <div class="testi-text">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
-                      congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
+                    Koperasi simpan pinjam bisa memberikan solusi bagi setiap orang yang membutuhkan bantuan dalam masalah perekonomian. 
+                    <br>Dengan alasan tersebut, maka koperasi semakin berkembang dan disukai.
                     </p>
-                    <h6>Jhon</h6>
+                    <h6>-Maulana-</h6>
                   </div>
                 </div>
                 <!-- End single item -->
                 <div class="single-testi">
                   <div class="testi-text">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
-                      congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
+                    Koperasi simpan pinjam menawarkan pinjaman dengan syarat yang mudah dan bunga yang sangat ringan bagi anggotanya. 
+                    <br>Dengan kondisi seperti ini, maka para anggota yang hanya memiliki usaha kecil-kecilan tidak akan merasa dipersulit. 
                     </p>
-                    <h6>Fleming</h6>
+                    <h6>-Surya-</h6>
                   </div>
                 </div>
                 <!-- End single item -->
