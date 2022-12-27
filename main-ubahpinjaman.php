@@ -29,7 +29,8 @@ include 'funct.php';
                 ?>
                 <table id="dataTable" class="table table-bordered table-striped">
                     <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal"
-                        class="btn btn-success">Tambah Jenis Pinjaman</button>
+                        class="btn btn-success" onMouseOver="this.style.backgroundColor='#006064'"
+                        onMouseOut="this.style.backgroundColor='#4CAF50'">Tambah Jenis Pinjaman</button>
                     <br></br>
                     <thead>
                         <tr class="info">
@@ -154,12 +155,15 @@ include 'funct.php';
                         class="form-control"></textarea>
                     <br />
 
-                    <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
+                    <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" 
+                            onMouseOver="this.style.backgroundColor='#00796b'"
+                            onMouseOut="this.style.backgroundColor='#4CAF50'"/>
 
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" onMouseOver="this.style.backgroundColor='#ff6666'"
+                                        onMouseOut="this.style.backgroundColor='white'"data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
