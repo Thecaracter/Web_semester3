@@ -113,7 +113,7 @@ if ($_GET['reqa'] == "dell") {
 		$sql = "UPDATE anggota set status='0' where id_anggota='" . $id_anggota . "'";
 		$delete = mysqli_query($conn, $sql);
 		//echo $sql;
-		header("Location:page-berhenti-anggota.php?id_anggota=$id_anggota");
+		header("Location:page-anggota.php?id_anggota=$id_anggota");
 	} else {
 		echo 'swal("Anda Berhasil Berhenti!", "Klik Button Untuk Melanjutkan!", "success");';
 	}

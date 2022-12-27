@@ -200,7 +200,7 @@ include 'funct.php';
 
 
 
-</div>
+
 
 <script>
     $(document).ready(function () {

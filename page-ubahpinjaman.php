@@ -41,6 +41,7 @@
         <!-- /.content-wrapper -->
         <?php include './bean/footer.php'; ?>
 
+        
     </div>
     <!-- jQuery 2.2.3 -->
     <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
