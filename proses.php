@@ -279,6 +279,8 @@ if ($_GET['requbs'] == "dell") {
 	mysqli_query($conn, "DELETE FROM K_simpanan where id='" . $id_ubahsimpanan . "'");
 	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
 	header('Location:page-ubahsimpanan.php');
+	$_SESSION["suksessss"] = 'Data Berhasil Di Hapus';
+
 	exit;
 
 }

@@ -84,7 +84,7 @@ include 'funct.php';
                                     </a>
 
                                     <a href="proses.php?id=<?php echo $row['id']; ?>&requbp=dell" title="Hapus Pinjaman"
-                                        class="btn btn-danger btn-sm">
+                                        class="btn btn-danger btn-sm alert_notif">
                                         Hapus</span>
                                     </a>
 

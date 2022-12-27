@@ -37,7 +37,7 @@
 
         function showGraph() {
             {
-                $.post("bar_encode.php",
+                $.post("lin_encode.php",
                     function (data) {
                         console.log(data);
                         var id = [];
