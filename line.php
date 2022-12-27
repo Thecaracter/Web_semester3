@@ -9,7 +9,7 @@
             height: auto;
             width: auto;
             margin: 0 auto;
-
+            background-color: #FFD39A;
         }
 
         #chart-container {
