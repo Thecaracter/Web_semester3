@@ -52,7 +52,7 @@
                             labels: nama,
                             datasets: [
                                 {
-                                    label: 'sembunyikan',
+                                    label: 'simpanan',
                                     backgroundColor: '#49e2ff',
                                     borderColor: '#46d5f1',
                                     hoverBackgroundColor: '#CCCCCC',

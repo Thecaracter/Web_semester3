@@ -6,8 +6,8 @@
     <style type="text/css">
         BODY {
             /* width: 550PX; */
-            height: 500%;
-            width: 100%;
+            height: auto;
+            width: auto;
             margin: 0 auto;
 
         }
@@ -52,9 +52,9 @@
                             labels: nama,
                             datasets: [
                                 {
-                                    label: 'sembunyikan',
-                                    backgroundColor: '#49e2ff',
-                                    borderColor: '#46d5f1',
+                                    label: 'Pinjaman',
+                                    backgroundColor: '#E26868',
+                                    borderColor: '#A10035',
                                     hoverBackgroundColor: '#CCCCCC',
                                     hoverBorderColor: '#666666',
                                     data: jual
