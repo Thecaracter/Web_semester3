@@ -504,15 +504,9 @@
             <div class="tab-pane active" id="p-view-1">
               <div class="tab-inner">
                 <div class="event-content head-team">
-                  <h4>Project</h4>
+                  <h4>KSP Makmur menawarkan proses peminjaman yang mudah</h4>
                   <p>
-                    Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus
-                    adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut,
-                    laborum sequi.
-                  </p>
-                  <p>
-                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto
-                    ducimus, doloribus fuga itaque omnis placeat.
+                    Kemudahan bagi anggota untuk mendapatkan pinjaman dan modal usaha.
                   </p>
                 </div>
               </div>
