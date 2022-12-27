@@ -45,8 +45,8 @@
                         var nama = [];
                         for (var i in data) {
                             id.push(data[i].id);
-                            jual.push(data[i].besar_simpanan);
-                            nama.push(data[i].tgl_simpanan)
+                            jual.push(data[i].besar_pinjaman);
+                            nama.push(data[i].nama_pinjaman)
                         }
                         var chartdata = {
                             labels: nama,
