@@ -13,7 +13,7 @@ if (isset($_SESSION['ses_username']) != '') {
 <html>
 
 <head>
-  <title>Login Form Design</title>
+  <title>Login Form</title>
   <link rel="stylesheet" type="text/css" href="style/style_login.css" />
   <link href="img/logo_koperasi.png" rel="icon">
   <link href="img/logo_koperasi.png" rel="apple-touch-icon">
@@ -24,16 +24,21 @@ if (isset($_SESSION['ses_username']) != '') {
     <video autoplay loop muted plays-inline class="back-video">
       <source src="asset/anjay.mp4" type="video/mp4" />
     </video>
+    <img src="asset/logo.png" class="avatar" />
     <div class="login-box">
-      <img src="asset/logo.png" class="avatar" />
+      
       <h1>Login Here</h1>
       <form action="login.php" method="POST">
         <p>Username</p>
         <input type="text" name="username" placeholder="Masukin Username" />
         <p>Password</p>
         <input type="password" name="password" placeholder="Masukin Password" />
-        <input type="submit" name="submit" value="Login" />
+        <input class="btn-hover color" type="submit" name="submit" value="Login" />
         <!-- <a href="#">Lupa Password</a> -->
+        <span class="top"></span>
+      <span class="right"></span>
+      <span class="bottom"></span>
+      <span class="left"></span>
       </form>
     </div>
   </section>
