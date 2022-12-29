@@ -26,7 +26,7 @@ if (isset($_SESSION['ses_username']) != '') {
     </video>
     <img src="asset/logo.png" class="avatar" />
     <div class="login-box">
-      
+
       <h1>Login Here</h1>
       <form action="login.php" method="POST">
         <p>Username</p>
@@ -36,9 +36,9 @@ if (isset($_SESSION['ses_username']) != '') {
         <input class="btn-hover color" type="submit" name="submit" value="Login" />
         <!-- <a href="#">Lupa Password</a> -->
         <span class="top"></span>
-      <span class="right"></span>
-      <span class="bottom"></span>
-      <span class="left"></span>
+        <span class="right"></span>
+        <span class="bottom"></span>
+        <span class="left"></span>
       </form>
     </div>
   </section>

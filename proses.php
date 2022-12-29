@@ -264,11 +264,44 @@ if ($_GET['requbs'] == "dell") {
 
 }
 if ($_GET['requbp'] == "dell") {
-	$id_ubahsimpanan = $_GET['id'];
-	mysqli_query($conn, "DELETE FROM K_pinjaman where id='" . $id_ubahsimpanan . "'");
+	$id_ubahpinjaman = $_GET['id'];
+	mysqli_query($conn, "DELETE FROM K_pinjaman where id='" . $id_ubahpinjaman . "'");
 	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
 	header('Location:page-ubahpinjaman.php');
 	exit;
+
+}
+if ($_GET['reqkarya'] == "dell") {
+	// require "../koneksi.php";
+	// session_start();
+
+	if (!empty($_GET)) {
+		$output = '';
+		$id = $_GET["id"]; // retrieve the id of the employee to be deleted
+
+		// get the current file path from the database
+		$query = "SELECT foto FROM karyawan WHERE id = '$id'";
+		$result = mysqli_query($conn, $query);
+		$row = mysqli_fetch_assoc($result);
+		$currentFilePath = $row['foto'];
+
+		// delete the current file from the server if it exists
+		if (file_exists($currentFilePath)) {
+			unlink($currentFilePath);
+		}
+
+		// delete the employee from the database
+		$query = "DELETE FROM karyawan WHERE id = '$id'";
+		$result = mysqli_query($conn, $query);
+
+		// check if the query was successful
+		if ($result) {
+			// the query was successful, redirect the user to the page-ubahpinjaman.php page
+			header("location: page-karyawan.php");
+		} else {
+			// the query failed, you can add additional error handling here
+		}
+	}
 
 }
 ?>

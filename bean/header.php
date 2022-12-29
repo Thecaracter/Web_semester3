@@ -10,7 +10,7 @@ if (isset($_SESSION["ses_username"]) == "") {
   $data_level = $_SESSION["ses_level"];
   $data_username = $_SESSION["ses_username"];
   $data_password = $_SESSION["ses_password"];
-  $_SESSION["ses_foto"] = $_SESSION["foto"];
+  $foto = $_SESSION["ses_foto"];
 }
 
 
@@ -35,7 +35,7 @@ if (isset($_SESSION["ses_username"]) == "") {
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="dist/img/avatar5.png" class="user-image" alt="User Image">
+            <img src="./foto/<?php echo $foto; ?>" class="user-image" alt="User Image">
             <span class="hidden-xs">
               <?php echo $data_username ?>
             </span>
@@ -43,7 +43,7 @@ if (isset($_SESSION["ses_username"]) == "") {
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
-              <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
+              <img src="./foto/<?php echo $foto; ?>" class="img-circle" alt="User Image">
 
               <p>
                 <?php echo $data_username ?>
@@ -68,32 +68,33 @@ if (isset($_SESSION["ses_username"]) == "") {
               </div>
               <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-              integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-              </script>
+                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+                crossorigin="anonymous">
+                </script>
               <!-- script js sweetalert-->
               <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
 
               <script>
-              $('.alert_notif').on('click',function(){
-                var getLink = $(this).attr('href');
-                Swal.fire({
-                    title: "Anda Ingin Logout",            
+                $('.alert_notif').on('click', function () {
+                  var getLink = $(this).attr('href');
+                  Swal.fire({
+                    title: "Anda Ingin Logout",
                     icon: 'question',
-                    position:'top-end',                    
-                    width:'300px',
+                    position: 'top-end',
+                    width: '300px',
                     showCancelButton: true,
                     confirmButtonColor: '#d33',
                     confirmButtonText: 'Yes',
                     cancelButtonColor: '#3085d6',
                     cancelButtonText: "Cancel"
-                
-                }).then(result => {
+
+                  }).then(result => {
                     //jika klik ya maka arahkan ke logout.php
-                    if(result.isConfirmed){
-                        window.location.href = getLink
-                    } 
-                })
-                return false;
+                    if (result.isConfirmed) {
+                      window.location.href = getLink
+                    }
+                  })
+                  return false;
                 });
               </script>
             </li>

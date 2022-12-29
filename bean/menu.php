@@ -10,7 +10,7 @@ if (isset($_SESSION["ses_username"]) == "") {
     $data_level = $_SESSION["ses_level"];
     $data_username = $_SESSION["ses_username"];
     $data_password = $_SESSION["ses_password"];
-    // $_SESSION["ses_foto"] = $data_login["foto"];
+    $foto = $_SESSION["ses_foto"];
 }
 if ($data_level == "1") {
     echo "
@@ -19,11 +19,12 @@ if ($data_level == "1") {
       <section class='sidebar'>
         <!-- Sidebar user panel -->
         <div class='user-panel'>
-          <div class='pull-left image'>
-            <img src='dist/img/avatar5.png' class='img-circle'
-             alt='User Image'>
-          </div>
-          <div class='pull-left info'> " ?>
+" ?>
+    <div class='pull-left image'>
+        <img src='./foto/<?php echo $foto; ?>' class='img-circle' alt='User Image'>
+    </div>
+    <?php
+    echo "<div class='pull-left info'> " ?>
     <p>
         <?php echo $data_username ?>
     </p>
