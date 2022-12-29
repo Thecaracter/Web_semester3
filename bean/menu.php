@@ -24,27 +24,27 @@ if ($data_level == "1") {
              alt='User Image'>
           </div>
           <div class='pull-left info'> " ?>
-<p>
-    <?php echo $data_username ?>
-</p>
-<a href='#'><i class='fa fa-money text-success'></i>
-    <?php
+    <p>
+        <?php echo $data_username ?>
+    </p>
+    <a href='#'><i class='fa fa-money text-success'></i>
+        <?php
 
-    if ($data_level == 1) {
-        echo 'Admin';
-    } else {
-        echo 'Petugas';
-    }
-    $data_level
+        if ($data_level == 1) {
+            echo 'Admin';
+        } else {
+            echo 'Petugas';
+        }
+        $data_level
 
-        ?>
-</a>
-</div>
-</div>
-<!-- search form -->
-<!-- /.search form -->
-<!-- sidebar menu: : style can be found in sidebar.less -->
-<?php echo "
+            ?>
+    </a>
+    </div>
+    </div>
+    <!-- search form -->
+    <!-- /.search form -->
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <?php echo "
 <ul class='sidebar-menu'>
     <li class='header'>MAIN NAVIGATION </li>
     <li class='active treeview'>
@@ -68,10 +68,6 @@ if ($data_level == "1") {
                 </a>
                 <ul class='treeview-menu'>
                     <li><a href='page-karyawan.php'><i class='fa fa-user-plus'></i> Daftar Karyawan</a></li>
-                    <li>
-                        <a href='page-form-karyawan.php?reqa=add'><i class='fa fa-plus'></i> Form Karyawan
-                        </a>
-                    </li>
                 </ul>
                 <a href='#'><i class='fa fa-circle-o'></i> Anggota
                     <span class='pull-right-container'>
@@ -192,27 +188,27 @@ if ($data_level == "1") {
              alt='User Image'>
           </div>
           <div class='pull-left info'> " ?>
-<p>
-    <?php echo $data_username ?>
-</p>
-<a href='#'><i class='fa fa-money text-success'></i>
-    <?php
+    <p>
+        <?php echo $data_username ?>
+    </p>
+    <a href='#'><i class='fa fa-money text-success'></i>
+        <?php
 
-    if ($data_level == 1) {
-        echo 'Admin';
-    } else {
-        echo 'Petugas';
-    }
-    $data_level
+        if ($data_level == 1) {
+            echo 'Admin';
+        } else {
+            echo 'Petugas';
+        }
+        $data_level
 
-        ?>
-</a>
-</div>
-</div>
-<!-- search form -->
-<!-- /.search form -->
-<!-- sidebar menu: : style can be found in sidebar.less -->
-<?php echo "
+            ?>
+    </a>
+    </div>
+    </div>
+    <!-- search form -->
+    <!-- /.search form -->
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <?php echo "
 <ul class='sidebar-menu'>
     <li class='header'>MAIN NAVIGATION </li>
     <li class='active treeview'>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,60 +23,88 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body onload="window.print();">
-<div class="wrapper">
-  <!-- Main content -->
-  <section class="invoice">
-    <!-- title row -->
-    <div class="row">
-      <div class="col-xs-12">
-        <h2 class="page-header">
-          <i class="fa fa-globe"></i> Koperasi Simpan Pinjam, Inc.
-          <small class="pull-right">Tanggal: <?php echo date('d F Y'); ?></small>
-        </h2>
-      </div>
-      <!-- /.col -->
-    </div>
 
-    <!-- Table row -->
-    <div class="row">
-      <div class="col-xs-12 table-responsive table-bordered">
-      <?php 
-	  	include 'koneksi.php'; 
-		include'funct.php';
-		$sql = mysqli_query($conn, "SELECT * FROM pinjaman p,anggota a WHERE a.id_anggota='".$_GET['id_anggota']."'");
-		$data = mysqli_fetch_array($sql);
-	  ?>
-        <table class="table table-striped table-responsive">
-          <thead>
-          <tr class="warning">
-            <th style="font-size:12px;"><center>Nama Anggota</center></th>
-            <th style="font-size:12px;"><center>ID Pinjaman</center></th>
-            <th style="font-size:12px;"><center>Nama Pinjaman</center></th>
-            <th style="font-size:12px;"><center>Besar Pinjaman</center></th>
-            <th style="font-size:12px;"><center>Tanggal Pinjaman</center></th>
-            <th style="font-size:12px;"><center>Tanggal Pelunasan</center></th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td style="font-size:12px;"><?php echo $data['nama']; ?></td>
-            <td style="font-size:12px;"><center><?php echo $data['id_pinjaman']; ?></center></td>
-            <td style="font-size:12px;"><?php echo $data['nama_pinjaman']; ?></td>
-            <td style="font-size:12px;"><?php echo numberrupiah($data['besar_pinjaman']); ?></td>
-            <td style="font-size:12px;"><center><?php echo TanggalIndo($data['tgl_pinjaman']); ?></center></td>
-            <td style="font-size:12px;"><center><?php echo TanggalIndo($data['tgl_pelunasan']); ?></center></td>
-          </tr>
-          </tbody>
-        </table>
+<body onload="window.print();">
+  <div class="wrapper">
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-globe"></i> Koperasi Simpan Pinjam, Inc.
+            <small class="pull-right">Tanggal: <?php echo date('d F Y'); ?></small>
+          </h2>
+        </div>
+        <!-- /.col -->
       </div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-    <!-- /.row -->
-  </section>
-  <!-- /.content -->
-</div>
-<!-- ./wrapper -->
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive table-bordered">
+          <?php
+          include 'koneksi.php';
+          include 'funct.php';
+          $sql = mysqli_query($conn, "SELECT * FROM pinjaman p,anggota a WHERE a.id_anggota='" . $_GET['id_anggota'] . "'");
+          $data = mysqli_fetch_array($sql);
+          ?>
+          <table class="table table-striped table-responsive">
+            <thead>
+              <tr class="warning">
+                <th style="font-size:12px;">
+                  <center>Nama Anggota</center>
+                </th>
+                <th style="font-size:12px;">
+                  <center>ID Pinjaman</center>
+                </th>
+                <th style="font-size:12px;">
+                  <center>Nama Pinjaman</center>
+                </th>
+                <th style="font-size:12px;">
+                  <center>Besar Pinjaman</center>
+                </th>
+                <th style="font-size:12px;">
+                  <center>Tanggal Pinjaman</center>
+                </th>
+                <th style="font-size:12px;">
+                  <center>Tanggal Pelunasan</center>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-size:12px;">
+                  <?php echo $data['nama']; ?>
+                </td>
+                <td style="font-size:12px;">
+                  <center><?php echo $data['id_pinjaman']; ?></center>
+                </td>
+                <td style="font-size:12px;">
+                  <?php echo $data['nama_pinjaman']; ?>
+                </td>
+                <td style="font-size:12px;"><?php echo numberrupiah($data['besar_pinjaman']); ?></td>
+                <td style="font-size:12px;">
+                  <center>
+                    <?php echo TanggalIndo($data['tgl_pinjaman']); ?>
+                  </center>
+                </td>
+                <td style="font-size:12px;">
+                  <center>
+                    <?php echo TanggalIndo($data['tgl_pelunasan']); ?>
+                  </center>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- ./wrapper -->
 </body>
+
 </html>
