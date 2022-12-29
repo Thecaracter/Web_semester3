@@ -64,8 +64,38 @@ if (isset($_SESSION["ses_username"]) == "") {
             <!-- Menu Footer-->
             <li class="user-footer">
               <div style="text-align:center;">
-                <a href="logout.php" class="btn btn-default btn-flat">Logout</a>
+                <a href="logout.php" class="btn btn-default btn-flat alert_notif">Logout</a>
               </div>
+              <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+              </script>
+              <!-- script js sweetalert-->
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
+
+              <script>
+              $('.alert_notif').on('click',function(){
+                var getLink = $(this).attr('href');
+                Swal.fire({
+                    title: "Anda Ingin Logout",            
+                    icon: 'question',
+                    position:'top-end',                    
+                    width:'300px',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'Yes',
+                    cancelButtonColor: '#3085d6',
+                    cancelButtonText: "Cancel"
+                
+                }).then(result => {
+                    //jika klik ya maka arahkan ke logout.php
+                    if(result.isConfirmed){
+                        window.location.href = getLink
+                    } 
+                })
+                return false;
+                });
+              </script>
             </li>
           </ul>
         </li>

@@ -10,7 +10,7 @@ body {
 .login-box {
   width: 320px;
   height: 420px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.651);
   color: #fff;
   top: 50%;
   left: 50%;
@@ -18,14 +18,159 @@ body {
   box-sizing: border-box;
   padding: 70px;
   transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border-top: 1px solid #25aae1;
+  border-right: 1px solid #4481eb;
+  border-bottom: 1px solid #0453fe;
+  border-left: 1px solid #3e4eee;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: -moz-hidden-unscrollable;
+}
+
+span {
+  position: absolute;
+  border-radius: 100vmax;
+}
+
+.top {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    #25a9e170,
+    #25aae1
+  );
+}
+
+.bottom {
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    #0453fe70,
+    #0453fe,
+    transparent 50%
+  );
+}
+
+.right {
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    #4481eb70,
+    #4481eb
+  );
+}
+
+.left {
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    #3e4aee70,
+    #3e4eee,
+    transparent 70%
+  );
+}
+
+.top {
+  animation: animateTop 3s ease-in-out infinite;
+}
+
+.bottom {
+  animation: animateBottom 3s ease-in-out infinite;
+}
+
+.right {
+  animation: animateRight 3s linear infinite;
+}
+
+.left {
+  animation: animateLeft 3s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+  25% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateRight {
+  0%,
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  55%,
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes animateLeft {
+  0%,
+  75% {
+    opacity: 0;
+    bottom: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
 }
 .avatar {
   width: 130px;
   height: 100px;
   border-radius: 50%;
   position: absolute;
-  top: -50px;
-  left: calc(50% - 20%);
+  z-index: 1;
+  top: 10%;
+  left: 45%;
 }
 h1 {
   margin-top: 0px;
@@ -53,28 +198,42 @@ input[type="password"] {
   color: #fff;
   font-size: 16px;
 }
-.login-box input[type="submit"] {
-  border: none;
-  outline: none;
-  height: 40px;
-  color: #fff;
+.btn-hover {
+  width: 200px;
   font-size: 18px;
-  border-radius: 20px;
-  background: #1c8adb;
-}
-.login-box input[type="submit"]:hover {
+  font-weight: 600;
+  color: rgb(255, 255, 255);
   cursor: pointer;
-  background: #e33d56;
-  color: #fff;
+  margin-top: 10px;
+  height: 45px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  
+  border-radius: 50px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  
+  transition: all .4s ease-in-out;
 }
-.login-box a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #fff;
+.btn-hover:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  color: rgb(7, 0, 107);
 }
-.login-box a:hover {
-  color: #e33d56;
+
+.btn-hover:focus {
+  outline: none;
 }
+
+.btn-hover.color {
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #0453fe, #653fed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  
+}
+
 * {
   margin: 0;
   padding: 0;
