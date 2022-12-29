@@ -142,6 +142,7 @@ if ($_POST['reqs'] == "add") {
 if ($_GET['reqs'] == "dell") {
 	$id_simpanan = $_GET['id_simpanan'];
 	mysqli_query($conn, "DELETE FROM simpanan where id_simpanan='" . $id_simpanan . "'");
+	$_SESSION["sukses"] = 'Data Berhasil Di Hapus';
 	header('Location:page-simpanan.php');
 	exit;
 }
@@ -193,7 +194,7 @@ if ($_POST['reqpin'] == "add") {
 	$sql = "UPDATE pinjaman set nama_pinjaman='" . $nama_pinjaman . "',id_anggota='" . $id_anggota . "',besar_pinjaman='" . $besar_pinjaman . "' WHERE id_pinjaman='" . $id_pinjaman . "'";
 
 	$update = mysqli_query($conn, $sql);
-
+	header('Location:page-pinjaman.php');
 	exit;
 }
 if ($_GET['reqpin'] == 'dell') {
@@ -249,8 +250,25 @@ if ($_GET['reqang'] == 'dell') {
 	$id_angsuran = $_GET['id_angsuran'];
 
 	$delete = mysqli_query($conn, "DELETE FROM angsuran WHERE id_angsuran='" . $id_angsuran . "'");
-
+	$_SESSION["suksesss"] = 'Data Berhasil Di Hapus';
 	header('Location:page-angsuran.php');
 	exit;
+}
+if ($_GET['requbs'] == "dell") {
+	$id_ubahsimpanan = $_GET['id'];
+	mysqli_query($conn, "DELETE FROM K_simpanan where id='" . $id_ubahsimpanan . "'");
+	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
+	header('Location:page-ubahsimpanan.php');
+
+	exit;
+
+}
+if ($_GET['requbp'] == "dell") {
+	$id_ubahsimpanan = $_GET['id'];
+	mysqli_query($conn, "DELETE FROM K_pinjaman where id='" . $id_ubahsimpanan . "'");
+	$_SESSION["sukses"] = 'Data Berhasil Dihapus';
+	header('Location:page-ubahpinjaman.php');
+	exit;
+
 }
 ?>
