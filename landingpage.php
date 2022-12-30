@@ -504,9 +504,9 @@
             <div class="tab-pane active" id="p-view-1">
               <div class="tab-inner">
                 <div class="event-content head-team">
-                  <h4>KSP Makmur menawarkan proses peminjaman yang mudah</h4>
+                  <h4>Project</h4>
                   <p>
-                    Kemudahan bagi anggota untuk mendapatkan pinjaman dan modal usaha.
+                  KSP Makmur menawarkan proses peminjaman yang mudah. Kemudahan bagi anggota untuk mendapatkan pinjaman dan modal usaha.
                   </p>
                 </div>
               </div>
@@ -516,12 +516,19 @@
                 <div class="event-content head-team">
                   <h4>Planning</h4>
                   <p>
-                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto
-                    ducimus, doloribus fuga itaque omnis.
+                  1. Pengurus bersama karyawan menyusun rencana strategis dan taktis baik untuk jangka panjang maupun jangka pendek. 
                   </p>
                   <p>
-                    Redug Lares dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus
-                    adipisci voluptas, praesentium maxime necessitatibus in dolor dolores unde ab, libero quo. Aut.
+                  2. Pengurus meminta karyawan menyusun garis besar program operasional.
+                  </p>
+                  <p>
+                  3. Karyawan juga membuat anggaran untuk mencapai hasil yang dikendaki, tanpa mengabaikan struktur keuangan yang ada.
+                  </p>
+                  <p>
+                  4. Berdasarkan rencana yang ada, dibuatlah kebijakan sebagai pedoman seluruh pelaksanaan.
+                  </p>
+                  <p>
+                  5. Secara bersama menetapkan kebijakan personalia, karyawan usaha keuangan dan anggota guna mencapai tujuan yang telah ditetapkan.
                   </p>
                 </div>
               </div>
@@ -531,12 +538,13 @@
                 <div class="event-content head-team">
                   <h4>Success</h4>
                   <p>
-                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto
-                    ducimus, doloribus fuga itaque omnis placeat.
+                  1. Konsep bisnis yang menjelaskan secara rinci koperasi sebagai badan usaha, struktur organisasi, produk dan jasa pelayanan yang dikelola.
                   </p>
                   <p>
-                    voluptas, praesentium maxime cum fugiat,magnam ducimus adipisci voluptas, praesentium architecto
-                    ducimus, doloribus fuga itaque omnis.
+                  2. Market, yang membahas dan menganalisa pasar konsumen potensial.
+                  </p>
+                  <p>
+                  3. Finansial, meliputi estimasi pendapatan dan arus kas, neraca serta rasio keuangan lainnya.
                   </p>
                 </div>
               </div>
