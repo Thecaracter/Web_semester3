@@ -174,8 +174,6 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 						</div>
 						<div>
 							<br>
-							<input type='hidden' name='old-foto-profile'value="<?php $foto; ?>" />
-							<input type='file' name='foto-profile' />
 						</div>
 						<?php if (isset($_GET['reqa']) && $_GET['reqa'] == 'add') { ?>
 						<br>
