@@ -67,7 +67,7 @@
                 </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="index.html">
-                <img src="img/logo_koperasi.png" width="30px" height="30px" >
+                <!--<img src="img/logo_koperasi.png" width="30px" height="30px" >-->
                   <h1><span>KSP</span> Makmur</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->

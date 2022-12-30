@@ -30,7 +30,7 @@ include 'funct.php';
               <th>
                 <center>No</center>
               </th>
-              <th>Nama Simpanan</th>
+              <th><center>Nama Simpanan</center></th>
               <th>
                 <center>ID Anggota</center>
               </th>

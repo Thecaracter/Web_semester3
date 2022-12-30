@@ -7,7 +7,7 @@ include 'funct.php';
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            Halaman Ubah Simpanan
+            Halaman Karyawan
             <small>Control panel</small>
         </h1>
         <ol class="breadcrumb">
@@ -20,7 +20,7 @@ include 'funct.php';
     <section class="content">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Daftar Simpanan Koperasi</h3>
+                <h3 class="box-title">Daftar Karyawan</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -30,7 +30,7 @@ include 'funct.php';
                 <table id="dataTable" class="table table-bordered table-striped">
                     <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal"
                         class="btn btn-success" onMouseOver="this.style.backgroundColor='#006064'"
-                        onMouseOut="this.style.backgroundColor='#4CAF50'">Tambah Jenis Simpanan</button>
+                        onMouseOut="this.style.backgroundColor='#4CAF50'">Tambah Karyawan</button>
                     <br></br>
                     <thead>
                         <tr class="info">
@@ -41,7 +41,7 @@ include 'funct.php';
                                 <center>Nama</center>
                             </th>
                             <th>
-                                <center>Jenis Kelamin</center>
+                                <center>No Telepon</center>
                             </th>
                             <th>
                                 <center>Alamat</center>
