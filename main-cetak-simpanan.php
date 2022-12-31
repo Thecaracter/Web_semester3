@@ -90,7 +90,7 @@
 					?>
                 </tbody>
               </table>
-              <a href="cetak-simpanan-pdf.php?bln=<?php echo $_GET['bln'] ?>" class="btn btn-primary pull-right" style="margin-right: 5px; margin-top:10px;">
+              <a href="cetak-simpanan-keseluruhan.php?bln=<?php echo $_GET['bln'] ?>" class="btn btn-primary pull-right" style="margin-right: 5px; margin-top:10px;">
             <i class="fa fa-download"></i> Generate PDF </a>	
 			<?php 
 			}else

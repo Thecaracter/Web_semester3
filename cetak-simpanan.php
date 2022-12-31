@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,67 +23,79 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body onload="window.print();">
-<div class="wrapper">
-  <!-- Main content -->
-  <section class="invoice">
-    <!-- title row -->
-    <div class="row">
-      <div class="col-xs-12">
-        <h2 class="page-header">
-          <i class="fa fa-globe"></i> Koperasi Simpan Pinjam, Inc.
-          <small class="pull-right">Tanggal: <?php echo date('d F Y'); ?></small>
-        </h2>
-      </div>
-      <!-- /.col -->
-    </div>
 
-    <!-- Table row -->
-    <div class="row">
-    <h1 class="text-center">DATA SIMPANAN</h1>
-      <div class="col-xs-12 table-responsive table-bordered">
-      <?php 
-	  	include 'koneksi.php'; 
-		include'funct.php';
-		$sql = mysqli_query($conn, "SELECT * FROM simpanan s,anggota a WHERE a.id_anggota='".$_GET['id_anggota']."' AND bln='".$_GET['bln']."'");
-		$data = mysqli_fetch_array($sql);
-	  ?>
-        <table class="table table-striped">
-          <thead>
-          <tr>
-            <th>Nama</th>
-            <th>ID Anggota</th>
-            <th>Alamat</th>
-            <th>Tampat , Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Nomor Handphone</th>
-            <th>Nama Simpanan</th>
-            <th>Tanggal Simpanan</th>
-            <th>Besar Simpanan</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td><?php echo $data['nama']; ?></td>
-            <td><?php echo $data['id_anggota']; ?></td>
-            <td><?php echo $data['alamat']; ?></td>
-            <td><?php echo $data['tmp_lahir'].' , '.$data['tgl_lahir']; ?></td>
-            <td><?php echo $data['j_kel']; ?></td>
-            <td><?php echo $data['no_telp']; ?></td>
-            <td><?php echo $data['nm_simpanan']; ?></td>
-            <td><?php echo $data['tgl_simpanan']; ?></td>
-            <td><?php echo $data['besar_simpanan']; ?></td>
-          </tr>
-          </tbody>
-        </table>
+<body onload="window.print();">
+  <div class="wrapper">
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <i class="fa fa-globe"></i> Koperasi Simpan Pinjam, Inc.
+            <small class="pull-right">Tanggal: <?php echo date('d F Y'); ?></small>
+          </h2>
+        </div>
+        <!-- /.col -->
       </div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-    <!-- /.row -->
-  </section>
-  <!-- /.content -->
-</div>
-<!-- ./wrapper -->
+
+      <!-- Table row -->
+      <div class="row">
+        <h1 class="text-center">DATA SIMPANAN</h1>
+        <div class="col-xs-12 table-responsive table-bordered">
+          <?php
+          include 'koneksi.php';
+          include 'funct.php';
+          $sql = mysqli_query($conn, "SELECT * FROM simpanan s,anggota a WHERE a.id_anggota='" . $_GET['id_anggota'] . "' AND bln='" . $_GET['bln'] . "'");
+          $data = mysqli_fetch_array($sql);
+          ?>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>ID Anggota</th>
+                <th>Alamat</th>
+                <th>Tampat , Tanggal Lahir</th>
+                <th>Jenis Kelamin</th>
+                <th>Nomor Handphone</th>
+                <th>Nama Simpanan</th>
+                <th>Tanggal Simpanan</th>
+                <th>Besar Simpanan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <?php echo $data['nama']; ?>
+                </td>
+                <td><?php echo $data['id_anggota']; ?></td>
+                <td>
+                  <?php echo $data['alamat']; ?>
+                </td>
+                <td><?php echo $data['tmp_lahir'] . ' , ' . $data['tgl_lahir']; ?></td>
+                <td>
+                  <?php echo $data['j_kel']; ?>
+                </td>
+                <td><?php echo $data['no_telp']; ?></td>
+                <td>
+                  <?php echo $data['nm_simpanan']; ?>
+                </td>
+                <td><?php echo $data['tgl_simpanan']; ?></td>
+                <td>
+                  <?php echo $data['besar_simpanan']; ?>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- ./wrapper -->
 </body>
+
 </html>
