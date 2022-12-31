@@ -13,7 +13,7 @@ include 'funct.php';
         <ol class="breadcrumb">
             <li><a href="index.php"><i class="fa fa-dashboard"></i> Master</a></li>
             <li class="active">Master Simpanan</li>
-            <li class="active">Jenis Simpan</li>
+            <li class="active">Jenis Simpanan</li>
 
         </ol>
     </section>

@@ -12,8 +12,8 @@ include 'funct.php';
         </h1>
         <ol class="breadcrumb">
             <li><a href="index.php"><i class="fa fa-dashboard"></i> Master</a></li>
-            <li class="active">Master Simpanan</li>
-            <li class="active">Jenis Simpan</li>
+            <li class="active">Karyawan</li>
+            <li class="active">Daftar Karyawan</li>
 
         </ol>
     </section>
@@ -136,14 +136,16 @@ include 'funct.php';
                                                     value="<?php echo $data['foto']; ?>" class="form-control" />
                                                 <br />
 
-                                                <input type="submit" name="update" id="update" value="update"
-                                                    class="btn btn-success" />
+                                                <input type="submit" name="update" id="update" value="Update"
+                                                class="btn btn-success" 
+                                                onMouseOver="this.style.backgroundColor='#00796b'"
+                                                onMouseOut="this.style.backgroundColor='#4CAF50'" />
 
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default"
-                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-default" onMouseOver="this.style.backgroundColor='#ff6666'"
+                                            onMouseOut="this.style.backgroundColor='white'" data-dismiss="modal">Close</button>
                                         </div>
                                     </div>
 

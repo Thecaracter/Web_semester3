@@ -201,7 +201,7 @@ if ($_GET['reqpin'] == 'dell') {
 	$id_pinjaman = $_GET['id_pinjaman'];
 
 	$delete = mysqli_query($conn, "DELETE FROM pinjaman WHERE id_pinjaman='" . $id_pinjaman . "'");
-
+	$_SESSION["suksesp"] = 'Data Berhasil Di Hapus';
 	header('Location:page-pinjaman.php');
 	exit;
 }
