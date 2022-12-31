@@ -46,9 +46,10 @@
                     <?php
                     include 'koneksi.php';
                     include 'funct.php';
-                    $sql = mysqli_query($conn, "SELECT anggota.nama, anggota.id_anggota,anggota.alamat,anggota.tmp_lahir,anggota.tgl_lahir,anggota.j_kel,anggota.no_telp, simpanan.nm_simpanan, simpanan.tgl_simpanan, anggota.besar_simpanan
-                    FROM anggota
-                    INNER JOIN simpanan ON anggota.id_anggota=anggota.id_anggota WHERE bln='" . $_GET['bln'] . "'");
+                    $sql = mysqli_query($conn, "SELECT DISTINCT A.nama, A.id_anggota, A.alamat, A.tmp_lahir, A.tgl_lahir, A.j_kel, A.no_telp, B.nm_simpanan, B.tgl_simpanan, A.besar_simpanan
+                    FROM anggota A
+                    INNER JOIN simpanan B ON A.id_anggota=B.id_anggota WHERE bln='" . $_GET['bln'] . "' ;
+                    ");
                     // $sql = mysqli_query($conn, "SELECT * FROM simpanan s,anggota a WHERE a.id_anggota='' AND bln='" . $_GET['bln'] . "'");
                     $data = mysqli_fetch_array($sql);
                     ?>
@@ -68,11 +69,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php while ($data = mysqli_fetch_array($sql)) {
+                            <?php
+                            while ($data = mysqli_fetch_array($sql)) {
 
-                            ?>
+                                ?>
                                 <tr>
-
                                     <td>
                                         <?php echo $data['nama']; ?>
                                     </td>
@@ -100,7 +101,8 @@
                                     <td>
                                         <?php echo $data['besar_simpanan']; ?>
                                     </td>
-                                    <?php } ?>
+                                    <?php
+                            } ?>
                             </tr>
                         </tbody>
                     </table>
