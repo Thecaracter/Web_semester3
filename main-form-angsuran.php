@@ -46,42 +46,42 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 			<div class="box-body">
 
 				<?php
-				/*if (isset($_GET['nama']))
+				/*if (isset($_GET['id_angsuran']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				Nama Tidak Boleh Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['alamat']))
+				else if (isset($_GET['id_pinjaman']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				Alamat Anda Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['no_hp']))
+				else if (isset($_GET['nama_pinjaman']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				No Handphone Anda Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['tmp_lahir']))
+				else if (isset($_GET['id_anggota']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				Tempat Lahir Anda Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['tgl_lahir']))
+				else if (isset($_GET['angsuran_ke']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				Tanggal Lahir Anda Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['ket']))
+				else if (isset($_GET['besar_angsuran']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -206,6 +206,7 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 							<input type="text" class="form-control" id="tgl_pembayaran" name="tgl_pembayaran"
 								data-inputmask="'alias': 'yyyy/mm/dd'" data-mask="">
 						</div>
+						<br>
 						<div class="form-group">
 							<label>Angsuran Ke</label>
 							<input type="number" value="<?php echo $angsuran_ke ?>"
@@ -220,6 +221,7 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 							<input type="text" id="tgl_jatuh_tempo" class="form-control" name="tgl_jatuh_tempo"
 								data-inputmask="'alias': 'yyyy/mm/dd'" data-mask="">
 						</div>
+						<br>
 						<script>
 							$("#id_pinjaman").on("change", function () {
 
@@ -240,7 +242,7 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 							});
 						</script>
 						<div class="form-group">
-							<label>besar angsuran</label>
+							<label>Besar Angsuran</label>
 							<input type="number" id="besar_angsuran" value="<?php echo $besar_angsuran ?>"
 								class="form-control" Y rows="3" placeholder="Besar Angsuran" name="besar_angsuran">
 						</div>
@@ -249,7 +251,7 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 					<!-- /.box-body -->
 
 					<div class="box-footer">
-						<button type="submit" class="btn btn-primary">
+						<button type="submit" class="btn btn-primary" style="box-shadow: 0 3px 0 0 #007299; padding:10px 16px; ">
 							<?php echo $button ?>
 						</button>
 					</div>

@@ -67,7 +67,7 @@ if ($data_level == "1") {
                         <i class='fa fa-angle-left pull-right'></i>
                     </span>
                 </a>
-                <ul class='treeview-menu'>
+                <ul class='treeview-menu' style='display: none;'>
                     <li><a href='page-karyawan.php'><i class='fa fa-user-plus'></i> Daftar Karyawan</a></li>
                 </ul>
                 <a href='#'><i class='fa fa-circle-o'></i> Anggota
@@ -75,7 +75,7 @@ if ($data_level == "1") {
                         <i class='fa fa-angle-left pull-right'></i>
                     </span>
                 </a>
-                <ul class='treeview-menu'>
+                <ul class='treeview-menu' style='display: none;'>
                     <li><a href='page-anggota.php'><i class='fa fa-database'></i> Daftar Anggota</a></li>
                     <li>
                         <a href='page-form-anggota.php?reqa=add'><i class='fa fa-plus'></i> Form Anggota
@@ -87,7 +87,7 @@ if ($data_level == "1") {
                         <i class='fa fa-angle-left pull-right'></i>
                     </span>
                 </a>
-                <ul class='treeview-menu'>
+                <ul class='treeview-menu' style='display: none;'>
                     <li><a href='page-ubahsimpanan.php'><i class='fa fa-pencil-square'></i> Jenis Simpanan</a></li>
                 </ul>
                 <a href='#'><i class='fa fa-circle-o'></i> Master Pinjaman
@@ -95,7 +95,7 @@ if ($data_level == "1") {
                         <i class='fa fa-angle-left pull-right'></i>
                     </span>
                 </a>
-                <ul class='treeview-menu'>
+                <ul class='treeview-menu' style='display: none;'>
                     <li><a href='page-ubahpinjaman.php'><i class='fa fa-wrench'></i> Jenis Pinjaman</a></li>
                 </ul>
             </li>
