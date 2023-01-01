@@ -102,24 +102,24 @@
         </head>
 
         <body>
-            <div class="container">
-                <h2>Grafik Oprasional KSP</h2>
+            <div class="container" style="text-align: center;">
+                <h2><b>Grafik Operasional KSP</h2>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-6">
                         <div class="panel-group">
                             <div class="panel panel-default">
-                                <div class="panel-heading">BarChart Simpanan</div>
-                                <div class="panel-body"><iframe src="bar.php" width="100%" height="300"></iframe></div>
+                                <div class="panel-heading">Bar Chart Simpanan</div>
+                                <div class="panel-body"><iframe src="bar.php" width="80%" height="480px"></iframe></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-6">
                         <div class="panel-group">
                             <div class="panel panel-default">
-                                <div class="panel-heading">Grafik Garis Pinjaman</div>
-                                <div class="panel-body"><iframe src="line.php" width="100%" height="300"></iframe>
+                                <div class="panel-heading">Line Chart Pinjaman</div>
+                                <div class="panel-body"><iframe src="line.php" width="80%" height="480px"></iframe>
                                 </div>
                             </div>
                         </div>

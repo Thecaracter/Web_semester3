@@ -6,10 +6,10 @@
     <style type="text/css">
         BODY {
             /* width: 550PX; */
-            height: auto;
-            width: auto;
+            height: 500%;
+            width: 100%;
             margin: 0 auto;
-            background-color: #FFD39A;
+            /*background-color: #FFD39A;*/
         }
 
         #chart-container {
@@ -53,7 +53,7 @@
                             datasets: [
                                 {
                                     label: 'Pinjaman',
-                                    backgroundColor: '#E26868',
+                                    backgroundColor: 'rgba(230, 140, 140, 0.8)',
                                     borderColor: '#A10035',
                                     hoverBackgroundColor: '#CCCCCC',
                                     hoverBorderColor: '#666666',

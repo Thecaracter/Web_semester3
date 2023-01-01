@@ -21,7 +21,7 @@
 <script type="text/javascript" src="vendor/chart.js/Chart.min.js"></script> -->
     <script src="//code.jquery.com/jquery-1.9.1.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-
+    <script src="https://code.highcharts.com/highcharts.js"></script>
 
 </head>
 
@@ -53,20 +53,28 @@
                             datasets: [
                                 {
                                     label: 'simpanan',
-                                    backgroundColor: '#49e2ff',
-                                    borderColor: '#46d5f1',
-                                    hoverBackgroundColor: '#CCCCCC',
-                                    hoverBorderColor: '#666666',
+                                    backgroundColor: '#0045a5',
+                                    borderColor: '#0b1d78',
+                                    hoverBackgroundColor: '#00c698',
+                                    hoverBorderColor: '#00a9b5',
+                                    borderWidth: 1,
                                     data: jual
                                 }
                             ]
                         };
-
+                        
                         var graphTarget = $('#graphCanvas');
+
+                        var chartOptions = {
+                        legend: {
+                            position: 'bottom'
+                        }
+                        };
 
                         var barGraph = new Chart(graphTarget, {
                             type: 'bar',
-                            data: chartdata
+                            data: chartdata,
+                            options: chartOptions
 
                         });
                     });

@@ -46,42 +46,42 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 			<div class="box-body">
 
 				<?php
-				/*if (isset($_GET['id_angsuran']))
+				/*if (isset($_GET['nama']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				Nama Tidak Boleh Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['id_pinjaman']))
+				else if (isset($_GET['alamat']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				Alamat Anda Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['nama_pinjaman']))
+				else if (isset($_GET['no_hp']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				No Handphone Anda Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['id_anggota']))
+				else if (isset($_GET['tmp_lahir']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				Tempat Lahir Anda Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['angsuran_ke']))
+				else if (isset($_GET['tgl_lahir']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				Tanggal Lahir Anda Kosong!!!
 				</div>';
 				}
-				else if (isset($_GET['besar_angsuran']))
+				else if (isset($_GET['ket']))
 				{
 				echo '<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
