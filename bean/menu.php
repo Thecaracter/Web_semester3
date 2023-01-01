@@ -184,26 +184,26 @@ if ($data_level == "1") {
       <section class='sidebar'>
         <!-- Sidebar user panel -->
         <div class='user-panel'>
-          <div class='pull-left image'>
-            <img src='dist/img/avatar5.png' class='img-circle'
-             alt='User Image'>
-          </div>
-          <div class='pull-left info'> " ?>
-    <p>
-        <?php echo $data_username ?>
-    </p>
-    <a href='#'><i class='fa fa-money text-success'></i>
-        <?php
+          <div class='pull-left image'>" ?>
+    <img src='./foto/<?php echo $foto; ?>' class="img-circle" alt="User Image">
+    </div>
 
-        if ($data_level == 1) {
-            echo 'Admin';
-        } else {
-            echo 'Petugas';
-        }
-        $data_level
+    <div class='pull-left info'>
+        <p>
+            <?php echo $data_username ?>
+        </p>
+        <a href='#'><i class='fa fa-money text-success'></i>
+            <?php
 
-            ?>
-    </a>
+            if ($data_level == 1) {
+                echo 'Admin';
+            } else {
+                echo 'Petugas';
+            }
+            $data_level
+
+                ?>
+        </a>
     </div>
     </div>
     <!-- search form -->
