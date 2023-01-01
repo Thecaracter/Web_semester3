@@ -21,7 +21,7 @@ if ($data_level == "1") {
         <div class='user-panel'>
 " ?>
     <div class='pull-left image'>
-        <img src='./foto/<?php echo $foto; ?>' class='img-circle' alt='User Image'>
+        <img src='./foto/<?php echo $foto; ?>' class="img-circle" alt="User Image">
     </div>
     <?php
     echo "<div class='pull-left info'> " ?>
