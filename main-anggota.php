@@ -49,7 +49,7 @@ include 'funct.php';
                         <center>
                          	<a href="page-form-anggota.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=edit" title="Edit Data Ini" class="btn btn-sm"style="background: darkslateblue;color:white;"><i class="fa fa-edit "></i> Edit
                             </a>
-                            <a href="proses.php?id_anggota=<?php echo $data['id_anggota'];?>" title="Lihat Detail" class="btn btn-info btn-sm"><span class="fa fa-info"> Detail</span> 
+                            <a href="page-detail-anggota.php?id_anggota=<?php echo $data['id_anggota'];?>" title="Lihat Detail" class="btn btn-info btn-sm"><span class="fa fa-info"> Detail</span> 
                             </a>
                             <a href="proses.php?id_anggota=<?php echo $data['id_anggota'];?>&reqa=dell" title="Berhenti Jadi Anggota" class="btn btn-danger btn-sm alert_notif" ><span class="fa fa-times"> Berhenti</span>
             </a>
