@@ -86,18 +86,16 @@ if ($_POST['reqa'] == "add") {
 if ($_GET['reqa'] == "dell") {
 	$id_anggota = $_GET['id_anggota'];
 	$sql_pin = mysqli_query($conn, "SELECT * FROM pinjaman WHERE id_anggota='" . $id_anggota . "'");
-	// $sql_pin = mysqli_query("Select * From pinjam where id_anggota='".$id_anggota."'");
+	// $sql_pin = mysqli_query("Select * From pinjam where id_anggota='" . $id_anggota . "'");
 	$data_pin = mysqli_fetch_array($sql_pin);
 	$jumlah_pin = mysqli_num_rows($sql_pin);
 
-	if ($jumlah_pin == 0 || $data_pin['ket'] == 1) {
-		$sql = "UPDATE anggota set status='0' where id_anggota='" . $id_anggota . "'";
-		$delete = mysqli_query($conn, $sql);
-		//echo $sql;
-		header("Location:page-berhenti-anggota.php?id_anggota=$id_anggota");
-	} else {
-		echo 'swal("Anda Berhasil Berhenti!", "Klik Button Untuk Melanjutkan!", "success");';
-	}
+
+	$sql = "UPDATE anggota set status='0' where id_anggota='" . $id_anggota . "'";
+	$delete = mysqli_query($conn, $sql);
+	echo $sql;
+	header("Location:page-berhenti-anggota.php?id_anggota=$id_anggota");
+
 	exit;
 }
 
