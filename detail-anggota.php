@@ -45,7 +45,7 @@ $data = mysqli_fetch_array($tampil);
         <div class="row">
             <!-- accepted payments column -->
             <div class="col-xs-6">
-                <p class="lead">Perhatian!</p>
+                <p class="lead">Sambutan</p>
                 <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
                     Menjadi bagian dari koperasi mantap gan
                 </p>
