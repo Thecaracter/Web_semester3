@@ -43,73 +43,99 @@
             <div class="row">
                 <div class="col-xs-12 table-responsive table-bordered">
                     <?php
-                    include 'koneksi.php';
-                    include 'funct.php';
-                    $sql = mysqli_query($conn, "SELECT anggota.nama, pinjaman.id_pinjaman,pinjaman.nama_pinjaman,pinjaman.besar_pinjaman,pinjaman.tgl_pinjaman,pinjaman.tgl_pelunasan
-                    FROM anggota
-                    INNER JOIN pinjaman ON anggota.id_anggota=pinjaman.id_anggota WHERE bln='" . $_GET['bln'] . "'");
-                    // $sql = mysqli_query($conn, "SELECT * FROM pinjaman p,anggota a WHERE p.id_anggota=a.id_anggota AND p.bln='" . $_GET['bln'] . "'");
-                    
-                    $data = mysqli_fetch_array($sql);
-                    ?>
-                    <table class="table table-striped table-responsive">
-                        <thead>
-                            <tr class="warning">
-                                <th style="font-size:12px;">
-                                    <center>Nama Anggota</center>
-                                </th>
-                                <th style="font-size:12px;">
-                                    <center>ID Pinjaman</center>
-                                </th>
-                                <th style="font-size:12px;">
-                                    <center>Nama Pinjaman</center>
-                                </th>
-                                <th style="font-size:12px;">
-                                    <center>Besar Pinjaman</center>
-                                </th>
-                                <th style="font-size:12px;">
-                                    <center>Tanggal Pinjaman</center>
-                                </th>
-                                <th style="font-size:12px;">
-                                    <center>Tanggal Pelunasan</center>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php while ($data = mysqli_fetch_array($sql)) {
+                    if (isset($_GET['bln'])) {
+                        include 'koneksi.php';
+                        include 'funct.php';
+                        $sql = mysqli_query($conn, "SELECT * FROM pinjaman p,anggota a WHERE p.id_anggota=a.id_anggota AND p.bln='" . $_GET['bln'] . "'");
+                        $jum = mysqli_num_rows($sql);
+                        if ($jum > 0) {
                             ?>
-                                <tr>
-                                    <!-- <td>
-                                            <center><?php echo $data['bln']; ?></center>
-                                        </td> -->
-                                    <td style="font-size:12px;">
-                                        <?php echo $data['nama']; ?>
-                                    </td>
-                                    <td style="font-size:12px;">
-                                        <center>
-                                            <?php echo $data['id_pinjaman']; ?>
-                                        </center>
-                                    </td>
-                                    <td style="font-size:12px;">
-                                        <?php echo $data['nama_pinjaman']; ?>
-                                    </td>
-                                    <td style="font-size:12px;">
-                                        <?php echo numberrupiah($data['besar_pinjaman']); ?>
-                                    </td>
-                                    <td style="font-size:12px;">
-                                        <center>
-                                            <?php echo TanggalIndo($data['tgl_pinjaman']); ?>
-                                        </center>
-                                    </td>
-                                    <td style="font-size:12px;">
-                                        <center>
-                                            <?php echo TanggalIndo($data['tgl_pelunasan']); ?>
-                                        </center>
-                                    </td>
-                                    <?php
-                        } ?>
-                            </tr>
-                        </tbody>
+
+                            <table id="dataTable" class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr class="info">
+                                        <th>
+                                            <center>No</center>
+                                        </th>
+                                        <th>
+                                            <center>Nama Anggota</center>
+                                        </th>
+                                        <th>
+                                            <center>ID Anggota</center>
+                                        </th>
+                                        <th>
+                                            <center>ID Pinjaman</center>
+                                        </th>
+                                        <th>
+                                            <center>Nama Pinjaman</center>
+                                        </th>
+                                        <th>
+                                            <center>Besar Pinjaman</center>
+                                        </th>
+                                        <th>
+                                            <center>Tanggal Pinjaman</center>
+                                        </th>
+                                        <th>
+                                            <center>Tanggal Pelunasan</center>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <?php
+                                        $no = 1;
+                                        while ($data = mysqli_fetch_array($sql)) {
+                                            ?>
+                                            <td>
+                                                <center><?php echo $no; ?></center>
+                                            </td>
+                                            <td>
+                                                <?php echo $data['nama']; ?>
+                                            </td>
+                                            <td>
+                                                <center><?php echo $data['id_anggota'] ?></center>
+                                            </td>
+                                            <td>
+                                                <center>
+                                                    <?php echo $data['id_pinjaman'] ?>
+                                                </center>
+                                            </td>
+                                            <td><?php echo $data['nama_pinjaman'] ?></td>
+                                            <td>
+                                                <?php echo numberrupiah($data['besar_pinjaman']); ?>
+                                            </td>
+                                            <td>
+                                                <center>
+                                                    <?php echo TanggalIndo($data['tgl_pinjaman']) ?>
+                                                </center>
+                                            </td>
+                                            <td>
+                                                <center>
+                                                    <?php echo TanggalIndo($data['tgl_pelunasan']) ?>
+                                                </center>
+                                            </td>
+
+                                        </tr>
+                                        <?php
+                                        $no++;
+                                        }
+                                        ?>
+                                </tbody>
+                            </table>
+
+                            <?php
+                        } else {
+                            echo '<div class="alert alert-danger" style="height: 80px; font-size:40px;" align="center">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+						DATA BELUM ADA!!!
+						</div>';
+                        }
+                    }
+                    ?>
+
+                    </tr>
+                    </tbody>
                     </table>
                 </div>
                 <!-- /.col -->

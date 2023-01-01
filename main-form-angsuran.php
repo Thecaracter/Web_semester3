@@ -115,7 +115,7 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 									<option id_anggota="<?php echo $r['id_anggota'] ?>" besar_angsuran="<?php
 									   if ($r['nama_pinjaman'] == "Pinjaman Jangka Pendek") {
 										   $bayar = $r['besar_pinjaman'] / 10;
-										   $bunga = $bayar * 0.1;
+										   $bunga = $bayar * 0.05;
 
 										   echo $angsuran = $bayar + $bunga;
 									   } else if ($r['nama_pinjaman'] == "Pinjaman Jangka Menengah") {
@@ -125,7 +125,7 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 										   echo $angsuran = $bayar + $bunga;
 									   } else if ($r['nama_pinjaman'] == "Pinjaman Jangka Panjang") {
 										   $bayar = $r['besar_pinjaman'] / 30;
-										   $bunga = $bayar * 0.1;
+										   $bunga = $bayar * 0.15;
 
 										   echo $angsuran = $bayar + $bunga;
 									   }
@@ -251,7 +251,8 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 					<!-- /.box-body -->
 
 					<div class="box-footer">
-						<button type="submit" class="btn btn-primary" style="box-shadow: 0 3px 0 0 #007299; padding:10px 16px; ">
+						<button type="submit" class="btn btn-primary"
+							style="box-shadow: 0 3px 0 0 #007299; padding:10px 16px; ">
 							<?php echo $button ?>
 						</button>
 					</div>
