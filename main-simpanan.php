@@ -25,69 +25,71 @@ include 'funct.php';
         $sql = mysqli_query($conn, "SELECT * FROM simpanan WHERE NOT nm_simpanan = 'Simpanan Pokok'");
         // $sql = mysqli_query($conn, "SELECT * FROM simpanan ");
         ?>
-        <table id="dataTable" class="table table-bordered table-striped">
-          <thead>
-            <tr class="info">
-              <th>
-                <center>No</center>
-              </th>
-              <th>
-                <center>Nama Simpanan</center>
-              </th>
-              <th>
-                <center>ID Anggota</center>
-              </th>
-              <th>
-                <center>Tanggal Simpanan</center>
-              </th>
-              <th>
-                <center>Besar Simpanan</center>
-              </th>
-              <th>
-                <center>Action</center>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <?php
-              $no = 1;
-              while ($data = mysqli_fetch_array($sql)) {
-                ?>
-                <td>
-                  <center>
-                    <?php echo $no; ?>
-                  </center>
-                </td>
-                <td>
-                  <?php echo $data['nm_simpanan']; ?>
-                </td>
-                <td>
-                  <center>
-                    <?php echo $data['id_anggota']; ?>
-                  </center>
-                </td>
-                <td>
-                  <?php echo TanggalIndo($data['tgl_simpanan']); ?>
-                </td>
-                <td>
-                  <?php echo numberrupiah($data['besar_simpanan']) ?>
-                </td>
-                <td>
-                  <center>
-                    <a href="proses.php?id_simpanan=<?php echo $data['id_simpanan']; ?>&reqs=dell"
-                      title="Hapus Simpanan Ini" class="btn btn-danger btn-sm alert_notif"><span
-                        class="glyphicon glyphicon-trash">
-                        Hapus</span> </a>
-                  </center>
-                </td>
+        <div class="table-responsive">
+          <table id="dataTable" class="table table-bordered table-striped">
+            <thead>
+              <tr class="info">
+                <th>
+                  <center>No</center>
+                </th>
+                <th>
+                  <center>Nama Simpanan</center>
+                </th>
+                <th>
+                  <center>ID Anggota</center>
+                </th>
+                <th>
+                  <center>Tanggal Simpanan</center>
+                </th>
+                <th>
+                  <center>Besar Simpanan</center>
+                </th>
+                <th>
+                  <center>Action</center>
+                </th>
               </tr>
-              <?php
-              $no++;
-              }
-              ?>
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              <tr>
+                <?php
+                $no = 1;
+                while ($data = mysqli_fetch_array($sql)) {
+                  ?>
+                  <td>
+                    <center>
+                      <?php echo $no; ?>
+                    </center>
+                  </td>
+                  <td>
+                    <?php echo $data['nm_simpanan']; ?>
+                  </td>
+                  <td>
+                    <center>
+                      <?php echo $data['id_anggota']; ?>
+                    </center>
+                  </td>
+                  <td>
+                    <?php echo TanggalIndo($data['tgl_simpanan']); ?>
+                  </td>
+                  <td>
+                    <?php echo numberrupiah($data['besar_simpanan']) ?>
+                  </td>
+                  <td>
+                    <center>
+                      <a href="proses.php?id_simpanan=<?php echo $data['id_simpanan']; ?>&reqs=dell"
+                        title="Hapus Simpanan Ini" class="btn btn-danger btn-sm alert_notif"><span
+                          class="glyphicon glyphicon-trash">
+                          Hapus</span> </a>
+                    </center>
+                  </td>
+                </tr>
+                <?php
+                $no++;
+                }
+                ?>
+            </tbody>
+          </table>
+        </div>
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">

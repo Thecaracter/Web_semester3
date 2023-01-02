@@ -53,7 +53,7 @@
 				if ($jum > 0)
 				{
 			?>
-            
+            <div class="table-responsive">
             	<table id="dataTable" class="table table-bordered table-striped table-responsive">
                 <thead>
                 <tr class="info">
@@ -95,7 +95,7 @@
 						}
 					?>
                 </tbody>
-              </table>
+              </table></div>
               <a href="cetak-angsuran-keseluruhan.php?bln=<?php echo $_GET['bln'] ?>" class="btn btn-primary pull-right" style="margin-right: 5px; margin-top:10px;">
             <i class="fa fa-download"></i> Generate PDF </a>	
 			<?php

@@ -27,136 +27,141 @@ include 'funct.php';
                 <?php
                 $sql = mysqli_query($conn, "SELECT * FROM karyawan where level =2");
                 ?>
-                <table id="dataTable" class="table table-bordered table-striped">
-                    <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal"
-                        class="btn btn-success" onMouseOver="this.style.backgroundColor='#006064'"
-                        onMouseOut="this.style.backgroundColor='#4CAF50'">Tambah Karyawan</button>
-                    <br></br>
-                    <thead>
-                        <tr class="info">
-                            <th>
-                                <center>No</center>
-                            </th>
-                            <th>
-                                <center>Nama</center>
-                            </th>
-                            <th>
-                                <center>No Telepon</center>
-                            </th>
-                            <th>
-                                <center>Alamat</center>
-                            </th>
-                            <th>
-                                <center>Foto</center>
-                            </th>
-                            <th>
-                                <center>Action</center>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <?php
-                            $no = 1;
-                            while ($data = mysqli_fetch_array($sql)) {
-                                ?>
-                                <td>
-                                    <center>
-                                        <?php echo $no; ?>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <?php echo $data['username']; ?>
-                                    </center>
-                                </td>
-                                <td>
-                                    <?php echo $data['no_telp']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['alamat'] ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['foto'] ?>
-                                </td>
-                                <td>
-                                    <center>
+                <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal"
+                    class="btn btn-success" onMouseOver="this.style.backgroundColor='#006064'"
+                    onMouseOut="this.style.backgroundColor='#4CAF50'">Tambah Karyawan</button>
+                <div class="table-responsive">
+                    <table id="dataTable" class="table table-bordered table-striped">
 
-                                        <a type="button" name="edit" value="Edit" data-toggle="modal"
-                                            data-target="#editModal<?php echo $data["id"]; ?>" title="Edit Data ini"
-                                            class="btn btn-sm" style="background: darkslateblue;color:white;"><i
-                                                class="fa fa-edit "></i>
-                                            Edit
-                                        </a>
-
-                                        <a href="proses.php?id=<?php echo $data['id']; ?>&reqkarya=dell"
-                                            title="Hapus Simpanan" class="btn btn-danger btn-sm alert_notif"><span
-                                                class="fa fa-trash-o">
-                                                Hapus</span>
-                                        </a>
-
-                                    </center>
-                                </td>
-
-
-
+                        <br></br>
+                        <thead>
+                            <tr class="info">
+                                <th>
+                                    <center>No</center>
+                                </th>
+                                <th>
+                                    <center>Nama</center>
+                                </th>
+                                <th>
+                                    <center>No Telepon</center>
+                                </th>
+                                <th>
+                                    <center>Alamat</center>
+                                </th>
+                                <th>
+                                    <center>Foto</center>
+                                </th>
+                                <th>
+                                    <center>Action</center>
+                                </th>
                             </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <?php
+                                $no = 1;
+                                while ($data = mysqli_fetch_array($sql)) {
+                                    ?>
+                                    <td>
+                                        <center>
+                                            <?php echo $no; ?>
+                                        </center>
+                                    </td>
+                                    <td>
+                                        <center>
+                                            <?php echo $data['username']; ?>
+                                        </center>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['no_telp']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['alamat'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['foto'] ?>
+                                    </td>
+                                    <td>
+                                        <center>
 
-                            <div id="editModal<?php echo $data["id"]; ?>" class="modal fade">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Input Data</h4>
+                                            <a type="button" name="edit" value="Edit" data-toggle="modal"
+                                                data-target="#editModal<?php echo $data["id"]; ?>" title="Edit Data ini"
+                                                class="btn btn-sm" style="background: darkslateblue;color:white;"><i
+                                                    class="fa fa-edit "></i>
+                                                Edit
+                                            </a>
+
+                                            <a href="proses.php?id=<?php echo $data['id']; ?>&reqkarya=dell"
+                                                title="Hapus Simpanan" class="btn btn-danger btn-sm alert_notif"><span
+                                                    class="fa fa-trash-o">
+                                                    Hapus</span>
+                                            </a>
+
+                                        </center>
+                                    </td>
+
+
+
+                                </tr>
+
+                                <div id="editModal<?php echo $data["id"]; ?>" class="modal fade">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Input Data</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="./proses/edit_karyawan.php" method="post" id="update"
+                                                    enctype='multipart/form-data'>
+                                                    <input type="hidden" value="<?php echo $data['id']; ?>"
+                                                        name="id_karyawan" id="id_karyawan" class="form-control">
+                                                    <label>Username</label>
+                                                    <input type="text" name="username" id="username"
+                                                        value="<?php echo $data['username']; ?>" class="form-control" />
+                                                    <br />
+                                                    <label>Password</label>
+                                                    <input type="text" name="password" id="password"
+                                                        value="<?php echo $data['password']; ?>" class="form-control" />
+                                                    <br />
+                                                    <label>No Telepon</label>
+                                                    <input type="text" style="resize:vertical"
+                                                        value="<?php echo $data['no_telp']; ?>" name="no_telp" id="no_telp"
+                                                        class="form-control"></textarea>
+                                                    <br />
+                                                    <label>Alamat</label>
+                                                    <input type="text" name="alamat" value="<?php echo $data['alamat']; ?>"
+                                                        id="alamat" class="form-control" />
+                                                    <br />
+                                                    <label>Foto</label>
+                                                    <input type="file" name="foto" id="foto"
+                                                        value="<?php echo $data['foto']; ?>" class="form-control" />
+                                                    <br />
+
+                                                    <input type="submit" name="update" id="update" value="Update"
+                                                        class="btn btn-success"
+                                                        onMouseOver="this.style.backgroundColor='#00796b'"
+                                                        onMouseOut="this.style.backgroundColor='#4CAF50'" />
+
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default"
+                                                    onMouseOver="this.style.backgroundColor='#ff6666'"
+                                                    onMouseOut="this.style.backgroundColor='white'"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
                                         </div>
-                                        <div class="modal-body">
-                                            <form action="./proses/edit_karyawan.php" method="post" id="update"
-                                                enctype='multipart/form-data'>
-                                                <input type="hidden" value="<?php echo $data['id']; ?>" name="id_karyawan"
-                                                    id="id_karyawan" class="form-control">
-                                                <label>Username</label>
-                                                <input type="text" name="username" id="username"
-                                                    value="<?php echo $data['username']; ?>" class="form-control" />
-                                                <br />
-                                                <label>Password</label>
-                                                <input type="text" name="password" id="password"
-                                                    value="<?php echo $data['password']; ?>" class="form-control" />
-                                                <br />
-                                                <label>No Telepon</label>
-                                                <input type="text" style="resize:vertical"
-                                                    value="<?php echo $data['no_telp']; ?>" name="no_telp" id="no_telp"
-                                                    class="form-control"></textarea>
-                                                <br />
-                                                <label>Alamat</label>
-                                                <input type="text" name="alamat" value="<?php echo $data['alamat']; ?>"
-                                                    id="alamat" class="form-control" />
-                                                <br />
-                                                <label>Foto</label>
-                                                <input type="file" name="foto" id="foto"
-                                                    value="<?php echo $data['foto']; ?>" class="form-control" />
-                                                <br />
-
-                                                <input type="submit" name="update" id="update" value="Update"
-                                                class="btn btn-success" 
-                                                onMouseOver="this.style.backgroundColor='#00796b'"
-                                                onMouseOut="this.style.backgroundColor='#4CAF50'" />
-
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" onMouseOver="this.style.backgroundColor='#ff6666'"
-                                            onMouseOut="this.style.backgroundColor='white'" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
 
 
-                                    <?php
-                                    $no++;
-                            }
-                            ?>
+                                        <?php
+                                        $no++;
+                                }
+                                ?>
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
                 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"

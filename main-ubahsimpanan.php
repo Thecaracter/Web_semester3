@@ -27,120 +27,123 @@ include 'funct.php';
                 <?php
                 $sql = mysqli_query($conn, "SELECT * FROM k_simpanan");
                 ?>
-                <table id="dataTable" class="table table-bordered table-striped">
-                    <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal"
-                        class="btn btn-success" onMouseOver="this.style.backgroundColor='#006064'"
-                        onMouseOut="this.style.backgroundColor='#4CAF50'">Tambah Jenis Simpanan</button>
-                    <br></br>
-                    <thead>
-                        <tr class="info">
-                            <th>
-                                <center>No</center>
-                            </th>
-                            <th>
-                                <center>Jenis Simpanan</center>
-                            </th>
-                            <th>
-                                <center>Keterangan Simpanan</center>
-                            </th>
-                            <th>
-                                <center>Besar Simpanan</center>
-                            </th>
-                            <th>
-                                <center>Action</center>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <?php
-                            $no = 1;
-                            while ($data = mysqli_fetch_array($sql)) {
-                                ?>
-                                <td>
-                                    <center>
-                                        <?php echo $no; ?>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <?php echo $data['nm_simpanan']; ?>
-                                    </center>
-                                </td>
-                                <td>
-                                    <?php echo $data['ket_simpanan']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['besar_simpanan'] ?>
-                                </td>
-                                <td>
-                                    <center>
+                <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal"
+                    class="btn btn-success" onMouseOver="this.style.backgroundColor='#006064'"
+                    onMouseOut="this.style.backgroundColor='#4CAF50'">Tambah Jenis Simpanan</button>
+                <div class="table-responsive">
+                    <table id="dataTable" class="table table-bordered table-striped">
 
-                                        <a type="button" name="edit" value="Edit" data-toggle="modal"
-                                            data-target="#editModal<?php echo $data["id"]; ?>" title="Edit Data ini"
-                                            class="btn btn-sm" style="background: darkslateblue;color:white;"><i
-                                                class="fa fa-edit "></i>
-                                            Edit
-                                        </a>
-
-                                        <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
-                                            title="Hapus Simpanan" class="btn btn-danger btn-sm alert_notif"><span
-                                                class="fa fa-trash-o">
-                                                Hapus</span>
-                                        </a>
-
-                                    </center>
-                                </td>
-
-
-
+                        <br></br>
+                        <thead>
+                            <tr class="info">
+                                <th>
+                                    <center>No</center>
+                                </th>
+                                <th>
+                                    <center>Jenis Simpanan</center>
+                                </th>
+                                <th>
+                                    <center>Keterangan Simpanan</center>
+                                </th>
+                                <th>
+                                    <center>Besar Simpanan</center>
+                                </th>
+                                <th>
+                                    <center>Action</center>
+                                </th>
                             </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <?php
+                                $no = 1;
+                                while ($data = mysqli_fetch_array($sql)) {
+                                    ?>
+                                    <td>
+                                        <center>
+                                            <?php echo $no; ?>
+                                        </center>
+                                    </td>
+                                    <td>
+                                        <center>
+                                            <?php echo $data['nm_simpanan']; ?>
+                                        </center>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['ket_simpanan']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['besar_simpanan'] ?>
+                                    </td>
+                                    <td>
+                                        <center>
 
-                            <div id="editModal<?php echo $data["id"]; ?>" class="modal fade">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Input Data</h4>
+                                            <a type="button" name="edit" value="Edit" data-toggle="modal"
+                                                data-target="#editModal<?php echo $data["id"]; ?>" title="Edit Data ini"
+                                                class="btn btn-sm" style="background: darkslateblue;color:white;"><i
+                                                    class="fa fa-edit "></i>
+                                                Edit
+                                            </a>
+
+                                            <a href="proses.php?id=<?php echo $data['id']; ?>&requbs=dell"
+                                                title="Hapus Simpanan" class="btn btn-danger btn-sm alert_notif"><span
+                                                    class="fa fa-trash-o">
+                                                    Hapus</span>
+                                            </a>
+
+                                        </center>
+                                    </td>
+
+
+
+                                </tr>
+
+                                <div id="editModal<?php echo $data["id"]; ?>" class="modal fade">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Input Data</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="./proses/edit_ubahsimpanan.php" method="post" id="update">
+                                                    <input type="hidden" value="<?php echo $data['id']; ?>"
+                                                        name="id_simpanan_edit" id="id_simpanan_edit" class="form-control">
+                                                    <br />
+                                                    <label>Nama Simpanan</label>
+                                                    <input type="text" value=" <?php echo $data['nm_simpanan']; ?>"
+                                                        name="nm_simpanan_edit" id="nama" class="form-control" />
+                                                    <br />
+                                                    <label>Keterangan Simpanan</label>
+                                                    <textarea style="resize:vertical" value=" " name="ket_simpanan_edit"
+                                                        id="ketsim"
+                                                        class="form-control"><?php echo $data['ket_simpanan']; ?></textarea>
+                                                    <br />
+                                                    <label>Besar Simpanan</label>
+                                                    <input type="text" value=" <?php echo $data['besar_simpanan']; ?>"
+                                                        name="besar_simpanan_edit" id="besar" class="form-control" />
+                                                    <br />
+
+                                                    <input type="submit" name="update" id="update" value="update"
+                                                        class="btn btn-success" />
+
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
                                         </div>
-                                        <div class="modal-body">
-                                            <form action="./proses/edit_ubahsimpanan.php" method="post" id="update">
-                                                <input type="hidden" value="<?php echo $data['id']; ?>"
-                                                    name="id_simpanan_edit" id="id_simpanan_edit" class="form-control">
-                                                <br />
-                                                <label>Nama Simpanan</label>
-                                                <input type="text" value=" <?php echo $data['nm_simpanan']; ?>"
-                                                    name="nm_simpanan_edit" id="nama" class="form-control" />
-                                                <br />
-                                                <label>Keterangan Simpanan</label>
-                                                <textarea style="resize:vertical" value=" " name="ket_simpanan_edit"
-                                                    id="ketsim"
-                                                    class="form-control"><?php echo $data['ket_simpanan']; ?></textarea>
-                                                <br />
-                                                <label>Besar Simpanan</label>
-                                                <input type="text" value=" <?php echo $data['besar_simpanan']; ?>"
-                                                    name="besar_simpanan_edit" id="besar" class="form-control" />
-                                                <br />
-
-                                                <input type="submit" name="update" id="update" value="update"
-                                                    class="btn btn-success" />
-
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
 
 
-                                    <?php
-                                    $no++;
-                            }
-                            ?>
+                                        <?php
+                                        $no++;
+                                }
+                                ?>
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
                 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
