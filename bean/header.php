@@ -21,7 +21,18 @@ if (isset($_SESSION["ses_username"]) == "") {
     <!-- mini logo for sidebar mini 50x50 pixels -->
     <span class="logo-mini"><b>K</b>SP</span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>Admin</b>Koperasi</span>
+    <span class="logo-lg"><b>
+        <?php
+
+        if ($data_level == 1) {
+          echo 'Admin';
+        } else {
+          echo 'Petugas';
+        }
+        $data_level
+
+          ?>
+      </b>Koperasi</span>
   </a>
   <!-- Header Navbar: style can be found in header.less -->
   <nav class="navbar navbar-static-top">

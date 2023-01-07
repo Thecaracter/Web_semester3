@@ -8,7 +8,6 @@ if (isset($_SESSION['ses_username']) != '') {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 
@@ -17,6 +16,7 @@ if (isset($_SESSION['ses_username']) != '') {
   <link rel="stylesheet" type="text/css" href="style_login.css" />
   <link href="img/logo_koperasi.png" rel="icon">
   <link href="img/logo_koperasi.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -32,7 +32,12 @@ if (isset($_SESSION['ses_username']) != '') {
         <p>Username</p>
         <input type="text" name="username" placeholder="Masukin Username" />
         <p>Password</p>
-        <input type="password" name="password" placeholder="Masukin Password" />
+        <div class="password-container">
+          <input type="password" id="password" name="password" placeholder="Masukin Password" />
+          <button class="btn-show" type="button" onclick="togglePassword()">
+            <i class="fa fa-eye"></i>
+          </button>
+        </div>
         <input class="btn-hover color" type="submit" name="submit" value="Login" />
         <!-- <a href="#">Lupa Password</a> -->
         <span class="top"></span>
@@ -43,46 +48,70 @@ if (isset($_SESSION['ses_username']) != '') {
     </div>
   </section>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    function togglePassword() {
+      // Mengambil element password
+      var passwordInput = document.getElementById("password");
+      // Mengambil ikon mata
+      var eyeIcon = document.querySelector(".eye-icon");
+
+      // Mengecek apakah password saat ini ditampilkan atau disembunyikan
+      if (passwordInput.type === "password") {
+        // Menampilkan password
+        passwordInput.type = "text";
+        // Mengganti ikon mata menjadi ikon terkunci
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+      } else {
+        // Menyembunyikan password
+        passwordInput.type = "password";
+        // Mengganti ikon mata terkunci menjadi ikon mata
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+      }
+    }
+
+  </script>
+
+  <?php
+  include "koneksi.php";
+  if (isset($_POST['submit'])) {
+    //anti inject sql
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    //query login
+    $sql_login = "SELECT * FROM karyawan WHERE username='$username' AND password='$password'";
+    $query_login = mysqli_query($conn, $sql_login);
+    $data_login = mysqli_fetch_array($query_login, MYSQLI_BOTH);
+    $jumlah_login = mysqli_num_rows($query_login);
+
+
+    if ($jumlah_login == 1) {
+
+      $_SESSION["ses_id"] = $data_login["id"];
+      // $_SESSION["ses_nama"] = $data_login["nama"];
+      $_SESSION["ses_level"] = $data_login["level"];
+      $_SESSION["ses_username"] = $data_login["username"];
+      $_SESSION["ses_password"] = $data_login["password"];
+      $_SESSION["ses_foto"] = $data_login["foto"];
+
+      echo "<script>
+      Swal.fire({title: 'Login Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
+      }).then((result) => {if (result.value)
+        {window.location = 'index.php';}
+      })</script>";
+
+    } else {
+
+      echo "<script>
+        Swal.fire({title: 'Login Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
+        }).then((result) => {if (result.value)
+          {window.location = 'login.php';}
+        })</script>";
+    }
+  }
+  ?>
 </body>
 
 </html>
-
-<?php
-include "koneksi.php";
-if (isset($_POST['submit'])) {
-  //anti inject sql
-  $username = mysqli_real_escape_string($conn, $_POST['username']);
-  $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-  //query login
-  $sql_login = "SELECT * FROM karyawan WHERE username='$username' AND password='$password'";
-  $query_login = mysqli_query($conn, $sql_login);
-  $data_login = mysqli_fetch_array($query_login, MYSQLI_BOTH);
-  $jumlah_login = mysqli_num_rows($query_login);
-
-
-  if ($jumlah_login == 1) {
-
-    $_SESSION["ses_id"] = $data_login["id"];
-    // $_SESSION["ses_nama"] = $data_login["nama"];
-    $_SESSION["ses_level"] = $data_login["level"];
-    $_SESSION["ses_username"] = $data_login["username"];
-    $_SESSION["ses_password"] = $data_login["password"];
-    $_SESSION["ses_foto"] = $data_login["foto"];
-
-    echo "<script>
-		Swal.fire({title: 'Login Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
-		}).then((result) => {if (result.value)
-			{window.location = 'index.php';}
-		})</script>";
-
-  } else {
-
-    echo "<script>
-			Swal.fire({title: 'Login Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
-			}).then((result) => {if (result.value)
-				{window.location = 'login.php';}
-			})</script>";
-  }
-}
-?>

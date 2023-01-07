@@ -169,7 +169,7 @@ if (isset($_GET['reqa']) && $_GET['reqa'] == 'edit') {
 						</div>
 						<div class="form-group">
 							<label for="exampleInputPassword1">Nomor Handphone</label>
-							<input type="number" class="form-control" id="exampleInputPassword1"
+							<input type="Text" class="form-control" id="exampleInputPassword1"
 								value="<?php echo $no_telp ?>" placeholder="08123456789" name="no_telp">
 						</div>
 						<div>

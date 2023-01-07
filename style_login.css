@@ -8,6 +8,27 @@ body {
     height: 100vh;
 }
 
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+    padding: 10px;
+}
+
+.password-container button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.password-container .eye-icon {
+    font-size: 18px;
+}
+
+
 .login-box {
     width: 320px;
     height: 420px;
