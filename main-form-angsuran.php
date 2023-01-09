@@ -100,8 +100,8 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 								rows="3" placeholder="ID Pinjaman">
 						</div>
 						<?php
-						$s = date('MM');
-						$t = date('YY');
+						$s = date('mm');
+						$t = date('yy');
 						?>
 						<div class="form-group">
 							<label>ID Pinjaman</label>
@@ -185,7 +185,7 @@ if (isset($_GET['reqang']) && $_GET['reqang'] == 'add') {
 										echo $r['id_pinjaman'] . "&nbsp;|&nbsp;" . $r['id_anggota'];
 										?>
 									</option>
-									<?php } ?>
+								<?php } ?>
 							</select>
 						</div>
 						<div class="form-group">
