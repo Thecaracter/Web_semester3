@@ -121,7 +121,7 @@ include 'funct.php';
                                                         value="<?php echo $data['username']; ?>" class="form-control" />
                                                     <br />
                                                     <label>Password</label>
-                                                    <input type="text" name="password" id="password"
+                                                    <input type="password" name="password" id="password"
                                                         value="<?php echo $data['password']; ?>" class="form-control" />
                                                     <br />
                                                     <label>No Telepon</label>
@@ -185,7 +185,7 @@ include 'funct.php';
                     </script>
                     <!-- agar sweet alert tidak muncul lagi saat di refresh -->
                     <?php unset($_SESSION['suksessss']);
-                    } ?>
+                } ?>
 
 
                 <!-- konfirmasi hapus data dengan sweet alert  -->

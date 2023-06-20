@@ -171,6 +171,10 @@ if ($data_level == "1") {
                 <a href='page-cetak-angsuran.php'><i class='fa fa-circle-o'></i> Cetak Angsuran
                 </a>
             </li>
+            <li>
+                <a href='page-kolektabilitas.php'><i class='fa fa-circle-o'></i> Laporan Kolektabilitas
+                </a>
+            </li>
         </ul>
     </li>
 </ul>
@@ -292,6 +296,10 @@ if ($data_level == "1") {
                 <a href='page-form-angsuran.php?reqang=add'><i class='fa fa-circle-o'></i> Form Angsuran
                 </a>
             </li>
+            <li>
+            <a href='page-kolektabilitas.php'><i class='fa fa-circle-o'></i> Laporan Kolektabilitas
+            </a>
+        </li>
         </ul>
     </li>
 </ul>
